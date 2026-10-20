@@ -1,11 +1,11 @@
 {% extends "base.html" %}
+{% from "_macros.html" import cabecalho_pagina, icone with context %}
 {% block title %}Conferir colunas{% endblock %}
 {% block content %}
-<h1>Conferir colunas</h1>
-<p>Arquivo <strong>{{ nome }}</strong> com {{ total }} linha(s). Indique qual coluna do arquivo corresponde a
-  cada campo. As sugestões vieram do nome do cabeçalho.</p>
+{{ cabecalho_pagina('Conferir colunas', 'Arquivo ' ~ nome ~ ' com ' ~ total ~ ' linha(s). Indique qual coluna do arquivo corresponde a cada campo. As sugestões vieram do nome do cabeçalho.',
+                    url_for('web.importar'), 'Importar') }}
 
-<form method="post" action="{{ url_for('web.importar_confirmar') }}" class="painel-bloco">
+<form method="post" action="{{ url_for('web.importar_confirmar') }}" class="cartao">
   <input type="hidden" name="token" value="{{ token }}">
   <input type="hidden" name="nome" value="{{ nome }}">
   <div class="campos-grade">
@@ -18,12 +18,14 @@
     {% endfor %}
   </div>
   <div class="campo">
-    <label><input type="checkbox" name="substituir" value="1"> Substituir todas as movimentações atuais por este arquivo</label>
-    <small class="suave">Use para trocar a base simulada pela base oficial. Unificações de nomes e fatores de
-      conversão já confirmados são mantidos e reaproveitados.</small>
+    <label class="opcao"><input type="checkbox" name="substituir" value="1"> Substituir todas as movimentações atuais por este arquivo</label>
+    <small>Use para trocar a base simulada pela base oficial. Unificações de nomes e fatores de conversão já
+      confirmados são mantidos e reaproveitados.</small>
   </div>
-  <button type="submit">Importar e reanalisar</button>
-  <a class="botao secundario" href="{{ url_for('web.importar') }}">Cancelar</a>
+  <div class="botoes">
+    <button type="submit">{{ icone('check') }} Importar e reanalisar</button>
+    <a class="botao secundario" href="{{ url_for('web.importar') }}">Cancelar</a>
+  </div>
 </form>
 
 <h2>Prévia (5 primeiras linhas)</h2>

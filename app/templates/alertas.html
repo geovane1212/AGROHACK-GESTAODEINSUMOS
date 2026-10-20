@@ -1,17 +1,15 @@
 {% extends "base.html" %}
-{% from "_macros.html" import alerta with context %}
+{% from "_macros.html" import alerta, cabecalho_pagina, estado_vazio, icone with context %}
 {% block title %}Alertas{% endblock %}
 {% block content %}
-<h1>Alertas priorizados</h1>
-<p class="suave">Ordenados pela prioridade: severidade, urgência, valor envolvido e confiança da estimativa.
-  Abra "Por que este alerta?" para ver a regra e os limites.</p>
+{{ cabecalho_pagina('Alertas', 'Do mais urgente para o menos urgente. Toque em "Por que este alerta?" para ver a regra e os limites.') }}
 
 <form class="filtros" method="get">
   <div><label for="severidade">Severidade</label>
     <select id="severidade" name="severidade">
       <option value="">Todas</option>
       {% for s in ['Crítico', 'Atenção', 'Informativo'] %}
-      <option value="{{ s }}" {% if filtros.get('severidade') == s %}selected{% endif %}>{{ ICONES[s] }} {{ s }}</option>
+      <option value="{{ s }}" {% if filtros.get('severidade') == s %}selected{% endif %}>{{ s }}</option>
       {% endfor %}
     </select></div>
   <div><label for="categoria">Categoria</label>
@@ -24,10 +22,10 @@
       <option value="">Todos</option>
       {% for t, n in tipos %}<option value="{{ t }}" {% if filtros.get('tipo') == t %}selected{% endif %}>{{ n }}</option>{% endfor %}
     </select></div>
-  <button type="submit">Filtrar</button>
-  <a class="botao secundario" href="{{ url_for('web.alertas_csv', **filtros) }}">⬇️ Baixar CSV</a>
+  <button type="submit">{{ icone('list-filter') }} Filtrar</button>
 </form>
 
-<p><strong>{{ alertas|length }}</strong> alerta(s).</p>
-{% for a in alertas %}{{ alerta(a) }}{% else %}<p>Nenhum alerta com esses filtros.</p>{% endfor %}
+<p><strong>{{ alertas|length }}</strong> alerta(s) ·
+  <a href="{{ url_for('web.alertas_csv', **filtros) }}">{{ icone('download') }} baixar CSV</a></p>
+{% for a in alertas %}{{ alerta(a) }}{% else %}{{ estado_vazio('Nenhum alerta com esses filtros.') }}{% endfor %}
 {% endblock %}

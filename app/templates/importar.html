@@ -1,33 +1,38 @@
 {% extends "base.html" %}
+{% from "_macros.html" import cabecalho_pagina, icone with context %}
 {% block title %}Importar planilha{% endblock %}
 {% block content %}
-<h1>Importar planilha (CSV ou XLSX)</h1>
-<div class="painel-bloco">
-  <form method="post" enctype="multipart/form-data">
-    <div class="campo"><label for="arquivo">Arquivo</label>
-      <input id="arquivo" type="file" name="arquivo" accept=".csv,.xlsx,.xlsm,.txt" required></div>
-    <button type="submit">Enviar e conferir colunas</button>
-  </form>
-</div>
-<h2>Como funciona</h2>
-<ol>
-  <li>Envie o arquivo. O sistema tenta reconhecer as colunas pelo nome (aceita sinônimos como "qtd", "insumo",
-    "vencimento", "valor unitário").</li>
-  <li>Confira o mapeamento na próxima tela e ajuste o que precisar. Nada é gravado antes da confirmação.</li>
-  <li>Linhas com erro em campo obrigatório são recusadas e listadas com o número da linha e o motivo.
-    Preço e validade vazios continuam vazios (nunca viram zero).</li>
-  <li>Depois da importação, os alertas são recalculados e o painel mostra o que mudou.</li>
-</ol>
-<p>Campos reconhecidos:
-  {% for c, (rotulo, obrig) in campos.items() %}<strong>{{ rotulo }}</strong>{{ ' *' if obrig }}{{ ', ' if not loop.last else '.' }}{% endfor %}
-  (* obrigatório)</p>
-<p class="suave">Separador do CSV (; , tab |) e codificação (UTF-8 ou Latin-1) são detectados automaticamente.
-  Datas em AAAA-MM-DD ou DD/MM/AAAA; números com vírgula ou ponto decimal.</p>
-<p>Base de demonstração: <a href="https://github.com/geovane1212/AGROHACK-GESTAODEINSUMOS/blob/main/data/simulado/movimentacoes_simulado.csv">movimentacoes_simulado.csv</a>.</p>
+{{ cabecalho_pagina('Importar planilha', 'CSV ou XLSX. Nada é gravado antes de você conferir as colunas.', url_for('web.mais'), 'Mais') }}
 
-<h2>Restaurar a demonstração</h2>
-<form method="post" action="{{ url_for('web.restaurar_demo') }}" onsubmit="return confirm('Apagar todos os dados atuais e recarregar a base simulada?');">
-  <p class="suave">Apaga todas as movimentações, unificações e fatores e recarrega a base simulada original.</p>
-  <button class="perigo" type="submit">Restaurar base de demonstração</button>
+<form method="post" enctype="multipart/form-data" class="cartao">
+  <div class="campo"><label for="arquivo">Arquivo</label>
+    <input id="arquivo" type="file" name="arquivo" accept=".csv,.xlsx,.xlsm,.txt" required></div>
+  <button type="submit" class="bloco">{{ icone('upload') }} Enviar e conferir colunas</button>
 </form>
+
+<section class="cartao">
+  <h2>Como funciona</h2>
+  <ol>
+    <li>Envie o arquivo. O sistema tenta reconhecer as colunas pelo nome (aceita sinônimos como "qtd", "insumo",
+      "vencimento", "valor unitário").</li>
+    <li>Confira o mapeamento na próxima tela e ajuste o que precisar.</li>
+    <li>Linhas com erro em campo obrigatório são recusadas e listadas com o número da linha e o motivo.
+      Preço e validade vazios continuam vazios (nunca viram zero).</li>
+    <li>Depois da importação, os alertas são recalculados e o painel mostra o que mudou.</li>
+  </ol>
+  <p>Campos reconhecidos:
+    {% for c, (rotulo, obrig) in campos.items() %}<strong>{{ rotulo }}</strong>{{ ' *' if obrig }}{{ ', ' if not loop.last else '.' }}{% endfor %}
+    (* obrigatório)</p>
+  <p class="suave">Separador do CSV (; , tab |) e codificação (UTF-8 ou Latin-1) são detectados automaticamente.
+    Datas em AAAA-MM-DD ou DD/MM/AAAA; números com vírgula ou ponto decimal.</p>
+  <p>Base de demonstração: <a href="https://github.com/geovane1212/AGROHACK-GESTAODEINSUMOS/blob/main/data/simulado/movimentacoes_simulado.csv">movimentacoes_simulado.csv</a>.</p>
+</section>
+
+<section class="cartao">
+  <h2>Restaurar a demonstração</h2>
+  <p class="suave">Apaga todas as movimentações, unificações e fatores e recarrega a base simulada original.</p>
+  <form method="post" action="{{ url_for('web.restaurar_demo') }}" onsubmit="return confirm('Apagar todos os dados atuais e recarregar a base simulada?');">
+    <button class="perigo" type="submit">Restaurar base de demonstração</button>
+  </form>
+</section>
 {% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% from "_macros.html" import cabecalho_pagina, atalhos_registrar with context %}
+{% block title %}Registrar{% endblock %}
+{% block content %}
+{{ cabecalho_pagina('O que você quer fazer?', 'Escolha uma ação. Depois de salvar, os alertas são recalculados.') }}
+{{ atalhos_registrar() }}
+{% endblock %}

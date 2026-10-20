@@ -1,85 +1,82 @@
 {% extends "base.html" %}
-{% from "_macros.html" import alerta, selo, lista_mudancas with context %}
-{% block title %}Painel{% endblock %}
+{% from "_macros.html" import alerta, selo, lista_mudancas, indicador, estado_vazio, cabecalho_pagina, botao, icone with context %}
+{% block title %}Início{% endblock %}
 {% block content %}
-<h1>Situação do estoque</h1>
+{% call cabecalho_pagina('Situação do estoque') %}
+<p class="suave">Data de referência: <strong>{{ res.data_referencia|data if res.data_referencia is not none else '—' }}</strong>
+  ({{ 'escolhida manualmente' if data_ref_manual else 'data da última movimentação' }})</p>
+{% endcall %}
 
 {% if not res.produtos %}
-<div class="painel-bloco">
-  <p>Ainda não há movimentações. <a href="{{ url_for('web.importar') }}">Importe uma planilha</a> ou
-    <a href="{{ url_for('web.registrar') }}">registre uma movimentação</a>.</p>
-</div>
+{{ estado_vazio('Ainda não há movimentações.', 'Importe uma planilha ou registre a primeira movimentação.',
+                'Importar planilha', url_for('web.importar'), 'package') }}
 {% else %}
+
+{% set sev = res.resumo.severidades %}
+<div class="grade grade-severidade">
+  {{ indicador(sev['Crítico'], 'críticos', url_for('web.alertas', severidade='Crítico'), 'critico') }}
+  {{ indicador(sev['Atenção'], 'atenção', url_for('web.alertas', severidade='Atenção'), 'atencao') }}
+  {{ indicador(sev['Informativo'], 'infor­mativos', url_for('web.alertas', severidade='Informativo'), 'informativo') }}
+</div>
+
+<h2>{{ icone('siren') }} O que merece atenção imediata</h2>
+{% for a in res.alertas[:5] %}{{ alerta(a) }}{% else %}{{ estado_vazio('Nenhum alerta no momento.') }}{% endfor %}
+{% if res.alertas|length > 5 %}
+<p>{{ botao('Ver todos os ' ~ res.alertas|length ~ ' alertas', url_for('web.alertas'), 'bell', 'secundario', true) }}</p>
+{% endif %}
 
 {% if mudancas %}
 <section class="mudancas" aria-labelledby="titulo-mudancas">
-  <h2 id="titulo-mudancas">🔄 O que mudou na última reanálise</h2>
+  <h2 id="titulo-mudancas">{{ icone('refresh-cw') }} O que mudou na última reanálise</h2>
   <p class="suave">{{ mudancas.motivo }} · {{ mudancas.quando }}</p>
   {{ lista_mudancas(mudancas) }}
 </section>
 {% endif %}
 
-{% set sev = res.resumo.severidades %}
-<div class="cartoes">
-  <a class="cartao critico" href="{{ url_for('web.alertas', severidade='Crítico') }}">
-    <div class="numero">{{ sev['Crítico'] }}</div><div class="rotulo">⛔ alertas críticos</div></a>
-  <a class="cartao atencao" href="{{ url_for('web.alertas', severidade='Atenção') }}">
-    <div class="numero">{{ sev['Atenção'] }}</div><div class="rotulo">⚠️ alertas de atenção</div></a>
-  <a class="cartao informativo" href="{{ url_for('web.alertas', severidade='Informativo') }}">
-    <div class="numero">{{ sev['Informativo'] }}</div><div class="rotulo">ℹ️ informativos</div></a>
-  <div class="cartao">
-    <div class="numero valor">{{ res.resumo.valor_total|moeda }}</div>
-    <div class="rotulo">valor em estoque
-      {% if res.resumo.sem_preco %}<br><span class="ausente">calculado sem {{ res.resumo.sem_preco|length }}
-        produto(s) sem preço</span>{% endif %}</div>
-  </div>
-  <a class="cartao" href="{{ url_for('web.produtos') }}">
-    <div class="numero">{{ res.resumo.n_produtos }}</div><div class="rotulo">produtos · {{ res.resumo.n_movimentacoes }} movimentações</div></a>
+<div class="grade">
+  {{ indicador(res.resumo.valor_total|moeda, 'valor em estoque' ~ (' · sem ' ~ res.resumo.sem_preco|length ~ ' produto(s) sem preço' if res.resumo.sem_preco else ''), none, '', true) }}
+  {{ indicador(res.resumo.n_produtos, 'produtos · ' ~ res.resumo.n_movimentacoes ~ ' movimentações', url_for('web.produtos')) }}
 </div>
 
-<h2>🚨 O que merece atenção imediata</h2>
-{% for a in res.alertas[:5] %}{{ alerta(a) }}{% else %}<p>Nenhum alerta no momento. 👍</p>{% endfor %}
-{% if res.alertas|length > 5 %}
-<p><a class="botao secundario" href="{{ url_for('web.alertas') }}">Ver todos os {{ res.alertas|length }} alertas</a></p>
-{% endif %}
-
 <div class="grade-2">
-  <section class="painel-bloco">
-    <h2>⏳ Produtos com menor cobertura</h2>
+  <section class="cartao">
+    <h2>{{ icone('hourglass') }} Produtos com menor cobertura</h2>
     <p class="suave">Dias que o saldo deve durar, mantendo o consumo médio recente.</p>
     <div class="grafico"><canvas id="grafCobertura" role="img" aria-label="Gráfico de cobertura em dias dos 10 produtos que acabam primeiro"></canvas></div>
-    <div class="tabela-rolagem"><table>
-      <caption class="pular">Cobertura em dias</caption>
+    <div class="tabela-rolagem"><table class="responsiva">
+      <caption class="visualmente-oculto">Cobertura em dias</caption>
       <thead><tr><th>Produto</th><th class="num">Cobertura</th><th>Confiança</th></tr></thead>
       <tbody>{% for p in cobertura %}
-        <tr><td><a href="{{ url_for('web.produto', chave=p.chave) }}">{{ p.nome }}</a></td>
-            <td class="num">{{ p.cobertura|dias }}</td><td>{{ p.consumo.confianca }}</td></tr>
+        <tr><td class="destaque"><a href="{{ url_for('web.produto', chave=p.chave) }}">{{ p.nome }}</a></td>
+            <td class="num" data-rotulo="Cobertura">{{ p.cobertura|dias }}</td>
+            <td data-rotulo="Confiança">{{ p.consumo.confianca }}</td></tr>
       {% endfor %}</tbody>
     </table></div>
   </section>
-  <section class="painel-bloco">
-    <h2>💰 Valor em estoque por categoria</h2>
+  <section class="cartao">
+    <h2>{{ icone('banknote') }} Valor em estoque por categoria</h2>
     <p class="suave">Saldo × custo médio das compras com preço.
       {% if res.resumo.sem_preco %}<span class="ausente">Sem preço (fora do cálculo): {{ res.resumo.sem_preco|join(', ') }}.</span>{% endif %}</p>
     <div class="grafico"><canvas id="grafValor" role="img" aria-label="Gráfico de valor em estoque por categoria"></canvas></div>
-    <div class="tabela-rolagem"><table>
-      <caption class="pular">Valor por categoria</caption>
+    <div class="tabela-rolagem"><table class="responsiva">
+      <caption class="visualmente-oculto">Valor por categoria</caption>
       <thead><tr><th>Categoria</th><th class="num">Valor</th></tr></thead>
-      <tbody>{% for c, v in por_categoria.items() %}<tr><td>{{ c }}</td><td class="num">{{ v|moeda }}</td></tr>{% endfor %}</tbody>
+      <tbody>{% for c, v in por_categoria.items() %}<tr><td class="destaque">{{ c }}</td><td class="num" data-rotulo="Valor">{{ v|moeda }}</td></tr>{% endfor %}</tbody>
     </table></div>
   </section>
 </div>
 
-<section class="painel-bloco">
-  <h2>📆 Lotes que vencem nos próximos 180 dias</h2>
+<section class="cartao">
+  <h2>{{ icone('calendar') }} Lotes que vencem nos próximos 180 dias</h2>
   {% if a_vencer %}
-  <div class="tabela-rolagem"><table>
+  <div class="tabela-rolagem"><table class="responsiva">
     <thead><tr><th>Produto</th><th>Lote</th><th>Validade</th><th class="num">Dias</th><th class="num">Quantidade</th></tr></thead>
     <tbody>{% for l in a_vencer %}
-      <tr><td><a href="{{ url_for('web.produto', chave=l.chave) }}">{{ l.produto }}</a></td><td>{{ l.lote or '—' }}</td>
-          <td>{{ l.validade|data }}</td>
-          <td class="num">{% if l.dias < 0 %}<strong>vencido há {{ -l.dias }}</strong>{% else %}{{ l.dias }}{% endif %}</td>
-          <td class="num">{{ l.qtd|num }} {{ l.unidade }}</td></tr>
+      <tr><td class="destaque"><a href="{{ url_for('web.produto', chave=l.chave) }}">{{ l.produto }}</a></td>
+          <td data-rotulo="Lote">{{ l.lote or '—' }}</td>
+          <td data-rotulo="Validade">{{ l.validade|data }}</td>
+          <td class="num" data-rotulo="Dias">{% if l.dias < 0 %}<strong>vencido há {{ -l.dias }}</strong>{% else %}{{ l.dias }}{% endif %}</td>
+          <td class="num" data-rotulo="Quantidade">{{ l.qtd|num }} {{ l.unidade }}</td></tr>
     {% endfor %}</tbody>
   </table></div>
   {% else %}<p>Nenhum lote vence nos próximos 180 dias.</p>{% endif %}
@@ -89,22 +86,25 @@
 
 {% block scripts %}
 {% if res.produtos %}
-<script src="{{ url_for('static', filename='chart.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='chart.umd.min.js') }}" defer></script>
 <script>
-  const cobertura = {{ cobertura|map(attribute='nome')|list|tojson }};
-  const dias = {{ cobertura|map(attribute='cobertura')|map('round', 1)|list|tojson }};
-  new Chart(document.getElementById('grafCobertura'), {
-    type: 'bar',
-    data: { labels: cobertura, datasets: [{ label: 'Dias de cobertura', data: dias,
-      backgroundColor: dias.map(d => d <= 7 ? '#a3001b' : (d <= 15 ? '#d99a00' : '#2f6b2f')) }] },
-    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false } },
-               scales: { x: { title: { display: true, text: 'dias' } } } }
-  });
-  new Chart(document.getElementById('grafValor'), {
-    type: 'bar',
-    data: { labels: {{ por_categoria.keys()|list|tojson }},
-            datasets: [{ label: 'R$', data: {{ por_categoria.values()|map('round', 2)|list|tojson }}, backgroundColor: '#2f6b2f' }] },
-    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false } } }
+  window.addEventListener('load', function () {
+    if (!window.Chart) return;
+    const dias = {{ cobertura|map(attribute='cobertura')|map('round', 1)|list|tojson }};
+    new Chart(document.getElementById('grafCobertura'), {
+      type: 'bar',
+      data: { labels: {{ cobertura|map(attribute='nome')|list|tojson }},
+              datasets: [{ label: 'Dias de cobertura', data: dias,
+                           backgroundColor: dias.map(d => d <= 7 ? '#a1001a' : (d <= 15 ? '#c98a00' : '#2e6b30')) }] },
+      options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false } },
+                 scales: { x: { title: { display: true, text: 'dias' } } } }
+    });
+    new Chart(document.getElementById('grafValor'), {
+      type: 'bar',
+      data: { labels: {{ por_categoria.keys()|list|tojson }},
+              datasets: [{ label: 'R$', data: {{ por_categoria.values()|map('round', 2)|list|tojson }}, backgroundColor: '#2e6b30' }] },
+      options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false } } }
+    });
   });
 </script>
 {% endif %}

@@ -1,78 +1,81 @@
 {% extends "base.html" %}
-{% from "_macros.html" import alerta with context %}
+{% from "_macros.html" import alerta, cabecalho_pagina, indicador, botao, estado_vazio, icone with context %}
 {% block title %}{{ p.nome }}{% endblock %}
 {% block content %}
-<p><a href="{{ url_for('web.produtos') }}">← Estoque</a></p>
-<h1>{{ p.nome }}</h1>
-<p class="suave">{{ p.categoria }}{% if p.grafias|length > 1 %} · Também registrado como:
-  {{ p.grafias|reject('equalto', p.nome)|join(', ') }}{% endif %}</p>
+{{ cabecalho_pagina(p.nome, p.categoria ~ (' · Também registrado como: ' ~ p.grafias|reject('equalto', p.nome)|join(', ') if p.grafias|length > 1 else ''),
+                    url_for('web.produtos'), 'Estoque') }}
 
-<div class="cartoes">
-  <div class="cartao"><div class="numero">{{ p.saldo|num }} {{ p.unidade }}</div><div class="rotulo">saldo atual</div></div>
-  <div class="cartao"><div class="numero">{{ p.cobertura|dias if p.cobertura is not none else '—' }}</div>
-    <div class="rotulo">cobertura estimada</div></div>
-  <div class="cartao"><div class="numero">{{ (p.consumo.consumo_diario|num(2) ~ ' ' ~ p.unidade) if p.consumo.consumo_diario is not none else '—' }}</div>
-    <div class="rotulo">consumo médio/dia{% if p.consumo.janela %} (últimos {{ p.consumo.janela }} dias){% endif %}</div></div>
-  <div class="cartao"><div class="numero">{{ p.consumo.confianca or 'sem estimativa' }}</div>
-    <div class="rotulo">confiança ({{ p.consumo.n_saidas_60 }} saídas em 60 dias)</div></div>
-  <div class="cartao"><div class="numero">{{ (p.minimo|num ~ ' ' ~ p.unidade) if p.minimo is not none else '—' }}</div><div class="rotulo">estoque mínimo</div></div>
-  <div class="cartao"><div class="numero valor">{% if p.valor_estoque is not none %}{{ p.valor_estoque|moeda }}{% else %}<span class="ausente">sem preço</span>{% endif %}</div>
-    <div class="rotulo">valor em estoque{% if p.classe_abc %} · classe {{ p.classe_abc }}{% endif %}
-      {% if p.custo_medio is not none %}<br>custo médio {{ p.custo_medio|moeda }}/{{ p.unidade }}{% endif %}</div></div>
+<div class="grade">
+  {{ indicador(p.saldo|num ~ ' ' ~ p.unidade, 'saldo atual') }}
+  {{ indicador(p.cobertura|dias if p.cobertura is not none else '—', 'cobertura estimada') }}
+  {{ indicador((p.consumo.consumo_diario|num(2) ~ ' ' ~ p.unidade) if p.consumo.consumo_diario is not none else '—',
+               'consumo médio/dia' ~ (' (últimos ' ~ p.consumo.janela ~ ' dias)' if p.consumo.janela else '')) }}
+  {{ indicador(p.consumo.confianca or 'sem estimativa', 'confiança (' ~ p.consumo.n_saidas_60 ~ ' saídas em 60 dias)') }}
+  {{ indicador((p.minimo|num ~ ' ' ~ p.unidade) if p.minimo is not none else '—', 'estoque mínimo') }}
+  {{ indicador(p.valor_estoque|moeda if p.valor_estoque is not none else 'sem preço',
+               'valor em estoque' ~ (' · classe ' ~ p.classe_abc if p.classe_abc else '') ~ (' · custo médio ' ~ p.custo_medio|moeda ~ '/' ~ p.unidade if p.custo_medio is not none else ''),
+               none, '', true) }}
 </div>
 
-<p><a class="botao" href="{{ url_for('web.registrar', produto=p.nome) }}">➕ Registrar movimentação deste produto</a></p>
+<div class="botoes">
+  {{ botao('Registrar movimentação deste produto', url_for('web.registrar', produto=p.nome), 'plus', '', true) }}
+</div>
 
 <h2>Alertas</h2>
-{% for a in alertas %}{{ alerta(a, mostrar_produto=false) }}{% else %}<p>Nenhum alerta para este produto.</p>{% endfor %}
+{% for a in alertas %}{{ alerta(a, mostrar_produto=false) }}{% else %}{{ estado_vazio('Nenhum alerta para este produto.') }}{% endfor %}
 
 {% if qualidade %}
-<h2>Qualidade dos dados</h2>
-<ul>{% for q in qualidade %}<li><strong>{{ q.titulo }}:</strong> {{ q.descricao }}</li>{% endfor %}</ul>
+<section class="cartao">
+  <h2>{{ icone('clipboard-check') }} Qualidade dos dados</h2>
+  <ul>{% for q in qualidade %}<li><strong>{{ q.titulo }}:</strong> {{ q.descricao }}</li>{% endfor %}</ul>
+</section>
 {% endif %}
 
-<section class="painel-bloco">
-  <h2>Consumo por semana (últimas 26 semanas)</h2>
+<section class="cartao">
+  <h2>{{ icone('trending-up') }} Consumo por semana (últimas 26 semanas)</h2>
   <div class="grafico"><canvas id="grafConsumo" role="img" aria-label="Gráfico de consumo semanal de {{ p.nome }}"></canvas></div>
 </section>
 
 <h2>Lotes com saldo</h2>
-<p class="suave">Saídas sem lote informado são descontadas do lote que vence primeiro (FEFO).</p>
+<p class="suave">Saídas sem lote informado são descontadas do lote que vence primeiro.</p>
 {% if p.lotes %}
-<div class="tabela-rolagem"><table>
+<div class="tabela-rolagem"><table class="responsiva">
   <thead><tr><th>Lote</th><th>Entrada</th><th>Validade</th><th class="num">Saldo</th></tr></thead>
   <tbody>{% for l in p.lotes|sort(attribute='entrada') %}
-    <tr><td>{{ l.lote or '—' }}</td><td>{{ l.entrada|data }}</td>
-        <td>{% if l.validade is not none and l.validade == l.validade %}{{ l.validade|data }}{% else %}<span class="ausente">sem validade</span>{% endif %}</td>
-        <td class="num">{{ l.qtd|num }} {{ p.unidade }}</td></tr>
+    <tr><td class="destaque">{{ l.lote or 'Sem lote' }}</td><td data-rotulo="Entrada">{{ l.entrada|data }}</td>
+        <td data-rotulo="Validade">{% if l.validade is not none and l.validade == l.validade %}{{ l.validade|data }}{% else %}<span class="ausente">sem validade</span>{% endif %}</td>
+        <td class="num" data-rotulo="Saldo">{{ l.qtd|num }} {{ p.unidade }}</td></tr>
   {% endfor %}</tbody>
 </table></div>
-{% else %}<p>Nenhum lote com saldo.</p>{% endif %}
+{% else %}{{ estado_vazio('Nenhum lote com saldo.', icone_nome='package') }}{% endif %}
 
 <h2>Últimas movimentações</h2>
-<div class="tabela-rolagem"><table>
-  <thead><tr><th>Data</th><th>Tipo</th><th>Nome registrado</th><th class="num">Quantidade</th><th class="num">Preço</th><th>Lote</th><th>Validade</th><th>Destino / fornecedor</th><th>Responsável</th></tr></thead>
+<div class="tabela-rolagem"><table class="responsiva">
+  <thead><tr><th>Data e tipo</th><th class="num">Quantidade</th><th>Nome registrado</th><th class="num">Preço</th><th>Lote</th><th>Validade</th><th>Destino / fornecedor</th><th>Responsável</th></tr></thead>
   <tbody>{% for m in movs %}
-    <tr><td>{{ m.data[8:10] }}/{{ m.data[5:7] }}/{{ m.data[:4] }}</td>
-        <td>{{ 'Entrada' if m.tipo == 'entrada' else 'Saída' }}</td><td>{{ m.produto }}</td>
-        <td class="num">{{ m.quantidade|num }} {{ m.unidade }}</td>
-        <td class="num">{% if m.tipo == 'entrada' %}{% if m.preco_unitario == m.preco_unitario and m.preco_unitario is not none %}{{ m.preco_unitario|moeda }}{% else %}<span class="ausente">ausente</span>{% endif %}{% endif %}</td>
-        <td>{{ m.lote or '' }}</td><td>{{ m.validade or '' }}</td>
-        <td>{{ m.destino or m.fornecedor or '' }}</td><td>{{ m.responsavel or '' }}</td></tr>
+    <tr><td class="destaque">{{ m.data[8:10] }}/{{ m.data[5:7] }}/{{ m.data[:4] }} · {{ 'Entrada' if m.tipo == 'entrada' else 'Saída' }}</td>
+        <td class="num" data-rotulo="Quantidade">{{ m.quantidade|num }} {{ m.unidade }}</td>
+        <td data-rotulo="Nome registrado">{{ m.produto }}</td>
+        <td class="num" data-rotulo="Preço">{% if m.tipo == 'entrada' %}{% if m.preco_unitario == m.preco_unitario and m.preco_unitario is not none %}{{ m.preco_unitario|moeda }}{% else %}<span class="ausente">ausente</span>{% endif %}{% endif %}</td>
+        <td data-rotulo="Lote">{{ m.lote or '' }}</td><td data-rotulo="Validade">{{ m.validade or '' }}</td>
+        <td data-rotulo="Destino / fornecedor">{{ m.destino or m.fornecedor or '' }}</td><td data-rotulo="Responsável">{{ m.responsavel or '' }}</td></tr>
   {% endfor %}</tbody>
 </table></div>
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='chart.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='chart.umd.min.js') }}" defer></script>
 <script>
-  new Chart(document.getElementById('grafConsumo'), {
-    type: 'bar',
-    data: { labels: {{ p.serie|map(attribute='semana')|list|tojson }},
-            datasets: [{ label: 'Saídas na semana ({{ p.unidade }})', data: {{ p.serie|map(attribute='total')|list|tojson }},
-                         backgroundColor: '#2f6b2f' }] },
-    options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: '{{ p.unidade }}' } },
-               x: { title: { display: true, text: 'semana terminando em' } } } }
+  window.addEventListener('load', function () {
+    if (!window.Chart) return;
+    new Chart(document.getElementById('grafConsumo'), {
+      type: 'bar',
+      data: { labels: {{ p.serie|map(attribute='semana')|list|tojson }},
+              datasets: [{ label: 'Saídas na semana ({{ p.unidade }})', data: {{ p.serie|map(attribute='total')|list|tojson }},
+                           backgroundColor: '#2e6b30' }] },
+      options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: '{{ p.unidade }}' } },
+                 x: { title: { display: true, text: 'semana terminando em' } } } }
+    });
   });
 </script>
 {% endblock %}

@@ -1,10 +1,8 @@
 {% extends "base.html" %}
-{% from "_macros.html" import selo with context %}
+{% from "_macros.html" import selo, cabecalho_pagina, icone with context %}
 {% block title %}Estoque{% endblock %}
 {% block content %}
-<h1>Estoque por produto</h1>
-<p class="suave">Saldo calculado a partir das movimentações, já convertido para a unidade base de cada produto.
-  "—" indica dado ausente ou estimativa impossível (nunca é tratado como zero).</p>
+{{ cabecalho_pagina('Estoque', 'Saldo de cada produto calculado a partir das movimentações. "—" indica dado ausente ou estimativa impossível (nunca é tratado como zero).') }}
 
 <form class="filtros" method="get">
   <div><label for="categoria">Categoria</label>
@@ -14,31 +12,29 @@
   <div><label for="ordem">Ordenar por</label>
     <select id="ordem" name="ordem">
       <option value="nome" {% if ordem == 'nome' %}selected{% endif %}>Nome</option>
-      <option value="cobertura" {% if ordem == 'cobertura' %}selected{% endif %}>Cobertura (acaba primeiro)</option>
+      <option value="cobertura" {% if ordem == 'cobertura' %}selected{% endif %}>Acaba primeiro</option>
       <option value="valor" {% if ordem == 'valor' %}selected{% endif %}>Valor em estoque</option>
     </select></div>
-  <button type="submit">Aplicar</button>
+  <button type="submit">{{ icone('list-filter') }} Aplicar</button>
 </form>
 
-<div class="tabela-rolagem"><table>
+<div class="tabela-rolagem"><table class="responsiva">
   <thead><tr>
-    <th>Produto</th><th>Categoria</th><th class="num">Saldo</th><th class="num">Mínimo</th>
-    <th class="num">Consumo/dia</th><th class="num">Cobertura</th><th>Confiança</th>
-    <th class="num">Valor</th><th>ABC</th><th>Alerta</th>
+    <th>Produto</th><th>Alerta</th><th class="num">Saldo</th><th class="num">Dura até</th><th>Confiança</th>
+    <th class="num">Mínimo</th><th class="num">Consumo/dia</th><th class="num">Valor</th><th>Categoria</th>
   </tr></thead>
   <tbody>
   {% for p in produtos %}
     <tr>
-      <td><a href="{{ url_for('web.produto', chave=p.chave) }}">{{ p.nome }}</a></td>
-      <td>{{ p.categoria }}</td>
-      <td class="num">{{ p.saldo|num }} {{ p.unidade }}</td>
-      <td class="num">{{ (p.minimo|num ~ ' ' ~ p.unidade) if p.minimo is not none else '—' }}</td>
-      <td class="num">{{ p.consumo.consumo_diario|num(2) if p.consumo.consumo_diario is not none else '—' }}</td>
-      <td class="num">{{ p.cobertura|dias if p.cobertura is not none else '—' }}</td>
-      <td>{{ p.consumo.confianca or 'sem estimativa' }}</td>
-      <td class="num">{% if p.valor_estoque is not none %}{{ p.valor_estoque|moeda }}{% else %}<span class="ausente">sem preço</span>{% endif %}</td>
-      <td>{{ p.classe_abc or '—' }}</td>
-      <td>{% if pior[p.chave] %}{{ selo(pior[p.chave]) }}{% endif %}</td>
+      <td class="destaque"><a href="{{ url_for('web.produto', chave=p.chave) }}">{{ p.nome }}</a></td>
+      <td data-rotulo="Alerta">{% if pior[p.chave] %}{{ selo(pior[p.chave]) }}{% endif %}</td>
+      <td class="num" data-rotulo="Saldo">{{ p.saldo|num }} {{ p.unidade }}</td>
+      <td class="num" data-rotulo="Dura até">{{ p.cobertura|dias if p.cobertura is not none else '—' }}</td>
+      <td data-rotulo="Confiança">{{ p.consumo.confianca or 'sem estimativa' }}</td>
+      <td class="num so-computador" data-rotulo="Mínimo">{{ (p.minimo|num ~ ' ' ~ p.unidade) if p.minimo is not none else '—' }}</td>
+      <td class="num so-computador" data-rotulo="Consumo/dia">{{ (p.consumo.consumo_diario|num(2) ~ ' ' ~ p.unidade) if p.consumo.consumo_diario is not none else '—' }}</td>
+      <td class="num" data-rotulo="Valor">{% if p.valor_estoque is not none %}{{ p.valor_estoque|moeda }}{% else %}<span class="ausente">sem preço</span>{% endif %}</td>
+      <td class="so-computador" data-rotulo="Categoria">{{ p.categoria }}</td>
     </tr>
   {% endfor %}
   </tbody>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_macros.html" import cabecalho_pagina, icone with context %}
+{% block title %}Mais{% endblock %}
+{% block content %}
+{{ cabecalho_pagina('Mais opções') }}
+
+<nav class="cartao" aria-label="Outras páginas">
+  <ul class="lista-links">
+    <li><a href="{{ url_for('web.importar') }}">{{ icone('file-spreadsheet') }} Importar planilha {{ icone('chevron-right') }}</a></li>
+    <li><a href="{{ url_for('web.qualidade') }}">{{ icone('clipboard-check') }} Qualidade dos dados {{ icone('chevron-right') }}</a></li>
+    <li><a href="{{ url_for('web.movimentacoes') }}">{{ icone('history') }} Histórico de movimentações {{ icone('chevron-right') }}</a></li>
+    <li><a href="{{ url_for('web.alertas_csv') }}">{{ icone('download') }} Baixar alertas (CSV) {{ icone('chevron-right') }}</a></li>
+    <li><a href="{{ url_for('web.como_funciona') }}">{{ icone('book-open') }} Como funciona: critérios e limites {{ icone('chevron-right') }}</a></li>
+  </ul>
+</nav>
+
+<section class="cartao" id="data-referencia" aria-labelledby="titulo-data">
+  <h2 id="titulo-data">{{ icone('calendar') }} Data de referência</h2>
+  <p>Todas as contas ("vence em X dias", "consumo dos últimos 30 dias") usam esta data, e não o relógio do aparelho.
+    Agora: <strong>{{ res.data_referencia|data if res.data_referencia is not none else '—' }}</strong>
+    ({{ 'escolhida manualmente' if data_ref_manual else 'data da última movimentação' }}).</p>
+  <form method="post" action="{{ url_for('web.data_referencia') }}">
+    <div class="campo">
+      <label for="data_referencia">Nova data</label>
+      <input type="date" id="data_referencia" name="data_referencia"
+             value="{{ res.data_referencia.strftime('%Y-%m-%d') if res.data_referencia is not none else '' }}">
+    </div>
+    <div class="botoes">
+      <button type="submit" name="acao" value="manual">Usar esta data</button>
+      {% if data_ref_manual %}<button class="secundario" type="submit" name="acao" value="automatica">Voltar para a última movimentação</button>{% endif %}
+    </div>
+  </form>
+</section>
+
+<section class="cartao" aria-labelledby="titulo-demo">
+  <h2 id="titulo-demo">{{ icone('refresh-cw') }} Demonstração</h2>
+  <p>Apaga todas as movimentações, unificações e fatores e recarrega a base simulada original.</p>
+  <form method="post" action="{{ url_for('web.restaurar_demo') }}"
+        onsubmit="return confirm('Apagar todos os dados atuais e recarregar a base simulada?');">
+    <button class="perigo" type="submit">Restaurar base de demonstração</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,22 +1,64 @@
+{# Componentes reutilizáveis. Importar sempre "with context" (usam ICONES, CLASSES e url_for). #}
+
+{% macro icone(nome, classe='') -%}
+<svg class="icone {{ classe }}" aria-hidden="true" focusable="false"><use href="{{ url_for('static', filename='img/icones.svg') }}#i-{{ nome }}"></use></svg>
+{%- endmacro %}
+
 {% macro selo(severidade) -%}
-<span class="selo {{ CLASSES[severidade] }}"><span aria-hidden="true">{{ ICONES[severidade] }}</span> {{ severidade }}</span>
+<span class="selo {{ CLASSES[severidade] }}">{{ icone(ICONES[severidade]) }}{{ severidade }}</span>
+{%- endmacro %}
+
+{% macro cabecalho_pagina(titulo, subtitulo=none, voltar=none, voltar_rotulo='Voltar') -%}
+<header class="cabecalho-pagina">
+  {% if voltar %}<a class="voltar" href="{{ voltar }}">{{ icone('arrow-left') }} {{ voltar_rotulo }}</a>{% endif %}
+  <h1>{{ titulo }}</h1>
+  {% if subtitulo %}<p>{{ subtitulo }}</p>{% endif %}
+  {{ caller() if caller }}
+</header>
+{%- endmacro %}
+
+{% macro botao(rotulo, url, icone_nome=none, estilo='', bloco=false) -%}
+<a class="botao {{ estilo }} {{ 'bloco' if bloco }}" href="{{ url }}">{% if icone_nome %}{{ icone(icone_nome) }}{% endif %}{{ rotulo }}</a>
+{%- endmacro %}
+
+{% macro indicador(numero, rotulo, url=none, classe='', valor=false) -%}
+{% if url %}<a class="cartao indicador {{ classe }}" href="{{ url }}">{% else %}<div class="cartao indicador {{ classe }}">{% endif %}
+  <div class="numero {{ 'valor' if valor }}">{{ numero }}</div>
+  <div class="rotulo">{{ rotulo }}</div>
+{% if url %}</a>{% else %}</div>{% endif %}
+{%- endmacro %}
+
+{% macro estado_vazio(titulo, texto=none, acao_rotulo=none, acao_url=none, icone_nome='circle-check') -%}
+<div class="estado-vazio cartao">
+  {{ icone(icone_nome) }}
+  <p><strong>{{ titulo }}</strong></p>
+  {% if texto %}<p>{{ texto }}</p>{% endif %}
+  {% if acao_url %}<p>{{ botao(acao_rotulo, acao_url) }}</p>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro mensagem(texto, tipo='ok') -%}
+<div class="mensagem {{ tipo }}" role="{{ 'alert' if tipo == 'erro' else 'status' }}">
+  {{ icone({'ok': 'circle-check', 'erro': 'octagon-alert', 'aviso': 'triangle-alert'}[tipo]) }}<span>{{ texto }}</span>
+</div>
 {%- endmacro %}
 
 {% macro alerta(a, mostrar_produto=true) -%}
 <article class="alerta {{ CLASSES[a.severidade] }}">
-  <div class="alerta-cabecalho">
+  <div class="alerta-topo">
     {{ selo(a.severidade) }}
-    <span class="alerta-titulo">{{ a.titulo }}{% if mostrar_produto %} —
-      <a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a>{% endif %}</span>
-    <span class="prioridade" title="Score de prioridade">Prioridade {{ a.score }}</span>
+    <h3 class="alerta-titulo">{{ a.titulo }}{% if mostrar_produto %} —
+      <a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a>{% endif %}</h3>
   </div>
   <p>{{ a.mensagem }}</p>
   <details>
-    <summary>Por que este alerta? (regra, limites e prioridade)</summary>
-    <p><strong>Regra aplicada:</strong> {{ a.regra }}</p>
-    <p><strong>Quando pode errar:</strong> {{ a.limite }}</p>
-    <p><strong>Prioridade {{ a.score }}</strong> = {{ a.score_partes|join('; ') }}.</p>
-    <p class="suave">Categoria: {{ a.categoria }}</p>
+    <summary>{{ icone('circle-help') }} Por que este alerta? {{ icone('chevron-down', 'icone-abrir') }}</summary>
+    <div class="detalhes">
+      <p><strong>Regra aplicada:</strong> {{ a.regra }}</p>
+      <p><strong>Quando pode errar:</strong> {{ a.limite }}</p>
+      <p><strong>Prioridade {{ a.score }}</strong> = {{ a.score_partes|join('; ') }}.</p>
+      <p>Categoria: {{ a.categoria }}</p>
+    </div>
   </details>
 </article>
 {%- endmacro %}
@@ -24,11 +66,28 @@
 {% macro lista_mudancas(m) -%}
 {% if m and (m.novos or m.resolvidos or m.mudaram) %}
 <ul>
-  {% for x in m.novos %}<li>🆕 <strong>Novo:</strong> {{ selo(x.severidade) }} {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
-  {% for x in m.mudaram %}<li>{{ '⬆️' if x.piorou else '⬇️' }} <strong>{{ 'Piorou' if x.piorou else 'Melhorou' }}:</strong> {{ x.titulo }} — {{ x.produto }} ({{ x.de }} → {{ x.para }})</li>{% endfor %}
-  {% for x in m.resolvidos %}<li>✅ <strong>Resolvido:</strong> {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
+  {% for x in m.novos %}<li><strong>Novo:</strong> {{ selo(x.severidade) }} {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
+  {% for x in m.mudaram %}<li><strong>{{ 'Piorou' if x.piorou else 'Melhorou' }}:</strong> {{ x.titulo }} — {{ x.produto }} ({{ x.de }} → {{ x.para }})</li>{% endfor %}
+  {% for x in m.resolvidos %}<li><strong>Resolvido:</strong> {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
 </ul>
 {% else %}
 <p>Nenhum alerta novo, resolvido ou com severidade diferente.</p>
 {% endif %}
+{%- endmacro %}
+
+{% macro atalhos_registrar() -%}
+<ul class="atalhos">
+  <li><a class="atalho" href="{{ url_for('web.registrar', tipo='saida') }}">{{ icone('package-minus') }}Registrar retirada<small>Saída do estoque</small></a></li>
+  <li><a class="atalho" href="{{ url_for('web.registrar', tipo='entrada') }}">{{ icone('package-plus') }}Registrar entrada<small>Compra ou recebimento</small></a></li>
+  <li><a class="atalho" href="{{ url_for('web.importar') }}">{{ icone('file-spreadsheet') }}Importar planilha<small>CSV ou XLSX</small></a></li>
+  <li><a class="atalho" href="{{ url_for('web.alertas', severidade='Crítico') }}">{{ icone('siren') }}Ver urgentes<small>Alertas críticos</small></a></li>
+</ul>
+{%- endmacro %}
+
+{% macro nav_itens(secao, criticos) -%}
+<li><a class="nav-item" href="{{ url_for('web.painel') }}" {% if secao == 'inicio' %}aria-current="page"{% endif %}>{{ icone('house') }}<span class="rotulo">Início</span></a></li>
+<li><a class="nav-item" href="{{ url_for('web.alertas') }}" {% if secao == 'alertas' %}aria-current="page"{% endif %}>{{ icone('bell') }}<span class="rotulo">Alertas</span>{% if criticos %}<span class="contador" aria-label="{{ criticos }} críticos">{{ criticos }}</span>{% endif %}</a></li>
+<li><a class="nav-item nav-registrar" href="{{ url_for('web.atalhos') }}" data-abre-folha="menu-registrar" {% if secao == 'registrar' %}aria-current="page"{% endif %}><span class="bolha">{{ icone('plus') }}</span><span class="rotulo">Registrar</span></a></li>
+<li><a class="nav-item" href="{{ url_for('web.produtos') }}" {% if secao == 'estoque' %}aria-current="page"{% endif %}>{{ icone('package') }}<span class="rotulo">Estoque</span></a></li>
+<li><a class="nav-item" href="{{ url_for('web.mais') }}" {% if secao == 'mais' %}aria-current="page"{% endif %}>{{ icone('ellipsis') }}<span class="rotulo">Mais</span></a></li>
 {%- endmacro %}

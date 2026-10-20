@@ -22,8 +22,14 @@ bp = Blueprint("web", __name__)
 
 CATEGORIAS = ["Fertilizantes", "Corretivos", "Sementes", "Defensivos e biológicos",
               "Combustíveis e lubrificantes", "Peças e manutenção", "Irrigação", "EPI e diversos"]
-ICONES = {"Crítico": "⛔", "Atenção": "⚠️", "Informativo": "ℹ️"}
+ICONES = {"Crítico": "octagon-alert", "Atenção": "triangle-alert", "Informativo": "info"}
 CLASSES = {"Crítico": "critico", "Atenção": "atencao", "Informativo": "informativo"}
+# Item do menu destacado em cada página.
+SECOES = {
+    "web.painel": "inicio", "web.alertas": "alertas", "web.registrar": "registrar", "web.atalhos": "registrar",
+    "web.produtos": "estoque", "web.produto": "estoque", "web.busca": "estoque",
+}
+POR_PAGINA = 50
 
 
 @bp.app_context_processor
@@ -34,6 +40,8 @@ def contexto_global():
         "data_ref_manual": servicos.data_referencia_configurada() is not None,
         "dados_simulados": db.contar_movimentacoes("simulado") > 0,
         "ICONES": ICONES, "CLASSES": CLASSES,
+        "secao": SECOES.get(request.endpoint, "mais"),
+        "busca_atual": request.args.get("q", "") if request.endpoint == "web.busca" else "",
     }
 
 
@@ -139,14 +147,39 @@ def produto(chave):
     return render_template("produto.html", p=prod, alertas=alertas, movs=movs, qualidade=qualidade)
 
 
+@bp.route("/busca")
+def busca():
+    res = servicos.analise_atual()
+    termo = normalizar_texto(request.args.get("q", ""))
+    achados = [p for p in res.produtos if termo and termo in normalizar_texto(p["nome"])] if termo else []
+    exato = [p for p in achados if normalizar_texto(p["nome"]) == termo]
+    if len(exato) == 1 or len(achados) == 1:
+        return redirect(url_for("web.produto", chave=(exato or achados)[0]["chave"]))
+    return render_template("busca.html", achados=achados, termo=request.args.get("q", ""))
+
+
 @bp.route("/movimentacoes")
 def movimentacoes():
     movs = db.carregar_movimentacoes().sort_values(["data", "id"], ascending=False)
-    busca = request.args.get("q", "").strip()
+    busca = request.args.get("filtro", "").strip()
     if busca:
         movs = movs[movs["produto"].map(normalizar_texto).str.contains(normalizar_texto(busca), regex=False)]
-    return render_template("movimentacoes.html", movs=movs.head(300).to_dict("records"), total=len(movs),
-                           busca=busca)
+    total = len(movs)
+    paginas = max(1, -(-total // POR_PAGINA))
+    pagina = min(max(1, request.args.get("pagina", 1, type=int)), paginas)
+    inicio = (pagina - 1) * POR_PAGINA
+    return render_template("movimentacoes.html", movs=movs.iloc[inicio:inicio + POR_PAGINA].to_dict("records"),
+                           total=total, busca=busca, pagina=pagina, paginas=paginas)
+
+
+@bp.route("/registrar/atalhos")
+def atalhos():
+    return render_template("atalhos.html")
+
+
+@bp.route("/mais")
+def mais():
+    return render_template("mais.html")
 
 
 # ------------------------------------------------------------------ cadastro manual
@@ -171,7 +204,8 @@ def registrar():
         flash(f"{motivo}. Alertas recalculados.", "ok")
         return redirect(url_for("web.painel"))
     data_padrao = res.data_referencia.strftime("%Y-%m-%d") if res.data_referencia is not None else ""
-    form = {"data": data_padrao, "tipo": "saida", "produto": request.args.get("produto", "")}
+    tipo = "entrada" if request.args.get("tipo") == "entrada" else "saida"
+    form = {"data": data_padrao, "tipo": tipo, "produto": request.args.get("produto", "")}
     prod = next((p for p in res.produtos if p["nome"] == form["produto"]), None)
     if prod:
         form.update(unidade=prod["unidade"], categoria=prod["categoria"])
