@@ -180,9 +180,10 @@ plantados** na base simulada, sem alertas extras. Detalhes, limitações conheci
 | Chart.js 4.4.1 (em `app/static/`) | gráficos | MIT |
 | pytest | testes | MIT |
 | gunicorn | servidor em produção (Linux) | MIT |
+| Ícones Lucide 0.460.0 (sprite em `app/static/img/icones.svg`) | ícones da interface | ISC ([licença](app/static/img/LICENSE-lucide.txt)) |
 
 Uso de IA declarado em [`AI_USAGE.md`](AI_USAGE.md) (ferramentas, partes apoiadas e revisão humana).
-Ícones são emojis Unicode; não há imagens de terceiros.
+Os ícones são do projeto Lucide (licença ISC); não há outras imagens de terceiros.
 
 ## 9. Autoria e licença
 
