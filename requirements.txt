@@ -1,0 +1,7 @@
+Flask>=3.1,<4
+pandas>=2.3,<3
+numpy>=2.3,<3
+openpyxl>=3.1,<4
+rapidfuzz>=3.14,<4
+python-dotenv>=1.1,<2
+pytest>=8.4,<9

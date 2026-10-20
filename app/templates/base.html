@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Gestão de Insumos{% endblock %}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; font-size: 1.05rem; line-height: 1.5;
+           margin: 0; color: #1a1a1a; background: #fafaf7; }
+    main { max-width: 960px; margin: 0 auto; padding: 1rem; }
+    .aviso-simulado { background: #fff3cd; color: #5c4400; border-bottom: 2px solid #b58900;
+                      padding: .6rem 1rem; text-align: center; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="aviso-simulado" role="status">⚠ Dados SIMULADOS para demonstração — não são de uma propriedade real.</div>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

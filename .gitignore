@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ambientes virtuais
+venv/
+.venv/
+
+# Variáveis de ambiente e segredos
+.env
+
+# Flask / bancos locais
+instance/
+*.db
+*.sqlite3
+
+# Base OFICIAL do desafio: não versionar até a organização autorizar
+data/oficial/*
+!data/oficial/README.md
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Pacotes
+*.zip
