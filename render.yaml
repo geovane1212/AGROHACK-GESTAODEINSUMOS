@@ -1,0 +1,14 @@
+# Blueprint do Render (render.com): New → Blueprint → selecione este repositório.
+# Plano gratuito: o disco é temporário, então o banco é recriado com os dados simulados a cada início
+# (SEED_DEMO=1). Movimentações cadastradas na demonstração online se perdem quando o serviço reinicia.
+services:
+  - type: web
+    name: agrohack-gestao-insumos
+    runtime: docker
+    plan: free
+    healthCheckPath: /como-funciona
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SEED_DEMO
+        value: "1"
