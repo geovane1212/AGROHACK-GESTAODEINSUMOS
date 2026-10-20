@@ -1,0 +1,1723 @@
+produto,categoria,unidade,quantidade,estoque_minimo,tipo,data,preco_unitario,lote,validade,fornecedor,destino,responsavel
+Adjuvante,Defensivos e biológicos,L,24.0,4.0,entrada,2026-03-02,30.06,ADJ-2603-1,2028-02-20,Cooperativa C,,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-03-02,38.15,ATR-2603-1,2028-02-20,Agro Fornecedor A,,Encarregado
+Azospirillum,Defensivos e biológicos,L,12.0,2.0,entrada,2026-03-02,53.22,AZO-2603-1,2027-02-25,Agro Fornecedor A,,Almoxarife
+Bota de borracha,EPI e diversos,par,3,1,entrada,2026-03-02,65.08,BOT-2603-1,,Distribuidora Rural B,,Encarregado
+Braquiária,Sementes,kg,120,20,entrada,2026-03-02,29.42,BRA-2603-1,2027-08-24,Distribuidora Rural B,,Almoxarife
+Calcário dolomítico,Corretivos,t,30.0,5.0,entrada,2026-03-02,212.64,CAL-2603-1,,Cooperativa C,,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,3600,600,entrada,2026-03-02,3.0,CLO-2603-1,,Agro Fornecedor A,,Almoxarife
+Conector de irrigação,Irrigação,un,60,10,entrada,2026-03-02,3.59,CON-2603-1,,Distribuidora Rural B,,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,9600,1920,entrada,2026-03-02,6.26,DIE-2603-1,,Distribuidora Rural B,,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,180,30,entrada,2026-03-02,,EST-2603-1,,Agro Fornecedor A,,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,180,30,entrada,2026-03-02,7.53,FTE-2603-1,,Cooperativa C,,Tratorista B
+Filtro de ar,Peças e manutenção,un,4,1,entrada,2026-03-02,144.99,FIL-2603-1,,Agro Fornecedor A,,Encarregado
+Filtro de óleo,Peças e manutenção,un,6,1,entrada,2026-03-02,88.91,FIL-2603-1,,Distribuidora Rural B,,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-03-02,115.35,FUN-2603-1,2028-02-20,Distribuidora Rural B,,Tratorista B
+Gesso agrícola,Corretivos,t,18.0,3.0,entrada,2026-03-02,162.67,GES-2603-1,,Cooperativa C,,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,180,120,entrada,2026-03-02,28.88,GLI-2603-1,2028-03-01,Cooperativa C,,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,120.0,4.5,entrada,2026-03-02,23.12,GRA-2603-1,,Agro Fornecedor A,,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,120,20,entrada,2026-03-02,31.1,HER-2603-1,2028-02-20,Cooperativa C,,Almoxarife
+Luva nitrílica,EPI e diversos,par,120,20,entrada,2026-03-02,4.38,LUV-2603-1,,Agro Fornecedor A,,Operador de pulverização
+MAP,Fertilizantes,kg,1800,300,entrada,2026-03-02,4.72,MAP-2603-1,,Distribuidora Rural B,,Tratorista B
+Mangueira de gotejamento,Irrigação,m,1200,200,entrada,2026-03-02,1.22,MAN-2603-1,,Distribuidora Rural B,,Encarregado
+NPK 04-14-08,Fertilizantes,kg,4800,800,entrada,2026-03-02,3.19,NPK-2603-1,,Distribuidora Rural B,,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,3000,500,entrada,2026-03-02,4.16,NPK-2603-1,,Agro Fornecedor A,,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,30,5,entrada,2026-03-02,9.1,RES-2603-1,,Distribuidora Rural B,,Almoxarife
+Rolamento 6205,Peças e manutenção,un,3,1,entrada,2026-03-02,124.07,ROL-2603-1,,Agro Fornecedor A,,Encarregado
+Semente de milho,Sementes,sc,48,8,entrada,2026-03-02,948.26,SEM-2603-1,2027-08-24,Cooperativa C,,Operador de pulverização
+Semente de soja,Sementes,sc,60,10,entrada,2026-03-02,369.7,SEM-2603-1,2027-08-24,Cooperativa C,,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,1500,250,entrada,2026-03-02,2.65,SUL-2603-1,,Cooperativa C,,Encarregado
+Ureia,Fertilizantes,sc,60,1000,entrada,2026-03-02,163.64,URE-2603,,Cooperativa C,,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,60,10,entrada,2026-03-02,20.36,ÓLE-2603-1,,Agro Fornecedor A,,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,48.0,8.0,entrada,2026-03-02,21.5,ÓLE-2603-1,,Agro Fornecedor A,,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,194.5,1920,saída,2026-03-03,,,,,Pulverizador,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-03,,,,,Almoxarifado,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,149.7,1920,saída,2026-03-04,,,,,Oficina,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-03-04,,,,,Pivô 1,Almoxarife
+Ureia,Fertilizantes,kg,106.3,1000,saída,2026-03-04,,,,,Talhão 4,Operador de pulverização
+Bico de pulverização,Peças e manutenção,un,12,4,entrada,2026-03-05,18,BIC-01,,Agro Fornecedor A,,Encarregado
+Braquiária,Sementes,kg,10.9,20,saída,2026-03-05,,,,,Talhão 3,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,210.5,1920,saída,2026-03-05,,,,,Oficina,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-05,,,,,Almoxarifado,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,311.8,800,saída,2026-03-05,,,,,Talhão 5,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-03-05,,,,,Talhão 1,Almoxarife
+Ureia,Fertilizantes,kg,118.0,1000,saída,2026-03-05,,,,,Talhão 5,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-03-06,,,,,Talhão 4,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,6.0,15.0,saída,2026-03-06,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,218.1,1920,saída,2026-03-06,,,,,Colheitadeira,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,21.6,30,saída,2026-03-06,,,,,Talhão 5,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-03-06,,,,,Talhão 2,Encarregado
+Gesso agrícola,Corretivos,t,2.12,3.0,saída,2026-03-06,,,,,Talhão 5,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,11.4,120,saída,2026-03-06,,,,,Talhão 2,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.8,20,saída,2026-03-06,,,,,Talhão 4,Operador de pulverização
+MAP,Fertilizantes,kg,157.0,300,saída,2026-03-06,,,,,Talhão 3,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-06,,,,,Almoxarifado,Encarregado
+Sulfato de amônio,Fertilizantes,kg,97.2,250,saída,2026-03-06,,,,,Talhão 5,Tratorista B
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-03-06,,,,,Pulverizador,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,271.4,600,saída,2026-03-07,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,189.3,1920,saída,2026-03-07,,,,,Trator 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-03-07,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,233.0,500,saída,2026-03-07,,,,,Pivô 1,Almoxarife
+Ureia,Fertilizantes,kg,87.7,1000,saída,2026-03-07,,,,,Talhão 5,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,168.3,1920,saída,2026-03-08,,,,,Trator 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-03-08,,,,,Talhão 3,Tratorista A
+Semente de milho,Sementes,sc,2,8,saída,2026-03-08,,,,,Talhão 4,Tratorista A
+Semente de soja,Sementes,sc,4,10,saída,2026-03-08,,,,,Talhão 5,Almoxarife
+Ureia,Fertilizantes,kg,107.6,1000,saída,2026-03-08,,,,,Talhão 2,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.8,10,saída,2026-03-08,,,,,Oficina,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.8,15.0,saída,2026-03-09,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,152.5,1920,saída,2026-03-09,,,,,Trator 1,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,13.2,120,saída,2026-03-09,,,,,Talhão 2,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-03-09,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,255.6,800,saída,2026-03-09,,,,,Talhão 1,Tratorista A
+Trichoderma,Defensivos e biológicos,kg,10,2,entrada,2026-03-10,60,TRI-01,2026-09-15,Cooperativa C,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1800,4.0,saída,2026-03-10,,,,,Talhão 2,Tratorista B
+Azospirillum,Defensivos e biológicos,L,2.1,2.0,saída,2026-03-10,,,,,Talhão 5,Encarregado
+Braquiária,Sementes,kg,10.4,20,saída,2026-03-10,,,,,Talhão 3,Almoxarife
+Conector de irrigação,Irrigação,un,5,10,saída,2026-03-10,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,270.0,1920,saída,2026-03-10,,,,,Trator 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,15,30,saída,2026-03-10,,,,,Talhão 5,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.3,15.0,saída,2026-03-10,,,,,Talhão 3,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-03-10,,,,,Trator 2,Tratorista B
+MAP,Fertilizantes,kg,121.6,300,saída,2026-03-10,,,,,Talhão 5,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,133.1,250,saída,2026-03-10,,,,,Talhão 4,Encarregado
+Calcário dolomítico,Corretivos,t,3.74,5.0,saída,2026-03-11,,,,,Talhão 2,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,185.8,1920,saída,2026-03-11,,,,,Trator 1,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.9,20,saída,2026-03-11,,,,,Talhão 3,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-11,,,,,Almoxarifado,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,189.6,500,saída,2026-03-11,,,,,Talhão 2,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-03-11,,,,,Pivô 1,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.8,8.0,saída,2026-03-11,,,,,Trator 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,193.2,1920,saída,2026-03-12,,,,,Oficina,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-03-12,,,,,Colheitadeira,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.7,15.0,saída,2026-03-12,,,,,Talhão 1,Tratorista A
+Mangueira de gotejamento,Irrigação,m,133.5,200,saída,2026-03-12,,,,,Pivô 1,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-12,,,,,Almoxarifado,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-03-12,,,,,Talhão 4,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,5.4,15.0,saída,2026-03-13,,,,,Talhão 5,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,368.7,600,saída,2026-03-13,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,192.6,1920,saída,2026-03-13,,,,,Colheitadeira,Encarregado
+Gesso agrícola,Corretivos,t,1.87,3.0,saída,2026-03-13,,,,,Pivô 1,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-13,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,313.5,800,saída,2026-03-13,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,205.5,1920,saída,2026-03-14,,,,,Pulverizador,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-03-14,,,,,Talhão 3,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.4,15.0,saída,2026-03-14,,,,,Pivô 1,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,11.9,120,saída,2026-03-14,,,,,Talhão 4,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1800,4.0,saída,2026-03-15,,,,,Talhão 3,Tratorista A
+Conector de irrigação,Irrigação,un,7,10,saída,2026-03-15,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,185.2,1920,saída,2026-03-15,,,,,Oficina,Encarregado
+FTE BR-12,Fertilizantes,kg,36.9,30,saída,2026-03-15,,,,,Pivô 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-15,,,,,Almoxarifado,Operador de pulverização
+Semente de milho,Sementes,sc,4,8,saída,2026-03-15,,,,,Talhão 3,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-03-15,,,,,Talhão 2,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.4,10,saída,2026-03-15,,,,,Pulverizador,Tratorista B
+Correia da colheitadeira,Peças e manutenção,un,4,1,entrada,2026-03-16,2800,COR-01,,Agro Fornecedor A,,Almoxarife
+Braquiária,Sementes,kg,13.2,20,saída,2026-03-16,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,188.7,1920,saída,2026-03-16,,,,,Trator 1,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.6,15.0,saída,2026-03-16,,,,,Talhão 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.3,20,saída,2026-03-16,,,,,Talhão 1,Tratorista B
+MAP,Fertilizantes,kg,166.3,300,saída,2026-03-16,,,,,Pivô 1,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,142.5,500,saída,2026-03-16,,,,,Talhão 4,Encarregado
+Sulfato de amônio,Fertilizantes,kg,126.6,250,saída,2026-03-16,,,,,Talhão 4,Tratorista A
+Ureia,Fertilizantes,kg,105.4,1000,saída,2026-03-16,,,,,Talhão 1,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.4,8.0,saída,2026-03-16,,,,,Trator 1,Tratorista A
+Atrazina,Defensivos e biológicos,L,5.8,15.0,saída,2026-03-17,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,192.8,1920,saída,2026-03-17,,,,,Trator 2,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-03-17,,,,,Pivô 1,Operador de pulverização
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-03-17,,,,,Colheitadeira,Encarregado
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-03-17,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,391.8,800,saída,2026-03-17,,,,,Talhão 4,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-17,,,,,Almoxarifado,Almoxarife
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-03-17,,,,,Colheitadeira,Tratorista B
+Ureia,Fertilizantes,kg,129.6,1000,saída,2026-03-17,,,,,Talhão 2,Almoxarife
+Calcário dolomítico,Corretivos,t,4.76,5.0,saída,2026-03-18,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,179.0,1920,saída,2026-03-18,,,,,Trator 1,Tratorista A
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-03-18,,,,,Oficina,Tratorista A
+Gesso agrícola,Corretivos,t,1.66,3.0,saída,2026-03-18,,,,,Pivô 1,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-03-18,,,,,Talhão 1,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-03-19,,,,,Talhão 4,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,140.2,1920,saída,2026-03-19,,,,,Trator 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-03-19,,,,,Almoxarifado,Almoxarife
+MAP,Fertilizantes,kg,140.4,300,saída,2026-03-19,,,,,Pivô 1,Almoxarife
+Mangueira de gotejamento,Irrigação,m,118.5,200,saída,2026-03-19,,,,,Pivô 1,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,220.0,500,saída,2026-03-19,,,,,Talhão 4,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-03-19,,,,,Talhão 4,Encarregado
+FTE BR-12,Fertilizantes,kg,180.0,30,entrada,2026-03-20,7.26,FTE-2603-2,,Distribuidora Rural B,,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,323.5,600,saída,2026-03-20,,,,,Talhão 5,Operador de pulverização
+Conector de irrigação,Irrigação,un,8,10,saída,2026-03-20,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,189.9,1920,saída,2026-03-20,,,,,Trator 2,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-03-20,,,,,Talhão 4,Encarregado
+FTE BR-12,Fertilizantes,kg,16.8,30,saída,2026-03-20,,,,,Talhão 2,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-03-20,,,,,Oficina,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.1,15.0,saída,2026-03-20,,,,,Talhão 4,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,10.8,120,saída,2026-03-20,,,,,Talhão 2,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.9,20,saída,2026-03-20,,,,,Talhão 1,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,132.4,250,saída,2026-03-20,,,,,Pivô 1,Tratorista B
+Ureia,Fertilizantes,kg,75.2,1000,saída,2026-03-20,,,,,Talhão 3,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,3.8,10,saída,2026-03-20,,,,,Trator 1,Almoxarife
+Braquiária,Sementes,kg,13.4,20,saída,2026-03-21,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,200.0,1920,saída,2026-03-21,,,,,Oficina,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-03-21,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,254.8,800,saída,2026-03-21,,,,,Talhão 1,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-21,,,,,Almoxarifado,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-03-21,,,,,Talhão 4,Tratorista B
+Ureia,Fertilizantes,kg,77.2,1000,saída,2026-03-21,,,,,Talhão 4,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-03-22,,,,,Talhão 3,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.6,15.0,saída,2026-03-22,,,,,Talhão 4,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.7,4.5,saída,2026-03-22,,,,,Trator 1,Encarregado
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-03-22,,,,,Colheitadeira,Tratorista A
+Azospirillum,Defensivos e biológicos,L,1.6,2.0,saída,2026-03-23,,,,,Talhão 3,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,169.6,1920,saída,2026-03-23,,,,,Colheitadeira,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-23,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,130.2,300,saída,2026-03-23,,,,,Talhão 2,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,201.7,500,saída,2026-03-23,,,,,Talhão 3,Operador de pulverização
+Semente de milho,Sementes,sc,3,8,saída,2026-03-23,,,,,Talhão 4,Encarregado
+Ureia,Fertilizantes,kg,98.3,1000,saída,2026-03-23,,,,,Pivô 1,Tratorista A
+Gesso agrícola,Corretivos,t,18.0,3.0,entrada,2026-03-24,159.07,GES-2603-2,,Cooperativa C,,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,1500.0,250,entrada,2026-03-24,2.48,SUL-2603-2,,Distribuidora Rural B,,Almoxarife
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-03-24,,,,,Almoxarifado,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,331.4,600,saída,2026-03-24,,,,,Talhão 3,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,214.7,1920,saída,2026-03-24,,,,,Trator 1,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-03-24,,,,,Talhão 3,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-03-24,,,,,Talhão 4,Encarregado
+Gesso agrícola,Corretivos,t,2.3,3.0,saída,2026-03-24,,,,,Talhão 1,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,15.2,120,saída,2026-03-24,,,,,Talhão 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,10.0,20,saída,2026-03-24,,,,,Talhão 1,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,332.4,800,saída,2026-03-24,,,,,Talhão 2,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-24,,,,,Almoxarifado,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-03-24,,,,,Talhão 4,Encarregado
+Sulfato de amônio,Fertilizantes,kg,137.6,250,saída,2026-03-24,,,,,Talhão 4,Operador de pulverização
+Trichoderma,Defensivos e biológicos,kg,1,2,saída,2026-03-24,,,,,Talhão 4,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.0,10,saída,2026-03-24,,,,,Trator 2,Almoxarife
+Calcário dolomítico,Corretivos,t,3.84,5.0,saída,2026-03-25,,,,,Talhão 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,161.4,1920,saída,2026-03-25,,,,,Trator 2,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-25,,,,,Almoxarifado,Almoxarife
+Braquiária,Sementes,kg,120.0,20,entrada,2026-03-26,26.88,BRA-2603-2,2027-09-17,Distribuidora Rural B,,Tratorista A
+Conector de irrigação,Irrigação,un,60,10,entrada,2026-03-26,3.64,CON-2603-2,,Cooperativa C,,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,48.0,8.0,entrada,2026-03-26,21.58,ÓLE-2603-2,,Agro Fornecedor A,,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-03-26,,,,,Talhão 1,Operador de pulverização
+Braquiária,Sementes,kg,14.1,20,saída,2026-03-26,,,,,Talhão 1,Tratorista B
+Conector de irrigação,Irrigação,un,10,10,saída,2026-03-26,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,183.8,1920,saída,2026-03-26,,,,,Trator 1,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,20.6,30,saída,2026-03-26,,,,,Talhão 4,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-26,,,,,Almoxarifado,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-03-26,,,,,Oficina,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-03-27,116.95,FUN-2603-2,2028-03-16,Distribuidora Rural B,,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,120,20,entrada,2026-03-27,4.47,LUV-2603-2,,Cooperativa C,,Encarregado
+Semente de milho,Sementes,sc,48,8,entrada,2026-03-27,951.63,SEM-2603-2,2027-09-18,Agro Fornecedor A,,Almoxarife
+Atrazina,Defensivos e biológicos,L,6.7,15.0,saída,2026-03-27,,,,,Talhão 1,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-03-27,,,,,Talhão 5,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-03-27,,,,,Oficina,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-27,,,,,Almoxarifado,Tratorista A
+Mangueira de gotejamento,Irrigação,m,136.5,200,saída,2026-03-27,,,,,Pivô 1,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-03-27,,,,,Talhão 2,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,120.8,250,saída,2026-03-27,,,,,Talhão 1,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,4800.0,800,entrada,2026-03-28,3.18,NPK-2603-2,,Agro Fornecedor A,,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,183.8,1920,saída,2026-03-28,,,,,Colheitadeira,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,9.8,120,saída,2026-03-28,,,,,Talhão 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.0,20,saída,2026-03-28,,,,,Talhão 2,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,281.1,800,saída,2026-03-28,,,,,Talhão 1,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,177.9,500,saída,2026-03-28,,,,,Talhão 5,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-03-28,,,,,Talhão 5,Tratorista A
+Adjuvante,Defensivos e biológicos,L,24.0,4.0,entrada,2026-03-29,28.99,ADJ-2603-2,2028-03-18,Distribuidora Rural B,,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,2700.0,600,entrada,2026-03-29,3.06,CLO-2603-2,,Cooperativa C,,Encarregado
+Estacas de eucalipto,EPI e diversos,un,180,30,entrada,2026-03-29,,EST-2603-2,,Agro Fornecedor A,,Tratorista B
+Filtro de óleo,Peças e manutenção,un,6,1,entrada,2026-03-29,83.31,FIL-2603-2,,Distribuidora Rural B,,Almoxarife
+Respirador PFF2,EPI e diversos,un,30,5,entrada,2026-03-29,8.33,RES-2603-2,,Agro Fornecedor A,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1000,4.0,saída,2026-03-29,,,,,Talhão 1,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,249.0,600,saída,2026-03-29,,,,,Talhão 4,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,158.3,1920,saída,2026-03-29,,,,,Colheitadeira,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,9,30,saída,2026-03-29,,,,,Talhão 4,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-03-29,,,,,Oficina,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-29,,,,,Almoxarifado,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-03-29,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,1800.0,300,entrada,2026-03-30,4.81,MAP-2603-2,,Agro Fornecedor A,,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,209.2,1920,saída,2026-03-30,,,,,Oficina,Tratorista A
+MAP,Fertilizantes,kg,152.4,300,saída,2026-03-30,,,,,Talhão 1,Encarregado
+Atrazina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-03-31,,ATR-2603-2,2028-03-20,Distribuidora Rural B,,Operador de pulverização
+Calcário dolomítico,Corretivos,t,30.0,5.0,entrada,2026-03-31,219.73,CAL-2603-2,,Distribuidora Rural B,,Operador de pulverização
+Filtro de ar,Peças e manutenção,un,4,1,entrada,2026-03-31,139.61,FIL-2603-2,,Agro Fornecedor A,,Encarregado
+Glifosato 480,Defensivos e biológicos,L,180.0,120,entrada,2026-03-31,27.55,GLI-2603-2,2028-03-30,Agro Fornecedor A,,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,120.0,20,entrada,2026-03-31,31.87,HER-2603-2,2028-03-20,Agro Fornecedor A,,Operador de pulverização
+Semente de soja,Sementes,sc,60,10,entrada,2026-03-31,387.54,SEM-2603-2,,Distribuidora Rural B,,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.5,15.0,saída,2026-03-31,,,,,Talhão 1,Operador de pulverização
+Calcário dolomítico,Corretivos,t,3.9,5.0,saída,2026-03-31,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,247.5,1920,saída,2026-03-31,,,,,Pulverizador,Tratorista A
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-03-31,,,,,Pulverizador,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.7,15.0,saída,2026-03-31,,,,,Talhão 2,Operador de pulverização
+Gesso agrícola,Corretivos,t,2.69,3.0,saída,2026-03-31,,,,,Talhão 4,Encarregado
+Glifosato 480,Defensivos e biológicos,L,14.1,120,saída,2026-03-31,,,,,Talhão 5,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.4,20,saída,2026-03-31,,,,,Talhão 2,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-03-31,,,,,Almoxarifado,Tratorista B
+Semente de milho,Sementes,sc,4,8,saída,2026-03-31,,,,,Pivô 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-03-31,,,,,Talhão 5,Encarregado
+Ureia,Fertilizantes,kg,93.0,1000,saída,2026-03-31,,,,,Pivô 1,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,3000.0,500,entrada,2026-04-01,4.19,NPK-2604-2,,Cooperativa C,,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,2800,4.0,saída,2026-04-01,,,,,Talhão 4,Encarregado
+Conector de irrigação,Irrigação,un,6,10,saída,2026-04-01,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,200.9,1920,saída,2026-04-01,,,,,Trator 2,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,159.0,500,saída,2026-04-01,,,,,Talhão 1,Almoxarife
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.0,10,saída,2026-04-01,,,,,Colheitadeira,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,12.0,2.0,entrada,2026-04-02,54.81,AZO-2604-2,2027-03-28,Agro Fornecedor A,,Tratorista A
+Mangueira de gotejamento,Irrigação,m,1200.0,200,entrada,2026-04-02,1.19,MAN-2604-2,,Agro Fornecedor A,,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,1.5,2.0,saída,2026-04-02,,,,,Pivô 1,Operador de pulverização
+Braquiária,Sementes,kg,11.1,20,saída,2026-04-02,,,,,Pivô 1,Almoxarife
+Cloreto de potássio (KCl),Fertilizantes,kg,270.8,600,saída,2026-04-02,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,159.2,1920,saída,2026-04-02,,,,,Trator 2,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.7,15.0,saída,2026-04-02,,,,,Talhão 5,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,134.5,200,saída,2026-04-02,,,,,Pivô 1,Encarregado
+NPK 04-14-08,Fertilizantes,kg,359.8,800,saída,2026-04-02,,,,,Talhão 1,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-02,,,,,Almoxarifado,Tratorista B
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.6,8.0,saída,2026-04-02,,,,,Oficina,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,193.2,1920,saída,2026-04-03,,,,,Trator 1,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,15,30,saída,2026-04-03,,,,,Talhão 5,Almoxarife
+FTE BR-12,Fertilizantes,kg,20.9,30,saída,2026-04-03,,,,,Talhão 3,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-03,,,,,Almoxarifado,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-04-03,,,,,Pivô 1,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,135.8,250,saída,2026-04-03,,,,,Talhão 4,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,2000,4.0,saída,2026-04-04,,,,,Pivô 1,Almoxarife
+Atrazina,Defensivos e biológicos,L,7.1,15.0,saída,2026-04-04,,,,,Talhão 3,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,243.1,1920,saída,2026-04-04,,,,,Colheitadeira,Encarregado
+Glifosato 480,Defensivos e biológicos,L,15.0,120,saída,2026-04-04,,,,,Pivô 1,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-04-04,,,,,Colheitadeira,Tratorista A
+Semente de milho,Sementes,sc,2,8,saída,2026-04-04,,,,,Talhão 4,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.9,15.0,saída,2026-04-05,,,,,Talhão 5,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.8,20,saída,2026-04-05,,,,,Talhão 2,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-05,,,,,Almoxarifado,Almoxarife
+MAP,Fertilizantes,kg,177.8,300,saída,2026-04-05,,,,,Talhão 2,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,216.0,800,saída,2026-04-05,,,,,Talhão 4,Encarregado
+NPK 04-30-16,Fertilizantes,kg,225.7,500,saída,2026-04-05,,,,,Talhão 1,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-05,,,,,Almoxarifado,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-04-05,,,,,Talhão 2,Encarregado
+Calcário dolomítico,Corretivos,t,4.63,5.0,saída,2026-04-06,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,192.4,1920,saída,2026-04-06,,,,,Pulverizador,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-04-06,,,,,Colheitadeira,Tratorista B
+Rolamento 6205,Peças e manutenção,un,3,1,entrada,2026-04-07,117.67,ROL-2604-2,,Cooperativa C,,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,100.0,10,entrada,2026-04-07,21.5,ÓLE-2604-2,,Agro Fornecedor A,,Encarregado
+Braquiária,Sementes,kg,9.4,20,saída,2026-04-07,,,,,Talhão 5,Tratorista B
+Conector de irrigação,Irrigação,un,7,10,saída,2026-04-07,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,289.8,1920,saída,2026-04-07,,,,,Trator 2,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-04-07,,,,,Talhão 3,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.4,15.0,saída,2026-04-07,,,,,Talhão 2,Encarregado
+Gesso agrícola,Corretivos,t,2.13,3.0,saída,2026-04-07,,,,,Talhão 1,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-04-07,,,,,Almoxarifado,Encarregado
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-04-07,,,,,Colheitadeira,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,111.7,250,saída,2026-04-07,,,,,Talhão 1,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.4,10,saída,2026-04-07,,,,,Trator 1,Almoxarife
+Bota de borracha,EPI e diversos,par,3,1,entrada,2026-04-08,66.65,BOT-2604-2,,Distribuidora Rural B,,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-04-08,,,,,Talhão 5,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,4.9,15.0,saída,2026-04-08,,,,,Talhão 1,Operador de pulverização
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-04-08,,,,,Pulverizador,Operador de pulverização
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-04-08,,,,,Almoxarifado,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,12.9,120,saída,2026-04-08,,,,,Talhão 4,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-08,,,,,Almoxarifado,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-04-08,,,,,Talhão 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,273.4,600,saída,2026-04-09,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,174.2,1920,saída,2026-04-09,,,,,Oficina,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,21.6,30,saída,2026-04-09,,,,,Pivô 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.6,20,saída,2026-04-09,,,,,Talhão 4,Almoxarife
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-04-09,,,,,Almoxarifado,Encarregado
+MAP,Fertilizantes,kg,167.2,300,saída,2026-04-09,,,,,Pivô 1,Encarregado
+Mangueira de gotejamento,Irrigação,m,138.1,200,saída,2026-04-09,,,,,Pivô 1,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,245.0,800,saída,2026-04-09,,,,,Talhão 5,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,143.3,500,saída,2026-04-09,,,,,Talhão 5,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-09,,,,,Almoxarifado,Tratorista A
+Semente de milho,Sementes,sc,4,8,saída,2026-04-09,,,,,Talhão 3,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.1,8.0,saída,2026-04-09,,,,,Trator 1,Encarregado
+Inseticida clorantraniliprole,Defensivos e biológicos,L,20,,entrada,2026-04-10,850,CLT-01,2028-04-01,Distribuidora Rural B,,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.9,15.0,saída,2026-04-10,,,,,Talhão 3,Almoxarife
+Ureia,Fertilizantes,kg,111.4,1000,saída,2026-04-10,,,,,Talhão 1,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.5,10,saída,2026-04-10,,,,,Trator 2,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1200,4.0,saída,2026-04-11,,,,,Talhão 2,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,231.4,1920,saída,2026-04-11,,,,,Trator 1,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-04-11,,,,,Oficina,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-11,,,,,Almoxarifado,Operador de pulverização
+Semente de soja,Sementes,sc,4,10,saída,2026-04-11,,,,,Talhão 5,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,132.2,250,saída,2026-04-11,,,,,Talhão 2,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.3,15.0,saída,2026-04-12,,,,,Talhão 3,Tratorista B
+Azospirillum,Defensivos e biológicos,L,2.1,2.0,saída,2026-04-12,,,,,Talhão 2,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,167.3,1920,saída,2026-04-12,,,,,Pulverizador,Encarregado
+Gesso agrícola,Corretivos,t,2.24,3.0,saída,2026-04-12,,,,,Talhão 1,Encarregado
+Glifosato 480,Defensivos e biológicos,L,13.0,120,saída,2026-04-12,,,,,Pivô 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-12,,,,,Almoxarifado,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,311.5,600,saída,2026-04-13,,,,,Talhão 5,Almoxarife
+Conector de irrigação,Irrigação,un,8,10,saída,2026-04-13,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,200.9,1920,saída,2026-04-13,,,,,Trator 2,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-04-13,,,,,Talhão 4,Encarregado
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-04-13,,,,,Trator 2,Operador de pulverização
+MAP,Fertilizantes,kg,150.6,300,saída,2026-04-13,,,,,Talhão 1,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,260.1,800,saída,2026-04-13,,,,,Talhão 1,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,236.4,500,saída,2026-04-13,,,,,Talhão 2,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-13,,,,,Almoxarifado,Operador de pulverização
+Semente de milho,Sementes,sc,3,8,saída,2026-04-13,,,,,Pivô 1,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,8.3,15.0,saída,2026-04-14,,,,,Talhão 2,Almoxarife
+Braquiária,Sementes,kg,13.6,20,saída,2026-04-14,,,,,Talhão 2,Tratorista B
+Calcário dolomítico,Corretivos,t,3.77,5.0,saída,2026-04-14,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,186.4,1920,saída,2026-04-14,,,,,Pulverizador,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.0,15.0,saída,2026-04-14,,,,,Talhão 5,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.7,20,saída,2026-04-14,,,,,Pivô 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-04-14,,,,,Almoxarifado,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-04-14,,,,,Talhão 2,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,1,2,saída,2026-04-14,,,,,Talhão 4,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.9,10,saída,2026-04-14,,,,,Trator 1,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-04-14,,,,,Pulverizador,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-04-15,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,254.7,1920,saída,2026-04-15,,,,,Trator 1,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,130.2,250,saída,2026-04-15,,,,,Talhão 5,Tratorista B
+Ureia,Fertilizantes,kg,103.5,1000,saída,2026-04-15,,,,,Talhão 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-04-16,6.44,DIE-2604-2,,Agro Fornecedor A,,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,214.1,1920,saída,2026-04-16,,,,,Trator 1,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,12.8,120,saída,2026-04-16,,,,,Talhão 1,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-04-16,,,,,Colheitadeira,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,340.8,800,saída,2026-04-16,,,,,Talhão 2,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,169.7,1920,saída,2026-04-17,,,,,Trator 1,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-04-17,,,,,Talhão 4,Tratorista B
+FTE BR-12,Fertilizantes,kg,18.9,30,saída,2026-04-17,,,,,Talhão 5,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.3,15.0,saída,2026-04-17,,,,,Talhão 3,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-17,,,,,Almoxarifado,Tratorista B
+Mangueira de gotejamento,Irrigação,m,144.3,200,saída,2026-04-17,,,,,Pivô 1,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,166.0,500,saída,2026-04-17,,,,,Talhão 2,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-17,,,,,Almoxarifado,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-04-17,,,,,Talhão 5,Tratorista B
+Ureia,Fertilizantes,kg,106.3,1000,saída,2026-04-17,,,,,Talhão 4,Almoxarife
+Atrazina,Defensivos e biológicos,L,6.3,15.0,saída,2026-04-18,,,,,Talhão 1,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,311.7,600,saída,2026-04-18,,,,,Talhão 2,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,163.3,1920,saída,2026-04-18,,,,,Pulverizador,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.5,20,saída,2026-04-18,,,,,Talhão 1,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,283.7,800,saída,2026-04-18,,,,,Talhão 3,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-04-18,,,,,Talhão 2,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-04-19,,,,,Pivô 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-04-19,,,,,Oficina,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-19,,,,,Almoxarifado,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,105.5,250,saída,2026-04-19,,,,,Talhão 2,Encarregado
+Ureia,Fertilizantes,kg,99.3,1000,saída,2026-04-19,,,,,Pivô 1,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-04-19,,,,,Pulverizador,Almoxarife
+Inoculante para soja,Defensivos e biológicos,L,40,5,entrada,2026-04-20,45,INO-2604,2026-10-20,Agro Fornecedor A,,Tratorista B
+Azospirillum,Defensivos e biológicos,L,2.1,2.0,saída,2026-04-20,,,,,Pivô 1,Tratorista B
+Calcário dolomítico,Corretivos,t,3.84,5.0,saída,2026-04-20,,,,,Talhão 2,Operador de pulverização
+Conector de irrigação,Irrigação,un,8,10,saída,2026-04-20,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,144.3,1920,saída,2026-04-20,,,,,Trator 1,Tratorista A
+Gesso agrícola,Corretivos,t,2.05,3.0,saída,2026-04-20,,,,,Talhão 3,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-20,,,,,Almoxarifado,Encarregado
+MAP,Fertilizantes,kg,124.6,300,saída,2026-04-20,,,,,Pivô 1,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,251.7,500,saída,2026-04-20,,,,,Talhão 2,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-20,,,,,Almoxarifado,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-04-20,,,,,Talhão 3,Tratorista A
+Ureia,Fertilizantes,kg,109.1,1000,saída,2026-04-20,,,,,Talhão 2,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.9,10,saída,2026-04-20,,,,,Trator 1,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,6.9,15.0,saída,2026-04-21,,,,,Talhão 5,Encarregado
+Braquiária,Sementes,kg,12.2,20,saída,2026-04-21,,,,,Talhão 2,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,200.9,1920,saída,2026-04-21,,,,,Oficina,Encarregado
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-04-21,,,,,Talhão 1,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,11.3,120,saída,2026-04-21,,,,,Talhão 5,Tratorista B
+Semente de milho,Sementes,sc,4,8,saída,2026-04-21,,,,,Talhão 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,296.8,600,saída,2026-04-22,,,,,Talhão 2,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,204.8,1920,saída,2026-04-22,,,,,Trator 2,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.6,15.0,saída,2026-04-22,,,,,Talhão 5,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-04-22,,,,,Oficina,Encarregado
+Luva nitrílica,EPI e diversos,par,6,20,saída,2026-04-22,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,175.2,200,saída,2026-04-22,,,,,Pivô 1,Tratorista B
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-04-22,,,,,Colheitadeira,Tratorista A
+Ureia,Fertilizantes,kg,91.4,1000,saída,2026-04-22,,,,,Talhão 1,Tratorista B
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-04-22,,,,,Trator 2,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1500,4.0,saída,2026-04-23,,,,,Talhão 5,Encarregado
+FTE BR-12,Fertilizantes,kg,29.8,30,saída,2026-04-23,,,,,Talhão 3,Encarregado
+NPK 04-14-08,Fertilizantes,kg,298.2,800,saída,2026-04-23,,,,,Talhão 3,Encarregado
+Semente de soja,Sementes,sc,2,10,saída,2026-04-23,,,,,Talhão 5,Encarregado
+Atrazina,Defensivos e biológicos,L,5.8,15.0,saída,2026-04-24,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,174.6,1920,saída,2026-04-24,,,,,Pulverizador,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-04-24,,,,,Talhão 4,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-04-24,,,,,Trator 1,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.7,20,saída,2026-04-24,,,,,Talhão 4,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-04-24,,,,,Almoxarifado,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-24,,,,,Almoxarifado,Encarregado
+Sulfato de amônio,Fertilizantes,kg,126.0,250,saída,2026-04-24,,,,,Talhão 5,Tratorista A
+Ureia,Fertilizantes,kg,98.5,1000,saída,2026-04-24,,,,,Talhão 4,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.4,10,saída,2026-04-24,,,,,Oficina,Tratorista A
+Calcário dolomítico,Corretivos,t,3.95,5.0,saída,2026-04-25,,,,,Talhão 5,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,216.6,1920,saída,2026-04-25,,,,,Trator 2,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-04-25,,,,,Talhão 3,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,10.2,120,saída,2026-04-25,,,,,Talhão 4,Encarregado
+Inseticida clorantraniliprole,Defensivos e biológicos,L,1,,saída,2026-04-25,,,,,Talhão 3,Tratorista A
+MAP,Fertilizantes,kg,195.6,300,saída,2026-04-25,,,,,Talhão 1,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,168.3,500,saída,2026-04-25,,,,,Talhão 4,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-04-25,,,,,Talhão 5,Almoxarife
+Cloreto de potássio (KCl),Fertilizantes,kg,355.2,600,saída,2026-04-26,,,,,Talhão 3,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,254.4,1920,saída,2026-04-26,,,,,Oficina,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-26,,,,,Almoxarifado,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-04-26,,,,,Talhão 4,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1800,4.0,saída,2026-04-27,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,192.0,1920,saída,2026-04-27,,,,,Trator 2,Encarregado
+Gesso agrícola,Corretivos,t,1.9,3.0,saída,2026-04-27,,,,,Talhão 4,Almoxarife
+Mangueira de gotejamento,Irrigação,m,164.3,200,saída,2026-04-27,,,,,Pivô 1,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,298.0,800,saída,2026-04-27,,,,,Pivô 1,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-04-27,,,,,Talhão 5,Tratorista B
+Ureia,Fertilizantes,kg,68.9,1000,saída,2026-04-27,,,,,Pivô 1,Almoxarife
+Braquiária,Sementes,kg,11.3,20,saída,2026-04-28,,,,,Talhão 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,254.5,1920,saída,2026-04-28,,,,,Trator 2,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,9.8,120,saída,2026-04-28,,,,,Talhão 3,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-04-28,,,,,Almoxarifado,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,177.4,500,saída,2026-04-28,,,,,Talhão 3,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-04-28,,,,,Almoxarifado,Encarregado
+Ureia,Fertilizantes,kg,114.4,1000,saída,2026-04-28,,,,,Talhão 5,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.3,10,saída,2026-04-28,,,,,Trator 2,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,5.4,8.0,saída,2026-04-28,,,,,Pulverizador,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.3,15.0,saída,2026-04-29,,,,,Talhão 3,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,1.8,2.0,saída,2026-04-29,,,,,Talhão 4,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,201.6,1920,saída,2026-04-29,,,,,Trator 1,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-04-29,,,,,Talhão 3,Tratorista B
+FTE BR-12,Fertilizantes,kg,21.8,30,saída,2026-04-29,,,,,Talhão 5,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-04-29,,,,,Talhão 5,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-04-29,,,,,Oficina,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.9,20,saída,2026-04-29,,,,,Talhão 4,Tratorista B
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-04-29,,,,,Almoxarifado,Operador de pulverização
+MAP,Fertilizantes,kg,156.5,300,saída,2026-04-29,,,,,Talhão 5,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-04-29,,,,,Talhão 2,Tratorista B
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-04-30,,,,,Almoxarifado,Operador de pulverização
+Conector de irrigação,Irrigação,un,9,10,saída,2026-04-30,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,144.1,1920,saída,2026-04-30,,,,,Trator 1,Encarregado
+Semente de milho,Sementes,sc,4,8,saída,2026-04-30,,,,,Talhão 3,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,115.5,250,saída,2026-04-30,,,,,Talhão 4,Operador de pulverização
+Calcário dolomítico,Corretivos,t,2.77,5.0,saída,2026-05-01,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,212.1,1920,saída,2026-05-01,,,,,Pulverizador,Tratorista A
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-05-01,,,,,Oficina,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.5,20,saída,2026-05-01,,,,,Talhão 4,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-01,,,,,Almoxarifado,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,345.2,800,saída,2026-05-01,,,,,Pivô 1,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-05-01,,,,,Pivô 1,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1900,4.0,saída,2026-05-02,,,,,Talhão 2,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,245.0,1920,saída,2026-05-02,,,,,Colheitadeira,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.9,15.0,saída,2026-05-02,,,,,Talhão 2,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,12.5,120,saída,2026-05-02,,,,,Talhão 5,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,187.8,500,saída,2026-05-02,,,,,Talhão 3,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.4,10,saída,2026-05-02,,,,,Trator 2,Almoxarife
+Cloreto de potássio (KCl),Fertilizantes,kg,298.4,600,saída,2026-05-03,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,225.5,1920,saída,2026-05-03,,,,,Trator 2,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-05-03,,,,,Talhão 5,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-03,,,,,Almoxarifado,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-05-03,,,,,Almoxarifado,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-05-03,,,,,Talhão 5,Tratorista A
+Ureia,Fertilizantes,sc,50,1000,entrada,2026-05-04,167.24,URE-2605,,Agro Fornecedor A,,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.5,15.0,saída,2026-05-04,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,154.1,1920,saída,2026-05-04,,,,,Pulverizador,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.6,15.0,saída,2026-05-04,,,,,Talhão 3,Encarregado
+Gesso agrícola,Corretivos,t,2.02,3.0,saída,2026-05-04,,,,,Talhão 2,Encarregado
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-05-04,,,,,Pivô 1,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-05-04,,,,,Talhão 2,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,127.2,250,saída,2026-05-04,,,,,Talhão 2,Operador de pulverização
+Ureia,Fertilizantes,kg,89.8,1000,saída,2026-05-04,,,,,Talhão 1,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.8,8.0,saída,2026-05-04,,,,,Pulverizador,Encarregado
+Braquiária,Sementes,kg,13.3,20,saída,2026-05-05,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,170.8,1920,saída,2026-05-05,,,,,Colheitadeira,Tratorista A
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-05-05,,,,,Pulverizador,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,12.6,120,saída,2026-05-05,,,,,Talhão 2,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.4,20,saída,2026-05-05,,,,,Talhão 1,Operador de pulverização
+MAP,Fertilizantes,kg,169.9,300,saída,2026-05-05,,,,,Talhão 4,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,231.7,500,saída,2026-05-05,,,,,Talhão 4,Tratorista B
+Trichoderma,Defensivos e biológicos,kg,1,2,saída,2026-05-05,,,,,Talhão 4,Almoxarife
+Ureia,Fertilizantes,kg,116.5,1000,saída,2026-05-05,,,,,Talhão 4,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,212.4,1920,saída,2026-05-06,,,,,Pulverizador,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-06,,,,,Almoxarifado,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,328.2,800,saída,2026-05-06,,,,,Talhão 1,Tratorista A
+Ureia,Fertilizantes,kg,120.0,1000,saída,2026-05-06,,,,,Talhão 2,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,317.3,600,saída,2026-05-07,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,235.3,1920,saída,2026-05-07,,,,,Trator 2,Tratorista B
+FTE BR-12,Fertilizantes,kg,20.4,30,saída,2026-05-07,,,,,Talhão 4,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.6,15.0,saída,2026-05-07,,,,,Talhão 5,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.7,4.5,saída,2026-05-07,,,,,Trator 1,Tratorista B
+Mangueira de gotejamento,Irrigação,m,192.8,200,saída,2026-05-07,,,,,Pivô 1,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-05-07,,,,,Almoxarifado,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-05-07,,,,,Talhão 4,Tratorista A
+Ureia,Fertilizantes,kg,101.2,1000,saída,2026-05-07,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-05-08,6.36,DIE-2605-3,,Distribuidora Rural B,,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1600,4.0,saída,2026-05-08,,,,,Talhão 2,Operador de pulverização
+Conector de irrigação,Irrigação,un,7,10,saída,2026-05-08,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,140.7,1920,saída,2026-05-08,,,,,Pulverizador,Encarregado
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-05-08,,,,,Pivô 1,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,11.6,120,saída,2026-05-08,,,,,Talhão 1,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-08,,,,,Almoxarifado,Tratorista A
+MAP,Fertilizantes,kg,121.9,300,saída,2026-05-08,,,,,Talhão 4,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-05-08,,,,,Pivô 1,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.8,10,saída,2026-05-08,,,,,Trator 1,Tratorista A
+Atrazina,Defensivos e biológicos,L,6.1,15.0,saída,2026-05-09,,,,,Talhão 3,Tratorista A
+Azospirillum,Defensivos e biológicos,L,1.5,2.0,saída,2026-05-09,,,,,Talhão 1,Tratorista B
+Calcário dolomítico,Corretivos,t,3.34,5.0,saída,2026-05-09,,,,,Talhão 2,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,207.4,1920,saída,2026-05-09,,,,,Trator 2,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.6,15.0,saída,2026-05-09,,,,,Pivô 1,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.6,20,saída,2026-05-09,,,,,Talhão 2,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,119.4,250,saída,2026-05-09,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,155.7,1920,saída,2026-05-10,,,,,Colheitadeira,Operador de pulverização
+Gesso agrícola,Corretivos,t,1.87,3.0,saída,2026-05-10,,,,,Pivô 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-05-10,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,274.6,500,saída,2026-05-10,,,,,Talhão 1,Operador de pulverização
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,3.2,8.0,saída,2026-05-10,,,,,Pulverizador,Operador de pulverização
+Braquiária,Sementes,kg,9.0,20,saída,2026-05-11,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,124.3,1920,saída,2026-05-11,,,,,Oficina,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,10.8,120,saída,2026-05-11,,,,,Talhão 4,Tratorista B
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-05-11,,,,,Talhão 3,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-11,,,,,Almoxarifado,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,360.2,800,saída,2026-05-11,,,,,Talhão 4,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-05-11,,,,,Almoxarifado,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-05-11,,,,,Talhão 3,Encarregado
+Ureia,Fertilizantes,kg,102.7,1000,saída,2026-05-11,,,,,Talhão 5,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,2000,4.0,saída,2026-05-12,,,,,Talhão 3,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,183.1,1920,saída,2026-05-12,,,,,Trator 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-05-12,,,,,Pulverizador,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-05-12,,,,,Talhão 1,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-05-12,,,,,Talhão 4,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,2700.0,600,entrada,2026-05-13,3.06,CLO-2605-3,,Cooperativa C,,Tratorista A
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-05-13,,,,,Pulverizador,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,273.6,600,saída,2026-05-13,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,213.7,1920,saída,2026-05-13,,,,,Colheitadeira,Encarregado
+FTE BR-12,Fertilizantes,kg,18.0,30,saída,2026-05-13,,,,,Talhão 4,Operador de pulverização
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-05-13,,,,,Pulverizador,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-05-13,,,,,Almoxarifado,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,173.9,500,saída,2026-05-13,,,,,Talhão 1,Encarregado
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-05-13,,,,,Colheitadeira,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-05-13,,,,,Talhão 2,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,104.2,250,saída,2026-05-13,,,,,Talhão 4,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.5,15.0,saída,2026-05-14,,,,,Talhão 5,Encarregado
+Conector de irrigação,Irrigação,un,7,10,saída,2026-05-14,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,188.0,1920,saída,2026-05-14,,,,,Colheitadeira,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-05-14,,,,,Pivô 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.8,20,saída,2026-05-14,,,,,Talhão 3,Tratorista B
+MAP,Fertilizantes,kg,112.2,300,saída,2026-05-14,,,,,Talhão 4,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,433.4,800,saída,2026-05-14,,,,,Talhão 5,Tratorista B
+Ureia,Fertilizantes,kg,76.6,1000,saída,2026-05-14,,,,,Talhão 5,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.2,10,saída,2026-05-14,,,,,Pulverizador,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1600,4.0,saída,2026-05-15,,,,,Talhão 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,163.9,1920,saída,2026-05-15,,,,,Trator 1,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,12.0,120,saída,2026-05-15,,,,,Talhão 1,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.0,8.0,saída,2026-05-15,,,,,Oficina,Tratorista B
+Calcário dolomítico,Corretivos,t,30.0,5.0,entrada,2026-05-16,215.6,CAL-2605-3,,Agro Fornecedor A,,Operador de pulverização
+Braquiária,Sementes,kg,9.2,20,saída,2026-05-16,,,,,Talhão 2,Almoxarife
+Calcário dolomítico,Corretivos,t,4.1,5.0,saída,2026-05-16,,,,,Talhão 5,Tratorista B
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-05-16,,,,,Colheitadeira,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.0,15.0,saída,2026-05-16,,,,,Talhão 1,Encarregado
+Gesso agrícola,Corretivos,t,1.72,3.0,saída,2026-05-16,,,,,Talhão 2,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-16,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,168.2,500,saída,2026-05-16,,,,,Talhão 2,Tratorista B
+Respirador PFF2,EPI e diversos,un,3,5,saída,2026-05-16,,,,,Almoxarifado,Operador de pulverização
+Semente de soja,Sementes,sc,2,10,saída,2026-05-16,,,,,Talhão 5,Tratorista A
+Ureia,Fertilizantes,kg,98.8,1000,saída,2026-05-16,,,,,Talhão 4,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.4,15.0,saída,2026-05-17,,,,,Talhão 4,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,191.8,1920,saída,2026-05-17,,,,,Trator 1,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-05-17,,,,,Talhão 5,Almoxarife
+Mangueira de gotejamento,Irrigação,m,188.7,200,saída,2026-05-17,,,,,Pivô 1,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-05-17,,,,,Talhão 3,Tratorista B
+Ureia,Fertilizantes,kg,86.2,1000,saída,2026-05-17,,,,,Talhão 4,Tratorista A
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-05-18,,,,,Almoxarifado,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,174.0,1920,saída,2026-05-18,,,,,Pulverizador,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.5,20,saída,2026-05-18,,,,,Talhão 4,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-05-18,,,,,Pivô 1,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-18,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,154.5,300,saída,2026-05-18,,,,,Pivô 1,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,111.6,250,saída,2026-05-18,,,,,Talhão 3,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-05-19,,,,,Talhão 3,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,5.8,15.0,saída,2026-05-19,,,,,Talhão 1,Almoxarife
+Azospirillum,Defensivos e biológicos,L,1.7,2.0,saída,2026-05-19,,,,,Talhão 4,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,259.1,600,saída,2026-05-19,,,,,Talhão 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,157.9,1920,saída,2026-05-19,,,,,Trator 2,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.9,15.0,saída,2026-05-19,,,,,Talhão 2,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,13.4,120,saída,2026-05-19,,,,,Talhão 2,Encarregado
+NPK 04-14-08,Fertilizantes,kg,333.4,800,saída,2026-05-19,,,,,Pivô 1,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-05-19,,,,,Almoxarifado,Operador de pulverização
+Semente de soja,Sementes,sc,4,10,saída,2026-05-19,,,,,Talhão 4,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.5,10,saída,2026-05-19,,,,,Colheitadeira,Encarregado
+Luva nitrílica,EPI e diversos,par,120,20,entrada,2026-05-20,4.4,LUV-2605-3,,Distribuidora Rural B,,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-05-20,,,,,Talhão 4,Almoxarife
+Inseticida clorantraniliprole,Defensivos e biológicos,L,1,,saída,2026-05-20,,,,,Talhão 3,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-05-20,,,,,Almoxarifado,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,250.7,500,saída,2026-05-20,,,,,Talhão 3,Tratorista B
+Conector de irrigação,Irrigação,un,60,10,entrada,2026-05-21,3.58,CON-2605-3,,Agro Fornecedor A,,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,180.0,30,entrada,2026-05-21,7.35,FTE-2605-3,,Distribuidora Rural B,,Operador de pulverização
+Braquiária,Sementes,kg,11.4,20,saída,2026-05-21,,,,,Talhão 4,Encarregado
+Conector de irrigação,Irrigação,un,10,10,saída,2026-05-21,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,159.8,1920,saída,2026-05-21,,,,,Colheitadeira,Almoxarife
+FTE BR-12,Fertilizantes,kg,23.9,30,saída,2026-05-21,,,,,Talhão 5,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-05-21,,,,,Trator 2,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-05-21,,,,,Talhão 1,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.5,8.0,saída,2026-05-21,,,,,Colheitadeira,Tratorista B
+Adjuvante,Defensivos e biológicos,L,24.0,4.0,entrada,2026-05-22,29.75,ADJ-2605-3,2028-05-11,Cooperativa C,,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,180.0,120,entrada,2026-05-22,29.0,GLI-2605-3,2028-05-21,Distribuidora Rural B,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1600,4.0,saída,2026-05-22,,,,,Talhão 1,Encarregado
+Atrazina,Defensivos e biológicos,L,6.7,15.0,saída,2026-05-22,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,218.8,1920,saída,2026-05-22,,,,,Oficina,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,12.1,120,saída,2026-05-22,,,,,Pivô 1,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-22,,,,,Almoxarifado,Tratorista A
+Ureia,Fertilizantes,kg,89.6,1000,saída,2026-05-22,,,,,Talhão 3,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,6,1,entrada,2026-05-23,85.83,FIL-2605-3,,Cooperativa C,,Encarregado
+Gesso agrícola,Corretivos,t,18.0,3.0,entrada,2026-05-23,164.32,GES-2605-3,,Distribuidora Rural B,,Almoxarife
+MAP,Fertilizantes,kg,1800.0,300,entrada,2026-05-23,4.63,MAP-2605-3,,Distribuidora Rural B,,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-05-23,,,,,Pulverizador,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.3,15.0,saída,2026-05-23,,,,,Talhão 1,Tratorista B
+Gesso agrícola,Corretivos,t,1.89,3.0,saída,2026-05-23,,,,,Pivô 1,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.6,20,saída,2026-05-23,,,,,Talhão 1,Tratorista B
+MAP,Fertilizantes,kg,167.9,300,saída,2026-05-23,,,,,Pivô 1,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,233.7,500,saída,2026-05-23,,,,,Pivô 1,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-05-23,,,,,Talhão 5,Encarregado
+Ureia,Fertilizantes,kg,86.2,1000,saída,2026-05-23,,,,,Talhão 1,Tratorista A
+Respirador PFF2,EPI e diversos,un,30,5,entrada,2026-05-24,8.85,RES-2605-3,,Distribuidora Rural B,,Tratorista B
+Semente de milho,Sementes,sc,48,8,entrada,2026-05-24,974.01,SEM-2605-3,2027-11-15,Distribuidora Rural B,,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,1500.0,250,entrada,2026-05-24,2.67,SUL-2605-3,,Cooperativa C,,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,325.3,600,saída,2026-05-24,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,200.0,1920,saída,2026-05-24,,,,,Pulverizador,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-05-24,,,,,Talhão 5,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,6,20,saída,2026-05-24,,,,,Almoxarifado,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,336.8,800,saída,2026-05-24,,,,,Pivô 1,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-05-24,,,,,Almoxarifado,Operador de pulverização
+Semente de milho,Sementes,sc,4,8,saída,2026-05-24,,,,,Talhão 1,Encarregado
+Sulfato de amônio,Fertilizantes,kg,124.9,250,saída,2026-05-24,,,,,Talhão 2,Tratorista B
+Ureia,Fertilizantes,kg,113.6,1000,saída,2026-05-24,,,,,Talhão 4,Tratorista B
+Calcário dolomítico,Corretivos,t,3.28,5.0,saída,2026-05-25,,,,,Talhão 4,Encarregado
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-05-25,,,,,Talhão 5,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.8,10,saída,2026-05-25,,,,,Pulverizador,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.9,8.0,saída,2026-05-25,,,,,Pulverizador,Encarregado
+Atrazina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-05-26,38.97,ATR-2605-3,,Cooperativa C,,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.9,15.0,saída,2026-05-26,,,,,Talhão 3,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,255.2,1920,saída,2026-05-26,,,,,Trator 1,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.7,15.0,saída,2026-05-26,,,,,Talhão 3,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,10.6,120,saída,2026-05-26,,,,,Talhão 2,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,1.1,4.5,saída,2026-05-26,,,,,Trator 2,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.1,20,saída,2026-05-26,,,,,Pivô 1,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-26,,,,,Almoxarifado,Tratorista A
+Mangueira de gotejamento,Irrigação,m,136.9,200,saída,2026-05-26,,,,,Pivô 1,Tratorista B
+Braquiária,Sementes,kg,120.0,20,entrada,2026-05-27,28.67,BRA-2605-3,2027-11-18,Cooperativa C,,Tratorista B
+Filtro de ar,Peças e manutenção,un,4,1,entrada,2026-05-27,141.43,FIL-2605-3,,Agro Fornecedor A,,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-05-27,,,,,Talhão 1,Almoxarife
+Braquiária,Sementes,kg,11.0,20,saída,2026-05-27,,,,,Talhão 2,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,225.8,1920,saída,2026-05-27,,,,,Oficina,Operador de pulverização
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-05-27,,,,,Trator 1,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-05-27,,,,,Pivô 1,Encarregado
+Ureia,Fertilizantes,kg,111.1,1000,saída,2026-05-27,,,,,Talhão 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,180,30,entrada,2026-05-28,,EST-2605-3,,Agro Fornecedor A,,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,4800.0,800,entrada,2026-05-28,3.15,NPK-2605-3,,Agro Fornecedor A,,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,3000.0,500,entrada,2026-05-28,4.33,NPK-2605-3,,Distribuidora Rural B,,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,213.2,1920,saída,2026-05-28,,,,,Trator 2,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-05-28,,,,,Talhão 3,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,23.8,30,saída,2026-05-28,,,,,Talhão 1,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-05-28,,,,,Almoxarifado,Tratorista A
+MAP,Fertilizantes,kg,167.2,300,saída,2026-05-28,,,,,Talhão 3,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,251.4,800,saída,2026-05-28,,,,,Talhão 4,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,142.6,500,saída,2026-05-28,,,,,Pivô 1,Almoxarife
+Respirador PFF2,EPI e diversos,un,3,5,saída,2026-05-28,,,,,Almoxarifado,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,120.0,20,entrada,2026-05-29,32.46,HER-2605-3,2028-05-18,Agro Fornecedor A,,Tratorista A
+Semente de soja,Sementes,sc,60,10,entrada,2026-05-29,382.49,SEM-2605-3,,Cooperativa C,,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,2.2,2.0,saída,2026-05-29,,,,,Talhão 4,Almoxarife
+Conector de irrigação,Irrigação,un,5,10,saída,2026-05-29,,,,,Pivô 1,Tratorista B
+Gesso agrícola,Corretivos,t,1.9,3.0,saída,2026-05-29,,,,,Talhão 3,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.7,20,saída,2026-05-29,,,,,Talhão 3,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-05-29,,,,,Talhão 5,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-05-29,,,,,Talhão 5,Encarregado
+Ureia,Fertilizantes,kg,112.8,1000,saída,2026-05-29,,,,,Talhão 2,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-05-30,123.92,FUN-2605-3,2028-05-19,Cooperativa C,,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,48.0,8.0,entrada,2026-05-30,22.1,ÓLE-2605-3,,Agro Fornecedor A,,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1200,4.0,saída,2026-05-30,,,,,Talhão 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,261.7,600,saída,2026-05-30,,,,,Talhão 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,192.3,1920,saída,2026-05-30,,,,,Colheitadeira,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.7,15.0,saída,2026-05-30,,,,,Pivô 1,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,12.6,120,saída,2026-05-30,,,,,Pivô 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-05-30,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,202.7,500,saída,2026-05-30,,,,,Talhão 1,Encarregado
+Sulfato de amônio,Fertilizantes,kg,141.9,250,saída,2026-05-30,,,,,Talhão 3,Almoxarife
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,3.6,8.0,saída,2026-05-30,,,,,Trator 2,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,6.1,10,saída,2026-05-30,,,,,Oficina,Tratorista A
+Atrazina,Defensivos e biológicos,L,5.1,15.0,saída,2026-05-31,,,,,Pivô 1,Encarregado
+Braquiária,Sementes,kg,12.0,20,saída,2026-05-31,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,207.8,1920,saída,2026-05-31,,,,,Trator 2,Encarregado
+Ureia,Fertilizantes,kg,97.9,1000,saída,2026-05-31,,,,,Talhão 2,Encarregado
+Mangueira de gotejamento,Irrigação,m,1200.0,200,entrada,2026-06-01,1.22,MAN-2606-3,,Cooperativa C,,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-06-01,,,,,Talhão 2,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-06-01,,,,,Colheitadeira,Almoxarife
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-06-01,,,,,Talhão 5,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-01,,,,,Almoxarifado,Tratorista A
+Mangueira de gotejamento,Irrigação,m,150.8,200,saída,2026-06-01,,,,,Pivô 1,Encarregado
+NPK 04-14-08,Fertilizantes,kg,340.6,800,saída,2026-06-01,,,,,Talhão 1,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-06-01,,,,,Pivô 1,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-06-01,,,,,Talhão 3,Tratorista A
+Bota de borracha,EPI e diversos,par,3,1,entrada,2026-06-02,63.44,BOT-2606-3,,Agro Fornecedor A,,Tratorista B
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-06-02,,,,,Almoxarifado,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,197.3,1920,saída,2026-06-02,,,,,Trator 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-06-02,,,,,Pulverizador,Tratorista A
+MAP,Fertilizantes,kg,138.6,300,saída,2026-06-02,,,,,Talhão 2,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-02,,,,,Almoxarifado,Tratorista B
+Trichoderma,Defensivos e biológicos,kg,1,2,saída,2026-06-02,,,,,Talhão 4,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,150.3,1920,saída,2026-06-03,,,,,Oficina,Encarregado
+FTE BR-12,Fertilizantes,kg,22.6,30,saída,2026-06-03,,,,,Talhão 3,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.7,15.0,saída,2026-06-03,,,,,Pivô 1,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,10.7,120,saída,2026-06-03,,,,,Talhão 1,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.5,20,saída,2026-06-03,,,,,Talhão 4,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-03,,,,,Almoxarifado,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,194.1,500,saída,2026-06-03,,,,,Talhão 3,Almoxarife
+Ureia,Fertilizantes,kg,117.5,1000,saída,2026-06-03,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-06-04,6.34,DIE-2606-4,,Cooperativa C,,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1500,4.0,saída,2026-06-04,,,,,Talhão 3,Almoxarife
+Braquiária,Sementes,kg,12.3,20,saída,2026-06-04,,,,,Talhão 4,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,403.1,600,saída,2026-06-04,,,,,Talhão 5,Tratorista B
+Conector de irrigação,Irrigação,un,7,10,saída,2026-06-04,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,155.3,1920,saída,2026-06-04,,,,,Trator 2,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,323.3,800,saída,2026-06-04,,,,,Talhão 4,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-06-04,,,,,Talhão 4,Tratorista B
+Ureia,Fertilizantes,kg,60.5,1000,saída,2026-06-04,,,,,Talhão 2,Encarregado
+Rolamento 6205,Peças e manutenção,un,3,1,entrada,2026-06-05,121.65,ROL-2606-3,,Distribuidora Rural B,,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.9,15.0,saída,2026-06-05,,,,,Talhão 3,Encarregado
+Calcário dolomítico,Corretivos,t,3.13,5.0,saída,2026-06-05,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,181.7,1920,saída,2026-06-05,,,,,Oficina,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-06-05,,,,,Talhão 5,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-05,,,,,Almoxarifado,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-05,,,,,Almoxarifado,Tratorista B
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-06-05,,,,,Colheitadeira,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-06-05,,,,,Talhão 1,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,157.2,250,saída,2026-06-05,,,,,Talhão 3,Encarregado
+Ureia,Fertilizantes,kg,86.4,1000,saída,2026-06-05,,,,,Talhão 2,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,6.4,10,saída,2026-06-05,,,,,Trator 2,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.3,8.0,saída,2026-06-05,,,,,Trator 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,196.8,1920,saída,2026-06-06,,,,,Oficina,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.8,15.0,saída,2026-06-06,,,,,Talhão 4,Operador de pulverização
+Gesso agrícola,Corretivos,t,2.41,3.0,saída,2026-06-06,,,,,Pivô 1,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-06-06,,,,,Colheitadeira,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,161.0,1920,saída,2026-06-07,,,,,Colheitadeira,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,12.4,120,saída,2026-06-07,,,,,Talhão 2,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-06-07,,,,,Almoxarifado,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,264.4,800,saída,2026-06-07,,,,,Talhão 4,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,183.3,500,saída,2026-06-07,,,,,Pivô 1,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-06-07,,,,,Talhão 5,Almoxarife
+Ureia,Fertilizantes,kg,112.5,1000,saída,2026-06-07,,,,,Talhão 4,Encarregado
+Azospirillum,Defensivos e biológicos,L,12.0,2.0,entrada,2026-06-08,57.08,AZO-2606-3,2027-06-03,Cooperativa C,,Tratorista B
+Azospirillum,Defensivos e biológicos,L,2.1,2.0,saída,2026-06-08,,,,,Talhão 2,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,262.4,600,saída,2026-06-08,,,,,Talhão 5,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,192.8,1920,saída,2026-06-08,,,,,Oficina,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,24.5,30,saída,2026-06-08,,,,,Talhão 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.7,20,saída,2026-06-08,,,,,Pivô 1,Tratorista B
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-06-08,,,,,Pivô 1,Tratorista B
+MAP,Fertilizantes,kg,154.1,300,saída,2026-06-08,,,,,Pivô 1,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-06-08,,,,,Talhão 1,Tratorista A
+Ureia,Fertilizantes,kg,101.3,1000,saída,2026-06-08,,,,,Talhão 4,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-06-09,,,,,Talhão 4,Tratorista B
+Conector de irrigação,Irrigação,un,8,10,saída,2026-06-09,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,223.6,1920,saída,2026-06-09,,,,,Oficina,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.3,15.0,saída,2026-06-09,,,,,Pivô 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-09,,,,,Almoxarifado,Tratorista A
+Mangueira de gotejamento,Irrigação,m,107.5,200,saída,2026-06-09,,,,,Pivô 1,Tratorista A
+Semente de feijão,Sementes,kg,600,50,entrada,2026-06-10,9,FEI-2606,2026-12-10,Cooperativa C,,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,6.9,15.0,saída,2026-06-10,,,,,Talhão 3,Tratorista A
+Calcário dolomítico,Corretivos,t,3.98,5.0,saída,2026-06-10,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,202.7,1920,saída,2026-06-10,,,,,Oficina,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,16,30,saída,2026-06-10,,,,,Talhão 5,Tratorista B
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-06-10,,,,,Trator 1,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-10,,,,,Almoxarifado,Tratorista B
+Ureia,Fertilizantes,kg,89.3,1000,saída,2026-06-10,,,,,Talhão 4,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,309.6,600,saída,2026-06-11,,,,,Talhão 4,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,183.6,1920,saída,2026-06-11,,,,,Pulverizador,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.1,15.0,saída,2026-06-11,,,,,Pivô 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-11,,,,,Almoxarifado,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,228.5,500,saída,2026-06-11,,,,,Talhão 1,Encarregado
+Semente de milho,Sementes,sc,4,8,saída,2026-06-11,,,,,Talhão 2,Tratorista B
+Semente de soja,Sementes,sc,4,10,saída,2026-06-11,,,,,Talhão 2,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,121.7,250,saída,2026-06-11,,,,,Talhão 3,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,3.8,10,saída,2026-06-11,,,,,Colheitadeira,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.7,8.0,saída,2026-06-11,,,,,Colheitadeira,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,186.4,1920,saída,2026-06-12,,,,,Colheitadeira,Tratorista B
+Gesso agrícola,Corretivos,t,3.03,3.0,saída,2026-06-12,,,,,Talhão 4,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,10.0,120,saída,2026-06-12,,,,,Talhão 5,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.7,20,saída,2026-06-12,,,,,Talhão 1,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,338.8,800,saída,2026-06-12,,,,,Talhão 1,Encarregado
+Adjuvante,Defensivos e biológicos,mL,2000,4.0,saída,2026-06-13,,,,,Talhão 1,Encarregado
+Atrazina,Defensivos e biológicos,L,6.1,15.0,saída,2026-06-13,,,,,Talhão 4,Tratorista A
+Braquiária,Sementes,kg,9.4,20,saída,2026-06-13,,,,,Talhão 4,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,224.0,1920,saída,2026-06-13,,,,,Trator 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-06-13,,,,,Oficina,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,1.1,4.5,saída,2026-06-13,,,,,Trator 2,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-13,,,,,Almoxarifado,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-13,,,,,Almoxarifado,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,2.1,2.0,saída,2026-06-14,,,,,Talhão 5,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,380.5,600,saída,2026-06-14,,,,,Talhão 4,Encarregado
+Estacas de eucalipto,EPI e diversos,un,9,30,saída,2026-06-14,,,,,Talhão 2,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.5,15.0,saída,2026-06-14,,,,,Talhão 4,Tratorista A
+Mangueira de gotejamento,Irrigação,m,142.7,200,saída,2026-06-14,,,,,Pivô 1,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,199.2,500,saída,2026-06-14,,,,,Talhão 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-06-14,,,,,Pivô 1,Operador de pulverização
+UREIA 45%,Fertilizantes,sc,20,,entrada,2026-06-15,165,U45-01,,Cooperativa C,,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,171.8,1920,saída,2026-06-15,,,,,Trator 2,Encarregado
+FTE BR-12,Fertilizantes,kg,19.5,30,saída,2026-06-15,,,,,Talhão 2,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,13.6,120,saída,2026-06-15,,,,,Talhão 3,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,10.6,20,saída,2026-06-15,,,,,Talhão 3,Tratorista B
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-06-15,,,,,Pivô 1,Almoxarife
+MAP,Fertilizantes,kg,172.7,300,saída,2026-06-15,,,,,Talhão 5,Operador de pulverização
+Semente de feijão,Sementes,kg,15,50,saída,2026-06-15,,,,,Talhão 3,Tratorista A
+Semente de milho,Sementes,sc,4,8,saída,2026-06-15,,,,,Talhão 4,Operador de pulverização
+Ureia,Fertilizantes,kg,91.1,1000,saída,2026-06-15,,,,,Talhão 1,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-06-16,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,164.3,1920,saída,2026-06-16,,,,,Trator 1,Encarregado
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-06-16,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,387.1,800,saída,2026-06-16,,,,,Talhão 3,Tratorista B
+Respirador PFF2,EPI e diversos,un,3,5,saída,2026-06-16,,,,,Almoxarifado,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,112.1,250,saída,2026-06-16,,,,,Talhão 2,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.5,10,saída,2026-06-16,,,,,Pulverizador,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.9,8.0,saída,2026-06-16,,,,,Trator 2,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.7,15.0,saída,2026-06-17,,,,,Talhão 1,Tratorista B
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-06-17,,,,,Pulverizador,Encarregado
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-06-17,,,,,Almoxarifado,Almoxarife
+Calcário dolomítico,Corretivos,t,3.79,5.0,saída,2026-06-17,,,,,Talhão 5,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.0,15.0,saída,2026-06-17,,,,,Pivô 1,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,162.0,500,saída,2026-06-17,,,,,Talhão 3,Tratorista A
+Ureia,Fertilizantes,kg,120.9,1000,saída,2026-06-17,,,,,Pivô 1,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,297.8,600,saída,2026-06-18,,,,,Talhão 2,Tratorista A
+Conector de irrigação,Irrigação,un,7,10,saída,2026-06-18,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,159.8,1920,saída,2026-06-18,,,,,Trator 2,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-06-18,,,,,Talhão 3,Operador de pulverização
+Gesso agrícola,Corretivos,t,2.17,3.0,saída,2026-06-18,,,,,Talhão 3,Almoxarife
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-18,,,,,Almoxarifado,Almoxarife
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-06-18,,,,,Colheitadeira,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-06-18,,,,,Pivô 1,Encarregado
+Ureia,Fertilizantes,kg,125.6,1000,saída,2026-06-18,,,,,Talhão 2,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-06-19,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,165.9,1920,saída,2026-06-19,,,,,Oficina,Operador de pulverização
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-06-19,,,,,Trator 1,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,11.5,120,saída,2026-06-19,,,,,Talhão 4,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.2,20,saída,2026-06-19,,,,,Talhão 2,Almoxarife
+Respirador PFF2,EPI e diversos,un,3,5,saída,2026-06-19,,,,,Almoxarifado,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-06-19,,,,,Pivô 1,Tratorista A
+Ureia,Fertilizantes,kg,82.3,1000,saída,2026-06-19,,,,,Talhão 4,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,220.4,1920,saída,2026-06-20,,,,,Oficina,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-06-20,,,,,Colheitadeira,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-20,,,,,Almoxarifado,Tratorista A
+MAP,Fertilizantes,kg,137.3,300,saída,2026-06-20,,,,,Talhão 4,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,270.2,800,saída,2026-06-20,,,,,Talhão 4,Encarregado
+Sulfato de amônio,Fertilizantes,kg,156.2,250,saída,2026-06-20,,,,,Talhão 3,Tratorista A
+Ureia,Fertilizantes,kg,105.6,1000,saída,2026-06-20,,,,,Talhão 4,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.2,8.0,saída,2026-06-20,,,,,Pulverizador,Operador de pulverização
+Braquiária,Sementes,kg,12.4,20,saída,2026-06-21,,,,,Talhão 5,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,198.0,1920,saída,2026-06-21,,,,,Trator 1,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.0,15.0,saída,2026-06-21,,,,,Talhão 5,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,214.2,500,saída,2026-06-21,,,,,Talhão 4,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-06-21,,,,,Talhão 5,Encarregado
+Ureia,Fertilizantes,kg,82.6,1000,saída,2026-06-21,,,,,Talhão 1,Almoxarife
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.8,10,saída,2026-06-21,,,,,Oficina,Almoxarife
+Atrazina,Defensivos e biológicos,L,4.4,15.0,saída,2026-06-22,,,,,Talhão 4,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,215.6,1920,saída,2026-06-22,,,,,Trator 1,Encarregado
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-06-22,,,,,Talhão 3,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,23.5,30,saída,2026-06-22,,,,,Pivô 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-06-22,,,,,Trator 1,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-06-22,,,,,Talhão 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-22,,,,,Almoxarifado,Tratorista B
+Mangueira de gotejamento,Irrigação,m,115.7,200,saída,2026-06-22,,,,,Pivô 1,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1900,4.0,saída,2026-06-23,,,,,Pivô 1,Tratorista A
+Conector de irrigação,Irrigação,un,9,10,saída,2026-06-23,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,161.8,1920,saída,2026-06-23,,,,,Trator 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.2,20,saída,2026-06-23,,,,,Talhão 3,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-23,,,,,Almoxarifado,Tratorista B
+Semente de milho,Sementes,sc,4,8,saída,2026-06-23,,,,,Talhão 3,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,2700.0,600,entrada,2026-06-24,2.96,CLO-2606-4,,Distribuidora Rural B,,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,314.7,600,saída,2026-06-24,,,,,Talhão 3,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.7,15.0,saída,2026-06-24,,,,,Talhão 3,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,13.3,120,saída,2026-06-24,,,,,Talhão 4,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-24,,,,,Almoxarifado,Almoxarife
+Azospirillum,Defensivos e biológicos,L,1.8,2.0,saída,2026-06-25,,,,,Talhão 1,Encarregado
+Braquiária,Sementes,kg,11.1,20,saída,2026-06-25,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,141.3,1920,saída,2026-06-25,,,,,Trator 1,Tratorista B
+MAP,Fertilizantes,kg,176.8,300,saída,2026-06-25,,,,,Pivô 1,Encarregado
+NPK 04-14-08,Fertilizantes,kg,354.8,800,saída,2026-06-25,,,,,Talhão 3,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,165.4,500,saída,2026-06-25,,,,,Pivô 1,Tratorista A
+Semente de feijão,Sementes,kg,14,50,saída,2026-06-25,,,,,Talhão 3,Operador de pulverização
+Semente de milho,Sementes,sc,3,8,saída,2026-06-25,,,,,Talhão 4,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-06-25,,,,,Pivô 1,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,126.8,250,saída,2026-06-25,,,,,Talhão 1,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.4,8.0,saída,2026-06-25,,,,,Oficina,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,6.4,15.0,saída,2026-06-26,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,161.7,1920,saída,2026-06-26,,,,,Pulverizador,Encarregado
+Gesso agrícola,Corretivos,t,2.3,3.0,saída,2026-06-26,,,,,Talhão 1,Operador de pulverização
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-06-26,,,,,Colheitadeira,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-06-26,,,,,Almoxarifado,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-06-26,,,,,Almoxarifado,Almoxarife
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-06-26,,,,,Oficina,Tratorista A
+Ureia,Fertilizantes,kg,103.7,1000,saída,2026-06-26,,,,,Talhão 5,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.1,10,saída,2026-06-26,,,,,Oficina,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1800,4.0,saída,2026-06-27,,,,,Talhão 3,Encarregado
+Calcário dolomítico,Corretivos,t,2.77,5.0,saída,2026-06-27,,,,,Talhão 2,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,157.4,1920,saída,2026-06-27,,,,,Oficina,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-06-27,,,,,Pivô 1,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.1,15.0,saída,2026-06-27,,,,,Talhão 2,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.8,20,saída,2026-06-27,,,,,Talhão 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,284.9,600,saída,2026-06-28,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,199.5,1920,saída,2026-06-28,,,,,Trator 2,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-06-28,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,138.7,200,saída,2026-06-28,,,,,Pivô 1,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-06-28,,,,,Talhão 3,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-06-29,6.12,DIE-2606-5,,Agro Fornecedor A,,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,163.5,1920,saída,2026-06-29,,,,,Oficina,Tratorista B
+FTE BR-12,Fertilizantes,kg,18.1,30,saída,2026-06-29,,,,,Talhão 4,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,9.9,120,saída,2026-06-29,,,,,Talhão 1,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-06-29,,,,,Talhão 4,Encarregado
+MAP,Fertilizantes,kg,175.8,300,saída,2026-06-29,,,,,Talhão 4,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,200.7,500,saída,2026-06-29,,,,,Talhão 5,Almoxarife
+Semente de soja,Sementes,sc,2,10,saída,2026-06-29,,,,,Pivô 1,Encarregado
+Sulfato de amônio,Fertilizantes,kg,103.3,250,saída,2026-06-29,,,,,Talhão 4,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.1,15.0,saída,2026-06-30,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,172.6,1920,saída,2026-06-30,,,,,Pulverizador,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.5,15.0,saída,2026-06-30,,,,,Talhão 1,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-06-30,,,,,Almoxarifado,Operador de pulverização
+Ureia,Fertilizantes,kg,105.6,1000,saída,2026-06-30,,,,,Pivô 1,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,3.9,10,saída,2026-06-30,,,,,Oficina,Encarregado
+Trichoderma,Defensivos e biológicos,kg,20,2,entrada,2026-07-01,62,TRI-02,2027-03-01,Cooperativa C,,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1500,4.0,saída,2026-07-01,,,,,Talhão 3,Tratorista A
+Braquiária,Sementes,kg,12.9,20,saída,2026-07-01,,,,,Pivô 1,Operador de pulverização
+Conector de irrigação,Irrigação,un,5,10,saída,2026-07-01,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,216.1,1920,saída,2026-07-01,,,,,Trator 1,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-07-01,,,,,Oficina,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.9,20,saída,2026-07-01,,,,,Talhão 1,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,293.1,800,saída,2026-07-01,,,,,Talhão 1,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-07-01,,,,,Almoxarifado,Operador de pulverização
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,4.2,8.0,saída,2026-07-01,,,,,Colheitadeira,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,192.8,1920,saída,2026-07-02,,,,,Pulverizador,Tratorista A
+Gesso agrícola,Corretivos,t,2.62,3.0,saída,2026-07-02,,,,,Pivô 1,Encarregado
+Glifosato 480,Defensivos e biológicos,L,9.7,120,saída,2026-07-02,,,,,Talhão 2,Encarregado
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-07-02,,,,,Almoxarifado,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,184.5,500,saída,2026-07-02,,,,,Talhão 3,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-07-02,,,,,Pivô 1,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-07-02,,,,,Talhão 1,Almoxarife
+Calcário dolomítico,Corretivos,t,3.64,5.0,saída,2026-07-03,,,,,Talhão 5,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,347.6,600,saída,2026-07-03,,,,,Talhão 4,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,159.1,1920,saída,2026-07-03,,,,,Colheitadeira,Encarregado
+Estacas de eucalipto,EPI e diversos,un,15,30,saída,2026-07-03,,,,,Talhão 4,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.2,15.0,saída,2026-07-03,,,,,Talhão 2,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.7,20,saída,2026-07-03,,,,,Talhão 2,Almoxarife
+MAP,Fertilizantes,kg,172.5,300,saída,2026-07-03,,,,,Talhão 4,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,115.9,250,saída,2026-07-03,,,,,Talhão 4,Encarregado
+Ureia,Fertilizantes,kg,104.7,1000,saída,2026-07-03,,,,,Pivô 1,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,2000,4.0,saída,2026-07-04,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,203.6,1920,saída,2026-07-04,,,,,Pulverizador,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-04,,,,,Almoxarifado,Encarregado
+Mangueira de gotejamento,Irrigação,m,148.8,200,saída,2026-07-04,,,,,Pivô 1,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.1,15.0,saída,2026-07-05,,,,,Talhão 4,Encarregado
+Azospirillum,Defensivos e biológicos,L,2.4,2.0,saída,2026-07-05,,,,,Talhão 2,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,194.4,1920,saída,2026-07-05,,,,,Trator 1,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,267.8,800,saída,2026-07-05,,,,,Talhão 2,Tratorista A
+Semente de feijão,Sementes,kg,15,50,saída,2026-07-05,,,,,Talhão 4,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-07-05,,,,,Talhão 3,Tratorista A
+Semente de soja,Sementes,sc,4,10,saída,2026-07-05,,,,,Talhão 1,Encarregado
+Ureia,Fertilizantes,sc,50,1000,entrada,2026-07-06,159.05,URE-2607,,Agro Fornecedor A,,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,194.9,1920,saída,2026-07-06,,,,,Pulverizador,Tratorista B
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-07-06,,,,,Colheitadeira,Encarregado
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-07-06,,,,,Pulverizador,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.1,15.0,saída,2026-07-06,,,,,Talhão 4,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,11.4,120,saída,2026-07-06,,,,,Talhão 5,Operador de pulverização
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-07-06,,,,,Trator 2,Almoxarife
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-07-06,,,,,Talhão 2,Almoxarife
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-07-06,,,,,Almoxarifado,Encarregado
+NPK 04-30-16,Fertilizantes,kg,213.0,500,saída,2026-07-06,,,,,Talhão 1,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-07-06,,,,,Almoxarifado,Operador de pulverização
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-07-06,,TRI-02,,,Talhão 4,Operador de pulverização
+Ureia,Fertilizantes,kg,152.5,1000,saída,2026-07-06,,,,,Pivô 1,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,6.7,10,saída,2026-07-06,,,,,Trator 1,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.4,8.0,saída,2026-07-06,,,,,Trator 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,210.9,1920,saída,2026-07-07,,,,,Pulverizador,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-07-07,,,,,Talhão 4,Almoxarife
+FTE BR-12,Fertilizantes,kg,19.4,30,saída,2026-07-07,,,,,Talhão 2,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.3,20,saída,2026-07-07,,,,,Talhão 4,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1500,4.0,saída,2026-07-08,,,,,Talhão 1,Encarregado
+Braquiária,Sementes,kg,13.7,20,saída,2026-07-08,,,,,Talhão 1,Almoxarife
+Calcário dolomítico,Corretivos,t,3.25,5.0,saída,2026-07-08,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,200.2,1920,saída,2026-07-08,,,,,Oficina,Encarregado
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-07-08,,,,,Almoxarifado,Operador de pulverização
+MAP,Fertilizantes,kg,118.3,300,saída,2026-07-08,,,,,Talhão 5,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-07-08,,,,,Talhão 1,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,130.7,250,saída,2026-07-08,,,,,Talhão 1,Almoxarife
+Ureia,Fertilizantes,kg,114.9,1000,saída,2026-07-08,,,,,Talhão 4,Almoxarife
+Semente de milho,Sementes,sc,48,8,entrada,2026-07-09,941.31,SEM-2607-4,2027-12-31,Agro Fornecedor A,,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,6.3,15.0,saída,2026-07-09,,,,,Pivô 1,Encarregado
+Conector de irrigação,Irrigação,un,7,10,saída,2026-07-09,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,255.2,1920,saída,2026-07-09,,,,,Trator 1,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.4,15.0,saída,2026-07-09,,,,,Talhão 5,Encarregado
+Gesso agrícola,Corretivos,t,2.54,3.0,saída,2026-07-09,,,,,Talhão 3,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,13.3,120,saída,2026-07-09,,,,,Talhão 3,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-07-09,,,,,Pivô 1,Tratorista B
+Ureia,Fertilizantes,kg,90.2,1000,saída,2026-07-09,,,,,Pivô 1,Operador de pulverização
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-07-10,,,,,Almoxarifado,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,351.9,600,saída,2026-07-10,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,231.8,1920,saída,2026-07-10,,,,,Pulverizador,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-10,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,275.5,800,saída,2026-07-10,,,,,Talhão 5,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-07-10,,,,,Almoxarifado,Tratorista A
+Ureia,Fertilizantes,kg,105.5,1000,saída,2026-07-10,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,151.4,1920,saída,2026-07-11,,,,,Pulverizador,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-07-11,,,,,Pivô 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,11.1,20,saída,2026-07-11,,,,,Talhão 4,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,170.7,500,saída,2026-07-11,,,,,Talhão 1,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-07-11,,,,,Pivô 1,Encarregado
+Ureia,Fertilizantes,kg,113.6,1000,saída,2026-07-11,,,,,Talhão 5,Almoxarife
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-07-11,,,,,Oficina,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1600,4.0,saída,2026-07-12,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,202.4,1920,saída,2026-07-12,,,,,Pulverizador,Almoxarife
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-07-12,,,,,Almoxarifado,Tratorista A
+Ureia,Fertilizantes,kg,85.2,1000,saída,2026-07-12,,,,,Talhão 3,Almoxarife
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.4,10,saída,2026-07-12,,,,,Oficina,Almoxarife
+Rolamento 6205,Peças e manutenção,un,3,1,entrada,2026-07-13,114.58,ROL-2607-4,,Cooperativa C,,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,5.5,15.0,saída,2026-07-13,,,,,Pivô 1,Almoxarife
+Braquiária,Sementes,kg,12.9,20,saída,2026-07-13,,,,,Talhão 2,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,210.3,1920,saída,2026-07-13,,,,,Trator 1,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-07-13,,,,,Pulverizador,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.9,15.0,saída,2026-07-13,,,,,Pivô 1,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,13.7,120,saída,2026-07-13,,,,,Pivô 1,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,0.7,4.5,saída,2026-07-13,,,,,Trator 1,Encarregado
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-07-13,,,,,Talhão 1,Tratorista B
+MAP,Fertilizantes,kg,133.1,300,saída,2026-07-13,,,,,Talhão 4,Encarregado
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-07-13,,,,,Oficina,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-07-13,,,,,Talhão 5,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,109.1,250,saída,2026-07-13,,,,,Talhão 2,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-07-13,,TRI-02,,,Talhão 2,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,180.0,30,entrada,2026-07-14,7.56,FTE-2607-4,,Distribuidora Rural B,,Almoxarife
+Azospirillum,Defensivos e biológicos,L,1.9,2.0,saída,2026-07-14,,,,,Talhão 3,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,386.4,600,saída,2026-07-14,,,,,Talhão 2,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,171.1,1920,saída,2026-07-14,,,,,Oficina,Almoxarife
+FTE BR-12,Fertilizantes,kg,15.4,30,saída,2026-07-14,,,,,Talhão 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-14,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,123.7,200,saída,2026-07-14,,,,,Pivô 1,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,340.9,800,saída,2026-07-14,,,,,Talhão 1,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-07-14,,,,,Almoxarifado,Operador de pulverização
+Ureia,Fertilizantes,kg,96.9,1000,saída,2026-07-14,,,,,Pivô 1,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,16,30,saída,2026-07-15,,,,,Talhão 3,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,223.3,500,saída,2026-07-15,,,,,Talhão 4,Almoxarife
+Semente de feijão,Sementes,kg,17,50,saída,2026-07-15,,,,,Talhão 1,Encarregado
+Semente de soja,Sementes,sc,2,10,saída,2026-07-15,,,,,Talhão 2,Tratorista B
+Conector de irrigação,Irrigação,un,60,10,entrada,2026-07-16,3.63,CON-2607-4,,Distribuidora Rural B,,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,100.0,10,entrada,2026-07-16,19.81,ÓLE-2607-3,,Distribuidora Rural B,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-07-16,,,,,Talhão 1,Tratorista B
+Conector de irrigação,Irrigação,un,9,10,saída,2026-07-16,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,167.6,1920,saída,2026-07-16,,,,,Oficina,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.7,15.0,saída,2026-07-16,,,,,Talhão 3,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.8,20,saída,2026-07-16,,,,,Talhão 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-16,,,,,Almoxarifado,Tratorista B
+Ureia,Fertilizantes,kg,134.1,1000,saída,2026-07-16,,,,,Talhão 5,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.0,10,saída,2026-07-16,,,,,Pulverizador,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-07-16,,,,,Pulverizador,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.8,15.0,saída,2026-07-17,,,,,Talhão 5,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,289.2,800,saída,2026-07-17,,,,,Talhão 3,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-07-17,,,,,Talhão 3,Tratorista B
+Ureia,Fertilizantes,kg,103.5,1000,saída,2026-07-17,,,,,Talhão 1,Almoxarife
+Filtro de ar,Peças e manutenção,un,4,1,entrada,2026-07-18,137.28,FIL-2607-4,,Cooperativa C,,Almoxarife
+Gesso agrícola,Corretivos,t,18.0,3.0,entrada,2026-07-18,157.21,GES-2607-4,,Cooperativa C,,Tratorista B
+Respirador PFF2,EPI e diversos,un,30,5,entrada,2026-07-18,9.37,RES-2607-4,,Distribuidora Rural B,,Almoxarife
+Braquiária,Sementes,kg,10.1,20,saída,2026-07-18,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,164.0,1920,saída,2026-07-18,,,,,Trator 2,Tratorista A
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-07-18,,,,,Trator 1,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.6,15.0,saída,2026-07-18,,,,,Talhão 2,Tratorista A
+Gesso agrícola,Corretivos,t,1.84,3.0,saída,2026-07-18,,,,,Pivô 1,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,12.5,120,saída,2026-07-18,,,,,Talhão 4,Operador de pulverização
+MAP,Fertilizantes,kg,126.4,300,saída,2026-07-18,,,,,Talhão 4,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-07-18,,,,,Almoxarifado,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-07-18,,,,,Talhão 4,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,120.6,250,saída,2026-07-18,,,,,Talhão 2,Encarregado
+Filtro de óleo,Peças e manutenção,un,6,1,entrada,2026-07-19,86.99,FIL-2607-4,,Distribuidora Rural B,,Tratorista A
+Calcário dolomítico,Corretivos,t,3.5,5.0,saída,2026-07-19,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,228.3,1920,saída,2026-07-19,,,,,Trator 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-07-19,,,,,Talhão 3,Tratorista A
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-07-19,,,,,Colheitadeira,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-19,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,147.3,500,saída,2026-07-19,,,,,Talhão 2,Tratorista A
+Ureia,Fertilizantes,kg,90.1,1000,saída,2026-07-19,,,,,Talhão 2,Almoxarife
+Adjuvante,Defensivos e biológicos,L,24.0,4.0,entrada,2026-07-20,29.36,ADJ-2607-4,2028-07-09,Agro Fornecedor A,,Encarregado
+ureia granulada,Fertilizantes,kg,1000,,entrada,2026-07-20,3.4,UGR-01,,Agro Fornecedor A,,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1900,4.0,saída,2026-07-20,,,,,Talhão 4,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,278.6,600,saída,2026-07-20,,,,,Talhão 2,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,1.1,4.5,saída,2026-07-20,,,,,Trator 1,Almoxarife
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-07-20,,,,,Talhão 3,Tratorista A
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-07-20,,TRI-02,,,Pivô 1,Tratorista A
+Ureia,Fertilizantes,kg,79.2,1000,saída,2026-07-20,,,,,Talhão 4,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.0,15.0,saída,2026-07-21,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,183.1,1920,saída,2026-07-21,,,,,Pulverizador,Tratorista A
+FTE BR-12,Fertilizantes,kg,15.7,30,saída,2026-07-21,,,,,Pivô 1,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.0,15.0,saída,2026-07-21,,,,,Talhão 2,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,12.2,120,saída,2026-07-21,,,,,Talhão 3,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.3,20,saída,2026-07-21,,,,,Talhão 5,Almoxarife
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-07-21,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,116.6,200,saída,2026-07-21,,,,,Pivô 1,Tratorista A
+Oleo hidraulico,Combustíveis e lubrificantes,L,4.2,8.0,saída,2026-07-21,,,,,Oficina,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-07-21,,,,,Talhão 1,Almoxarife
+Semente de soja,Sementes,sc,4,10,saída,2026-07-21,,,,,Pivô 1,Tratorista A
+Ureia,Fertilizantes,kg,94.6,1000,saída,2026-07-21,,,,,Talhão 2,Tratorista A
+Adjuvante,Defensivos e biológicos,mL,1600,4.0,saída,2026-07-22,,,,,Talhão 3,Tratorista A
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-07-22,,,,,Pulverizador,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,236.2,1920,saída,2026-07-22,,,,,Oficina,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,263.2,800,saída,2026-07-22,,,,,Talhão 1,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.9,10,saída,2026-07-22,,,,,Pulverizador,Tratorista A
+Luva nitrílica,EPI e diversos,par,120,20,entrada,2026-07-23,4.57,LUV-2607-4,,Cooperativa C,,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,1500.0,250,entrada,2026-07-23,2.57,SUL-2607-4,,Agro Fornecedor A,,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-07-23,,,,,Talhão 4,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.3,15.0,saída,2026-07-23,,,,,Talhão 3,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-07-23,,,,,Almoxarifado,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,142.1,500,saída,2026-07-23,,,,,Talhão 4,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-07-23,,,,,Talhão 5,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,122.5,250,saída,2026-07-23,,,,,Talhão 5,Almoxarife
+Ureia,Fertilizantes,kg,99.2,1000,saída,2026-07-23,,,,,Talhão 4,Tratorista A
+Braquiária,Sementes,kg,120.0,20,entrada,2026-07-24,28.79,BRA-2607-4,2028-01-15,Distribuidora Rural B,,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-07-24,6.47,DIE-2607-6,,Distribuidora Rural B,,Almoxarife
+MAP,Fertilizantes,kg,1800.0,300,entrada,2026-07-24,4.94,MAP-2607-4,,Cooperativa C,,Encarregado
+Atrazina,Defensivos e biológicos,L,5.9,15.0,saída,2026-07-24,,,,,Talhão 1,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,1.6,2.0,saída,2026-07-24,,,,,Pivô 1,Operador de pulverização
+Braquiária,Sementes,kg,13.3,20,saída,2026-07-24,,,,,Talhão 4,Tratorista B
+Conector de irrigação,Irrigação,un,7,10,saída,2026-07-24,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,191.3,1920,saída,2026-07-24,,,,,Trator 1,Encarregado
+Gesso agrícola,Corretivos,t,1.89,3.0,saída,2026-07-24,,,,,Pivô 1,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.5,20,saída,2026-07-24,,,,,Talhão 2,Tratorista A
+MAP,Fertilizantes,kg,179.8,300,saída,2026-07-24,,,,,Talhão 5,Almoxarife
+Respirador PFF2,EPI e diversos,un,1,5,saída,2026-07-24,,,,,Almoxarifado,Almoxarife
+Ureia,Fertilizantes,kg,77.3,1000,saída,2026-07-24,,,,,Pivô 1,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,268.9,600,saída,2026-07-25,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,172.6,1920,saída,2026-07-25,,,,,Colheitadeira,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,4.3,15.0,saída,2026-07-25,,,,,Talhão 3,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-25,,,,,Almoxarifado,Tratorista A
+Semente de feijão,Sementes,kg,14,50,saída,2026-07-25,,,,,Talhão 5,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,182.4,120,entrada,2026-07-26,26.79,GLI-2607-4,2028-07-25,Cooperativa C,,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,143.0,1920,saída,2026-07-26,,,,,Oficina,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,12.4,120,saída,2026-07-26,,,,,Pivô 1,Almoxarife
+Oleo hidraulico,Combustíveis e lubrificantes,L,4.6,8.0,saída,2026-07-26,,,,,Pulverizador,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-07-26,,,,,Talhão 2,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.9,10,saída,2026-07-26,,,,,Pulverizador,Tratorista B
+Atrazina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-07-27,,ATR-2607-4,2028-07-16,Agro Fornecedor A,,Tratorista A
+Calcário dolomítico,Corretivos,t,30.0,5.0,entrada,2026-07-27,208.26,CAL-2607-4,,Agro Fornecedor A,,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,180,30,entrada,2026-07-27,,EST-2607-4,,Cooperativa C,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-07-27,,,,,Talhão 2,Tratorista A
+Atrazina,Defensivos e biológicos,L,7.1,15.0,saída,2026-07-27,,,,,Talhão 2,Tratorista A
+Calcário dolomítico,Corretivos,t,3.85,5.0,saída,2026-07-27,,,,,Talhão 2,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,164.4,1920,saída,2026-07-27,,,,,Pulverizador,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-07-27,,,,,Talhão 3,Operador de pulverização
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-07-27,,,,,Talhão 5,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-27,,,,,Almoxarifado,Encarregado
+MAP,Fertilizantes,kg,153.8,300,saída,2026-07-27,,,,,Talhão 4,Tratorista A
+Mangueira de gotejamento,Irrigação,m,136.3,200,saída,2026-07-27,,,,,Pivô 1,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-07-27,,,,,Talhão 3,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,98.4,250,saída,2026-07-27,,,,,Talhão 3,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-07-27,,TRI-02,,,Talhão 2,Almoxarife
+Ureia,Fertilizantes,kg,88.4,1000,saída,2026-07-27,,,,,Talhão 3,Tratorista A
+ureia granulada,Fertilizantes,kg,150,,saída,2026-07-27,,,,,Talhão 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,120.0,20,entrada,2026-07-28,30.9,HER-2607-4,2028-07-17,Agro Fornecedor A,,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,3000.0,500,entrada,2026-07-28,4.35,NPK-2607-4,,Distribuidora Rural B,,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,216.3,1920,saída,2026-07-28,,,,,Trator 1,Encarregado
+FTE BR-12,Fertilizantes,kg,21.2,30,saída,2026-07-28,,,,,Pivô 1,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-07-28,,,,,Colheitadeira,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,0.7,4.5,saída,2026-07-28,,,,,Trator 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.0,20,saída,2026-07-28,,,,,Talhão 1,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,357.0,800,saída,2026-07-28,,,,,Talhão 5,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,192.0,500,saída,2026-07-28,,,,,Talhão 4,Tratorista A
+Respirador PFF2,EPI e diversos,un,3,5,saída,2026-07-28,,,,,Almoxarifado,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-07-29,128.49,FUN-2607-4,2028-07-18,Distribuidora Rural B,,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,180.1,1920,saída,2026-07-29,,,,,Colheitadeira,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,3.9,15.0,saída,2026-07-29,,,,,Talhão 5,Almoxarife
+Gesso agrícola,Corretivos,t,1.68,3.0,saída,2026-07-29,,,,,Pivô 1,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-29,,,,,Almoxarifado,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-07-29,,,,,Pivô 1,Tratorista A
+Ureia,Fertilizantes,kg,109.7,1000,saída,2026-07-29,,,,,Talhão 4,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,48.0,8.0,entrada,2026-07-30,22.03,ÓLE-2607-4,,Agro Fornecedor A,,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1900,4.0,saída,2026-07-30,,,,,Talhão 5,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.8,15.0,saída,2026-07-30,,,,,Talhão 1,Operador de pulverização
+Braquiária,Sementes,kg,11.2,20,saída,2026-07-30,,,,,Talhão 1,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,330.7,600,saída,2026-07-30,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,240.3,1920,saída,2026-07-30,,,,,Colheitadeira,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,12.8,120,saída,2026-07-30,,,,,Talhão 3,Almoxarife
+Semente de soja,Sementes,sc,2,10,saída,2026-07-30,,,,,Talhão 1,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.3,8.0,saída,2026-07-30,,,,,Trator 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,172.0,1920,saída,2026-07-31,,,,,Pulverizador,Encarregado
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-07-31,,,,,Pivô 1,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-07-31,,,,,Almoxarifado,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.1,10,saída,2026-07-31,,,,,Oficina,Encarregado
+Azospirillum,Defensivos e biológicos,L,12.0,2.0,entrada,2026-08-01,55.86,AZO-2608-4,2027-07-27,Distribuidora Rural B,,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,2.0,2.0,saída,2026-08-01,,,,,Talhão 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,206.2,1920,saída,2026-08-01,,,,,Oficina,Almoxarife
+Filtro de ar,Peças e manutenção,un,2,1,saída,2026-08-01,,,,,Oficina,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.4,15.0,saída,2026-08-01,,,,,Talhão 1,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-08-01,,,,,Oficina,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.1,20,saída,2026-08-01,,,,,Talhão 5,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,243.3,800,saída,2026-08-01,,,,,Talhão 5,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-01,,,,,Almoxarifado,Tratorista A
+Bota de borracha,EPI e diversos,par,3,1,entrada,2026-08-02,65.8,BOT-2608-4,,Agro Fornecedor A,,Tratorista B
+Semente de soja,Sementes,sc,60,10,entrada,2026-08-02,369.57,SEM-2608-4,2028-01-24,Cooperativa C,,Encarregado
+Atrazina,Defensivos e biológicos,L,4.8,15.0,saída,2026-08-02,,,,,Talhão 1,Encarregado
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-08-02,,,,,Almoxarifado,Almoxarife
+Conector de irrigação,Irrigação,un,7,10,saída,2026-08-02,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,180.1,1920,saída,2026-08-02,,,,,Pulverizador,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.2,15.0,saída,2026-08-02,,,,,Pivô 1,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-02,,,,,Almoxarifado,Tratorista A
+MAP,Fertilizantes,kg,162.5,300,saída,2026-08-02,,,,,Talhão 2,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,203.4,500,saída,2026-08-02,,,,,Talhão 1,Operador de pulverização
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-08-02,,,,,Oficina,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-08-02,,,,,Talhão 5,Tratorista B
+Sulfato de amônio,Fertilizantes,kg,142.0,250,saída,2026-08-02,,,,,Talhão 5,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,2700.0,600,entrada,2026-08-03,2.98,CLO-2608-5,,Cooperativa C,,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,368.2,600,saída,2026-08-03,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,188.7,1920,saída,2026-08-03,,,,,Pulverizador,Tratorista B
+Gesso agrícola,Corretivos,t,1.98,3.0,saída,2026-08-03,,,,,Talhão 5,Tratorista B
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-08-03,,,,,Talhão 3,Tratorista B
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-08-03,,TRI-02,,,Pivô 1,Tratorista B
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.8,8.0,saída,2026-08-03,,,,,Trator 1,Tratorista A
+Mangueira de gotejamento,Irrigação,m,1200.0,200,entrada,2026-08-04,1.19,MAN-2608-4,,Distribuidora Rural B,,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-08-04,,,,,Pivô 1,Tratorista A
+Braquiária,Sementes,kg,13.3,20,saída,2026-08-04,,,,,Talhão 1,Tratorista B
+Calcário dolomítico,Corretivos,t,3.8,5.0,saída,2026-08-04,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,196.7,1920,saída,2026-08-04,,,,,Colheitadeira,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,9,30,saída,2026-08-04,,,,,Talhão 2,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,7.4,15.0,saída,2026-08-04,,,,,Talhão 1,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-04,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,137.7,200,saída,2026-08-04,,,,,Pivô 1,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-04,,,,,Almoxarifado,Tratorista B
+Semente de feijão,Sementes,kg,17,50,saída,2026-08-04,,,,,Pivô 1,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-08-04,,,,,Talhão 2,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-08-04,,,,,Talhão 1,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.5,10,saída,2026-08-04,,,,,Trator 2,Encarregado
+Atrazina,Defensivos e biológicos,L,7.0,15.0,saída,2026-08-05,,,,,Talhão 5,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,185.8,1920,saída,2026-08-05,,,,,Trator 1,Tratorista A
+FTE BR-12,Fertilizantes,kg,17.7,30,saída,2026-08-05,,,,,Talhão 4,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,9.5,120,saída,2026-08-05,,,,,Talhão 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.7,20,saída,2026-08-05,,,,,Talhão 5,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,4800.0,800,entrada,2026-08-06,3.39,NPK-2608-4,,Cooperativa C,,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,251.4,1920,saída,2026-08-06,,,,,Pulverizador,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-08-06,,,,,Pulverizador,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-06,,,,,Almoxarifado,Encarregado
+NPK 04-14-08,Fertilizantes,kg,361.9,800,saída,2026-08-06,,,,,Talhão 4,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,209.8,500,saída,2026-08-06,,,,,Talhão 4,Tratorista B
+Ureia,Fertilizantes,kg,95.7,1000,saída,2026-08-06,,,,,Talhão 5,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-08-07,,,,,Talhão 4,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,326.1,600,saída,2026-08-07,,,,,Talhão 3,Operador de pulverização
+Conector de irrigação,Irrigação,un,7,10,saída,2026-08-07,,,,,Pivô 1,Tratorista A
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-08-07,,,,,Colheitadeira,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,5.5,15.0,saída,2026-08-07,,,,,Talhão 1,Operador de pulverização
+Semente de soja,Sementes,sc,4,10,saída,2026-08-07,,,,,Talhão 1,Encarregado
+Sulfato de amônio,Fertilizantes,kg,103.4,250,saída,2026-08-07,,,,,Talhão 2,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-08-07,,,,,Colheitadeira,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,188.4,1920,saída,2026-08-08,,,,,Trator 1,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-08-08,,,,,Talhão 3,Tratorista B
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-08-08,,,,,Colheitadeira,Tratorista A
+Luvas nitrilicas,EPI e diversos,par,3,20,saída,2026-08-08,,,,,Almoxarifado,Encarregado
+MAP,Fertilizantes,kg,157.0,300,saída,2026-08-08,,,,,Talhão 4,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-08,,,,,Almoxarifado,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-08-08,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,140.8,1920,saída,2026-08-09,,,,,Pulverizador,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,11.3,120,saída,2026-08-09,,,,,Talhão 3,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.7,10,saída,2026-08-09,,,,,Pulverizador,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.6,15.0,saída,2026-08-10,,,,,Talhão 3,Operador de pulverização
+Braquiária,Sementes,kg,13.7,20,saída,2026-08-10,,,,,Talhão 3,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,195.5,1920,saída,2026-08-10,,,,,Trator 1,Almoxarife
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.6,20,saída,2026-08-10,,,,,Talhão 3,Operador de pulverização
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-08-10,,,,,Talhão 1,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-10,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,309.0,800,saída,2026-08-10,,,,,Pivô 1,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-08-10,,,,,Talhão 2,Operador de pulverização
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-08-10,,TRI-02,,,Talhão 1,Tratorista B
+Ureia,Fertilizantes,kg,103.9,1000,saída,2026-08-10,,,,,Talhão 1,Tratorista A
+ureia granulada,Fertilizantes,kg,120,,saída,2026-08-10,,,,,Talhão 2,Tratorista A
+Azospirillum,Defensivos e biológicos,L,2.2,2.0,saída,2026-08-11,,,,,Talhão 5,Almoxarife
+Calcário dolomítico,Corretivos,t,2.91,5.0,saída,2026-08-11,,,,,Talhão 5,Almoxarife
+Cloreto de potássio (KCl),Fertilizantes,kg,384.5,600,saída,2026-08-11,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,194.8,1920,saída,2026-08-11,,,,,Oficina,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.7,15.0,saída,2026-08-11,,,,,Talhão 1,Almoxarife
+Gesso agrícola,Corretivos,t,2.08,3.0,saída,2026-08-11,,,,,Talhão 3,Tratorista B
+Mangueira de gotejamento,Irrigação,m,137.8,200,saída,2026-08-11,,,,,Pivô 1,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,182.6,500,saída,2026-08-11,,,,,Talhão 2,Tratorista A
+Semente de milho,Sementes,sc,4,8,saída,2026-08-11,,,,,Talhão 4,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,124.3,250,saída,2026-08-11,,,,,Talhão 2,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.5,8.0,saída,2026-08-11,,,,,Trator 2,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-08-12,,,,,Talhão 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,232.8,1920,saída,2026-08-12,,,,,Oficina,Encarregado
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-08-12,,,,,Talhão 3,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,14.2,120,saída,2026-08-12,,,,,Talhão 5,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-08-12,,,,,Colheitadeira,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-08-12,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,187.8,300,saída,2026-08-12,,,,,Talhão 3,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-12,,,,,Almoxarifado,Operador de pulverização
+Ureia,Fertilizantes,kg,119.4,1000,saída,2026-08-12,,,,,Talhão 5,Tratorista A
+FTE BR-12,Fertilizantes,kg,18.6,30,saída,2026-08-13,,,,,Talhão 4,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,270.6,800,saída,2026-08-13,,,,,Talhão 1,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-08-13,,,,,Pivô 1,Encarregado
+Atrazina,Defensivos e biológicos,L,5.0,15.0,saída,2026-08-14,,,,,Talhão 5,Almoxarife
+Conector de irrigação,Irrigação,un,7,10,saída,2026-08-14,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,221.1,1920,saída,2026-08-14,,,,,Trator 2,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,10.2,20,saída,2026-08-14,,,,,Talhão 5,Operador de pulverização
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-08-14,,,,,Almoxarifado,Almoxarife
+Semente de feijão,Sementes,kg,15,50,saída,2026-08-14,,,,,Talhão 3,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,194.8,600,saída,2026-08-15,,,,,Talhão 5,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-08-15,,,,,Talhão 1,Almoxarife
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-08-15,,,,,Pulverizador,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,7.2,15.0,saída,2026-08-15,,,,,Talhão 5,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-08-15,,,,,Colheitadeira,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,4000.0,1920,entrada,2026-08-16,6.15,DIE-2608-7,,Cooperativa C,,Operador de pulverização
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-08-16,,,,,Talhão 4,Tratorista B
+Braquiária,Sementes,kg,11.1,20,saída,2026-08-16,,,,,Pivô 1,Operador de pulverização
+Calcário dolomítico,Corretivos,t,3.64,5.0,saída,2026-08-16,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,192.1,1920,saída,2026-08-16,,,,,Colheitadeira,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-16,,,,,Almoxarifado,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,220.4,500,saída,2026-08-16,,,,,Talhão 3,Tratorista B
+Semente de milho,Sementes,sc,3,8,saída,2026-08-16,,,,,Talhão 4,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-08-16,,,,,Talhão 5,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,115.1,250,saída,2026-08-16,,,,,Talhão 4,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.5,10,saída,2026-08-16,,,,,Trator 1,Almoxarife
+UREIA 45%,Fertilizantes,sc,20,,entrada,2026-08-17,168,U45-02,,Cooperativa C,,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,253.1,1920,saída,2026-08-17,,,,,Trator 1,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.0,15.0,saída,2026-08-17,,,,,Pivô 1,Tratorista A
+Gesso agrícola,Corretivos,t,2.1,3.0,saída,2026-08-17,,,,,Talhão 2,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,17.0,120,saída,2026-08-17,,,,,Talhão 5,Operador de pulverização
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-08-17,,,,,Talhão 5,Tratorista A
+MAP,Fertilizantes,kg,113.0,300,saída,2026-08-17,,,,,Talhão 1,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,327.0,800,saída,2026-08-17,,,,,Talhão 5,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-17,,,,,Almoxarifado,Tratorista B
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-08-17,,TRI-02,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,181.2,1920,saída,2026-08-18,,,,,Trator 2,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,9,30,saída,2026-08-18,,,,,Talhão 1,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.3,20,saída,2026-08-18,,,,,Talhão 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-18,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,123.2,200,saída,2026-08-18,,,,,Pivô 1,Tratorista A
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-08-19,,,,,Pulverizador,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,221.9,1920,saída,2026-08-19,,,,,Trator 2,Tratorista B
+FTE BR-12,Fertilizantes,kg,26.2,30,saída,2026-08-19,,,,,Pivô 1,Tratorista A
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-08-19,,,,,Pulverizador,Tratorista B
+Semente de milho,Sementes,sc,2,8,saída,2026-08-19,,,,,Talhão 3,Tratorista B
+Semente de soja,Sementes,sc,4,10,saída,2026-08-19,,,,,Pivô 1,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-08-20,,,,,Pivô 1,Encarregado
+Atrazina,Defensivos e biológicos,L,7.2,15.0,saída,2026-08-20,,,,,Talhão 2,Encarregado
+Azospirillum,Defensivos e biológicos,L,2.2,2.0,saída,2026-08-20,,,,,Talhão 1,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,245.6,600,saída,2026-08-20,,,,,Talhão 2,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,178.6,1920,saída,2026-08-20,,,,,Colheitadeira,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.6,15.0,saída,2026-08-20,,,,,Talhão 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-08-20,,,,,Almoxarifado,Tratorista A
+MAP,Fertilizantes,kg,157.1,300,saída,2026-08-20,,,,,Pivô 1,Encarregado
+NPK 04-30-16,Fertilizantes,kg,258.8,500,saída,2026-08-20,,,,,Talhão 3,Tratorista B
+Filtro de ar,Peças e manutenção,un,4,1,entrada,2026-08-21,133.97,FIL-2608-5,,Cooperativa C,,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,152.7,1920,saída,2026-08-21,,,,,Oficina,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-08-21,,,,,Talhão 4,Operador de pulverização
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-08-21,,,,,Trator 2,Encarregado
+Glifosato 480,Defensivos e biológicos,L,14.4,120,saída,2026-08-21,,,,,Talhão 1,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.9,20,saída,2026-08-21,,,,,Talhão 4,Operador de pulverização
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-08-21,,,,,Oficina,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-08-21,,,,,Talhão 4,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-08-21,,,,,Talhão 2,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,117.4,250,saída,2026-08-21,,,,,Talhão 1,Tratorista A
+Braquiária,Sementes,kg,11.1,20,saída,2026-08-22,,,,,Talhão 1,Encarregado
+Conector de irrigação,Irrigação,un,8,10,saída,2026-08-22,,,,,Pivô 1,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,203.6,1920,saída,2026-08-22,,,,,Trator 2,Tratorista B
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-22,,,,,Almoxarifado,Operador de pulverização
+NPK 04-14-08,Fertilizantes,kg,324.2,800,saída,2026-08-22,,,,,Talhão 1,Encarregado
+NPK 04-30-16,Fertilizantes,kg,181.8,500,saída,2026-08-22,,,,,Talhão 5,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-22,,,,,Almoxarifado,Operador de pulverização
+ÓLEO HIDRÁULICO,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-08-22,,,,,Trator 1,Almoxarife
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.2,10,saída,2026-08-22,,,,,Pulverizador,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,162.1,1920,saída,2026-08-23,,,,,Trator 1,Operador de pulverização
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-08-23,,,,,Colheitadeira,Tratorista B
+Fungicida azoxistrobina,Defensivos e biológicos,L,8.7,15.0,saída,2026-08-23,,,,,Talhão 5,Encarregado
+Gesso agrícola,Corretivos,t,2.33,3.0,saída,2026-08-23,,,,,Talhão 5,Tratorista B
+Ureia,Fertilizantes,kg,105.1,1000,saída,2026-08-23,,,,,Talhão 5,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1400,4.0,saída,2026-08-24,,,,,Pivô 1,Almoxarife
+Calcário dolomítico,Corretivos,t,3.92,5.0,saída,2026-08-24,,,,,Pivô 1,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,165.8,1920,saída,2026-08-24,,,,,Oficina,Encarregado
+Glifosato 480,Defensivos e biológicos,L,11.3,120,saída,2026-08-24,,,,,Talhão 3,Encarregado
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-08-24,,,,,Oficina,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-08-24,,,,,Talhão 5,Tratorista A
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-08-24,,,,,Almoxarifado,Tratorista B
+Semente de feijão,Sementes,kg,15,50,saída,2026-08-24,,,,,Pivô 1,Almoxarife
+Semente de soja,Sementes,sc,3,10,saída,2026-08-24,,,,,Talhão 3,Tratorista B
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-08-24,,TRI-02,,,Talhão 2,Operador de pulverização
+Atrazina,Defensivos e biológicos,L,5.4,15.0,saída,2026-08-25,,,,,Talhão 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,171.3,1920,saída,2026-08-25,,,,,Colheitadeira,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-08-25,,,,,Talhão 1,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.5,20,saída,2026-08-25,,,,,Talhão 5,Almoxarife
+MAP,Fertilizantes,kg,158.6,300,saída,2026-08-25,,,,,Talhão 2,Encarregado
+NPK 04-30-16,Fertilizantes,kg,214.3,500,saída,2026-08-25,,,,,Talhão 3,Tratorista A
+Semente de milho,Sementes,sc,3,8,saída,2026-08-25,,,,,Talhão 3,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,121.4,250,saída,2026-08-25,,,,,Talhão 4,Encarregado
+Óleo hidráulico,Combustíveis e lubrificantes,L,6.2,8.0,saída,2026-08-25,,,,,Pulverizador,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,135.0,15.0,entrada,2026-08-26,122.5,FUN-2608-5,2028-08-15,Agro Fornecedor A,,Tratorista A
+Cloreto de potássio (KCl),Fertilizantes,kg,256.8,600,saída,2026-08-26,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,235.1,1920,saída,2026-08-26,,,,,Colheitadeira,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.3,15.0,saída,2026-08-26,,,,,Pivô 1,Tratorista A
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-08-26,,,,,Almoxarifado,Operador de pulverização
+Mangueira de gotejamento,Irrigação,m,157.5,200,saída,2026-08-26,,,,,Pivô 1,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-26,,,,,Almoxarifado,Tratorista B
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-08-27,,,,,Almoxarifado,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,205.3,1920,saída,2026-08-27,,,,,Oficina,Almoxarife
+NPK 04-14-08,Fertilizantes,kg,334.1,800,saída,2026-08-27,,,,,Talhão 3,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-08-27,,,,,Talhão 5,Almoxarife
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.8,10,saída,2026-08-27,,,,,Colheitadeira,Encarregado
+Adjuvante,Defensivos e biológicos,mL,2000,4.0,saída,2026-08-28,,,,,Talhão 1,Tratorista B
+Braquiária,Sementes,kg,12.1,20,saída,2026-08-28,,,,,Talhão 5,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,227.2,1920,saída,2026-08-28,,,,,Oficina,Tratorista B
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-08-28,,,,,Trator 2,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.4,20,saída,2026-08-28,,,,,Talhão 4,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-28,,,,,Almoxarifado,Almoxarife
+Semente de milho,Sementes,sc,4,8,saída,2026-08-28,,,,,Talhão 1,Encarregado
+Atrazina,Defensivos e biológicos,L,6.6,15.0,saída,2026-08-29,,,,,Pivô 1,Tratorista B
+Conector de irrigação,Irrigação,un,7,10,saída,2026-08-29,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,200.2,1920,saída,2026-08-29,,,,,Colheitadeira,Tratorista B
+FTE BR-12,Fertilizantes,kg,18.6,30,saída,2026-08-29,,,,,Talhão 4,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.0,15.0,saída,2026-08-29,,,,,Pivô 1,Operador de pulverização
+Gesso agrícola,Corretivos,t,2.22,3.0,saída,2026-08-29,,,,,Talhão 4,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,9.9,120,saída,2026-08-29,,,,,Talhão 4,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,137.3,500,saída,2026-08-29,,,,,Talhão 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-08-29,,,,,Talhão 2,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,178.0,1920,saída,2026-08-30,,,,,Colheitadeira,Tratorista B
+Estacas de eucalipto,EPI e diversos,un,13,30,saída,2026-08-30,,,,,Talhão 2,Almoxarife
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-08-30,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,104.0,300,saída,2026-08-30,,,,,Talhão 4,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-08-30,,,,,Almoxarifado,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.1,8.0,saída,2026-08-30,,,,,Oficina,Encarregado
+Ureia,Fertilizantes,sc,40,1000,entrada,2026-08-31,155.72,URE-2608,,Agro Fornecedor A,,Tratorista A
+Azospirillum,Defensivos e biológicos,L,2.4,2.0,saída,2026-08-31,,,,,Talhão 3,Almoxarife
+Calcário dolomítico,Corretivos,t,2.53,5.0,saída,2026-08-31,,,,,Talhão 1,Encarregado
+Cloreto de potássio (KCl),Fertilizantes,kg,258.2,600,saída,2026-08-31,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,164.0,1920,saída,2026-08-31,,,,,Colheitadeira,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-08-31,,,,,Pulverizador,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,6.4,15.0,saída,2026-08-31,,,,,Pivô 1,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-08-31,,,,,Pivô 1,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,109.7,250,saída,2026-08-31,,,,,Pivô 1,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-08-31,,TRI-02,,,Talhão 4,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.7,10,saída,2026-08-31,,,,,Colheitadeira,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,2300,4.0,saída,2026-09-01,,,,,Talhão 2,Operador de pulverização
+Conector de irrigação,Irrigação,un,6,10,saída,2026-09-01,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,152.5,1920,saída,2026-09-01,,,,,Trator 2,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-01,,,,,Almoxarifado,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,178.5,500,saída,2026-09-01,,,,,Talhão 3,Operador de pulverização
+Semente de milho,Sementes,sc,3,8,saída,2026-09-01,,,,,Pivô 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-09-01,,,,,Talhão 4,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,227.0,1920,saída,2026-09-02,,,,,Oficina,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,7.8,15.0,saída,2026-09-02,,,,,Talhão 1,Encarregado
+Glifosato 480,Defensivos e biológicos,L,12.3,120,saída,2026-09-02,,,,,Talhão 4,Almoxarife
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-09-02,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,283.6,800,saída,2026-09-02,,,,,Talhão 4,Tratorista A
+Atrazina,Defensivos e biológicos,L,5.2,15.0,saída,2026-09-03,,,,,Talhão 5,Encarregado
+Braquiária,Sementes,kg,15.9,20,saída,2026-09-03,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,148.9,1920,saída,2026-09-03,,,,,Trator 1,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,10,30,saída,2026-09-03,,,,,Talhão 5,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-09-03,,,,,Trator 2,Operador de pulverização
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.4,20,saída,2026-09-03,,,,,Talhão 1,Almoxarife
+MAP,Fertilizantes,kg,139.0,300,saída,2026-09-03,,,,,Pivô 1,Tratorista B
+Mangueira de gotejamento,Irrigação,m,126.3,200,saída,2026-09-03,,,,,Pivô 1,Almoxarife
+Semente de feijão,Sementes,kg,16,50,saída,2026-09-03,,,,,Talhão 4,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,103.9,250,saída,2026-09-03,,,,,Talhão 4,Encarregado
+Gesso agrícola,Corretivos,t,18.0,3.0,entrada,2026-09-04,162.57,GES-2609-5,,Agro Fornecedor A,,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,158.5,1920,saída,2026-09-04,,,,,Pulverizador,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,20.0,30,saída,2026-09-04,,,,,Talhão 4,Operador de pulverização
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-09-04,,,,,Trator 2,Tratorista A
+Gesso agrícola,Corretivos,t,2.09,3.0,saída,2026-09-04,,,,,Talhão 1,Operador de pulverização
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-04,,,,,Almoxarifado,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-04,,,,,Almoxarifado,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-09-04,,,,,Talhão 1,Tratorista A
+Ureia,Fertilizantes,kg,83.3,1000,saída,2026-09-04,,,,,Talhão 2,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.8,8.0,saída,2026-09-04,,,,,Colheitadeira,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1900,4.0,saída,2026-09-05,,,,,Talhão 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,278.8,600,saída,2026-09-05,,,,,Talhão 5,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,191.6,1920,saída,2026-09-05,,,,,Oficina,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,173.7,500,saída,2026-09-05,,,,,Talhão 4,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-09-05,,,,,Talhão 4,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,3251.8,1920,entrada,2026-09-06,6.45,DIE-2609-8,,Cooperativa C,,Tratorista B
+Calcário dolomítico,Corretivos,t,4.29,5.0,saída,2026-09-06,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,197.1,1920,saída,2026-09-06,,,,,Oficina,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-09-06,,,,,Talhão 1,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,10.7,15.0,saída,2026-09-06,,,,,Talhão 3,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,9.1,120,saída,2026-09-06,,,,,Talhão 4,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-09-06,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,253.4,800,saída,2026-09-06,,,,,Talhão 5,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,101.5,250,saída,2026-09-06,,,,,Talhão 3,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.5,10,saída,2026-09-06,,,,,Colheitadeira,Almoxarife
+Atrazina,Defensivos e biológicos,L,7.2,15.0,saída,2026-09-07,,,,,Pivô 1,Almoxarife
+Azospirillum,Defensivos e biológicos,L,2.0,2.0,saída,2026-09-07,,,,,Talhão 1,Operador de pulverização
+Conector de irrigação,Irrigação,un,5,10,saída,2026-09-07,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,143.7,1920,saída,2026-09-07,,,,,Oficina,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.4,20,saída,2026-09-07,,,,,Talhão 3,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-09-07,,,,,Talhão 3,Tratorista A
+MAP,Fertilizantes,kg,144.0,300,saída,2026-09-07,,,,,Talhão 5,Encarregado
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-09-07,,TRI-02,,,Talhão 3,Operador de pulverização
+Semente de milho,Sementes,sc,48,8,entrada,2026-09-08,1012.2,SEM-2609-5,2028-03-01,Agro Fornecedor A,,Tratorista B
+Braquiária,Sementes,kg,11.8,20,saída,2026-09-08,,,,,Talhão 4,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,183.4,1920,saída,2026-09-08,,,,,Colheitadeira,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.8,4.5,saída,2026-09-08,,,,,Pulverizador,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-08,,,,,Almoxarifado,Operador de pulverização
+NPK 04-30-16,Fertilizantes,kg,203.4,500,saída,2026-09-08,,,,,Talhão 4,Encarregado
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-08,,,,,Almoxarifado,Encarregado
+Semente de milho,Sementes,sc,2,8,saída,2026-09-08,,,,,Talhão 1,Operador de pulverização
+Semente de soja,Sementes,sc,3,10,saída,2026-09-08,,,,,Talhão 2,Almoxarife
+ureia granulada,Fertilizantes,kg,140,,saída,2026-09-08,,,,,Talhão 2,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-09-09,,,,,Pivô 1,Almoxarife
+Bico de pulverização,Peças e manutenção,un,3,4,saída,2026-09-09,,,,,Pulverizador,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,193.5,1920,saída,2026-09-09,,,,,Colheitadeira,Encarregado
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-09-09,,,,,Talhão 2,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,10.8,15.0,saída,2026-09-09,,,,,Talhão 3,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,4.9,8.0,saída,2026-09-09,,,,,Trator 2,Operador de pulverização
+Cloreto de potássio (KCl),Fertilizantes,kg,297.7,600,saída,2026-09-10,,,,,Pivô 1,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,195.6,1920,saída,2026-09-10,,,,,Colheitadeira,Operador de pulverização
+FTE BR-12,Fertilizantes,kg,24.5,30,saída,2026-09-10,,,,,Pivô 1,Tratorista A
+Gesso agrícola,Corretivos,t,2.06,3.0,saída,2026-09-10,,,,,Talhão 3,Encarregado
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-09-10,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,247.0,800,saída,2026-09-10,,,,,Talhão 4,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.8,10,saída,2026-09-10,,,,,Trator 2,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,198.2,1920,saída,2026-09-11,,,,,Colheitadeira,Almoxarife
+Glifosato 480,Defensivos e biológicos,L,13.7,120,saída,2026-09-11,,,,,Pivô 1,Encarregado
+"Herbicida 2,4-D",Defensivos e biológicos,L,6.5,20,saída,2026-09-11,,,,,Talhão 3,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-09-11,,,,,Talhão 3,Tratorista A
+Sulfato de amônio,Fertilizantes,kg,135.6,250,saída,2026-09-11,,,,,Talhão 3,Almoxarife
+Filtro de óleo,Peças e manutenção,un,6,1,entrada,2026-09-12,91.14,FIL-2609-5,,Agro Fornecedor A,,Tratorista B
+Rolamento 6205,Peças e manutenção,un,3,1,entrada,2026-09-12,114.92,ROL-2609-5,,Cooperativa C,,Almoxarife
+Atrazina,Defensivos e biológicos,L,5.6,15.0,saída,2026-09-12,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,177.2,1920,saída,2026-09-12,,,,,Pulverizador,Encarregado
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-09-12,,,,,Trator 2,Tratorista B
+Luvas nitrilicas,EPI e diversos,par,3,20,saída,2026-09-12,,,,,Almoxarifado,Operador de pulverização
+MAP,Fertilizantes,kg,137.0,300,saída,2026-09-12,,,,,Talhão 3,Encarregado
+Mangueira de gotejamento,Irrigação,m,126.9,200,saída,2026-09-12,,,,,Pivô 1,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,152.7,500,saída,2026-09-12,,,,,Pivô 1,Tratorista A
+Rolamento 6205,Peças e manutenção,un,1,1,saída,2026-09-12,,,,,Colheitadeira,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-09-12,,,,,Talhão 1,Operador de pulverização
+Ureia,Fertilizantes,kg,112.7,1000,saída,2026-09-12,,,,,Talhão 1,Almoxarife
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.8,8.0,saída,2026-09-12,,,,,Colheitadeira,Operador de pulverização
+Adjuvante,Defensivos e biológicos,L,24.0,4.0,entrada,2026-09-13,30.81,ADJ-2609-5,2028-09-02,Distribuidora Rural B,,Tratorista A
+Conector de irrigação,Irrigação,un,60,10,entrada,2026-09-13,3.38,CON-2609-5,,Distribuidora Rural B,,Tratorista B
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-09-13,,,,,Talhão 1,Tratorista B
+Conector de irrigação,Irrigação,un,8,10,saída,2026-09-13,,,,,Pivô 1,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-09-13,,,,,Talhão 3,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,11.7,15.0,saída,2026-09-13,,,,,Talhão 4,Tratorista B
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-09-13,,,,,Almoxarifado,Almoxarife
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-13,,,,,Almoxarifado,Tratorista A
+Semente de feijão,Sementes,kg,15,50,saída,2026-09-13,,,,,Pivô 1,Almoxarife
+Ureia,Fertilizantes,kg,102.7,1000,saída,2026-09-13,,,,,Talhão 3,Encarregado
+Braquiária,Sementes,kg,12.5,20,saída,2026-09-14,,,,,Talhão 4,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,219.2,1920,saída,2026-09-14,,,,,Oficina,Encarregado
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-09-14,,,,,Pulverizador,Operador de pulverização
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-09-14,,,,,Trator 1,Tratorista A
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-09-14,,,,,Talhão 3,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,384.1,800,saída,2026-09-14,,,,,Talhão 3,Operador de pulverização
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-09-14,,TRI-02,,,Pivô 1,Almoxarife
+Ureia,Fertilizantes,kg,105.3,1000,saída,2026-09-14,,,,,Talhão 1,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,285.3,600,saída,2026-09-15,,,,,Talhão 3,Almoxarife
+Diesel S10,Combustíveis e lubrificantes,L,174.2,1920,saída,2026-09-15,,,,,Trator 1,Operador de pulverização
+Fungicida azoxistrobina,Defensivos e biológicos,L,11.9,15.0,saída,2026-09-15,,,,,Talhão 5,Encarregado
+Luva nitrílica,EPI e diversos,par,3,20,saída,2026-09-15,,,,,Almoxarifado,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-09-15,,,,,Talhão 3,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-09-15,,,,,Pivô 1,Tratorista A
+Atrazina,Defensivos e biológicos,L,6.6,15.0,saída,2026-09-16,,,,,Talhão 1,Almoxarife
+Calcário dolomítico,Corretivos,t,3.49,5.0,saída,2026-09-16,,,,,Talhão 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,164.9,1920,saída,2026-09-16,,,,,Trator 2,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,13.6,120,saída,2026-09-16,,,,,Talhão 5,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,192.6,500,saída,2026-09-16,,,,,Pivô 1,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-16,,,,,Almoxarifado,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,124.8,250,saída,2026-09-16,,,,,Talhão 3,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.2,10,saída,2026-09-16,,,,,Trator 2,Tratorista B
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.5,8.0,saída,2026-09-16,,,,,Trator 2,Tratorista A
+Azospirillum,Defensivos e biológicos,L,12.0,2.0,entrada,2026-09-17,58.47,AZO-2609-5,2027-09-12,Agro Fornecedor A,,Tratorista A
+MAP,Fertilizantes,kg,1800.0,300,entrada,2026-09-17,4.64,MAP-2609-5,,Distribuidora Rural B,,Tratorista A
+Azospirillum,Defensivos e biológicos,L,1.9,2.0,saída,2026-09-17,,,,,Talhão 5,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,220.2,1920,saída,2026-09-17,,,,,Oficina,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-09-17,,,,,Talhão 5,Almoxarife
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-09-17,,,,,Pulverizador,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.0,20,saída,2026-09-17,,,,,Talhão 5,Tratorista B
+Luva nitrílica,EPI e diversos,par,5,20,saída,2026-09-17,,,,,Almoxarifado,Tratorista B
+MAP,Fertilizantes,kg,137.3,300,saída,2026-09-17,,,,,Talhão 5,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,231.2,1920,saída,2026-09-18,,,,,Trator 2,Encarregado
+Mangueira de gotejamento,Irrigação,m,136.2,200,saída,2026-09-18,,,,,Pivô 1,Tratorista B
+Braquiária,Sementes,kg,120.0,20,entrada,2026-09-19,27.73,BRA-2609-5,2028-03-12,Cooperativa C,,Tratorista A
+FTE BR-12,Fertilizantes,kg,180.0,30,entrada,2026-09-19,7.5,FTE-2609-5,,Distribuidora Rural B,,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1300,4.0,saída,2026-09-19,,,,,Talhão 4,Tratorista B
+Bota de borracha,EPI e diversos,par,1,1,saída,2026-09-19,,,,,Almoxarifado,Almoxarife
+Braquiária,Sementes,kg,12.2,20,saída,2026-09-19,,,,,Talhão 5,Tratorista A
+Conector de irrigação,Irrigação,un,5,10,saída,2026-09-19,,,,,Pivô 1,Almoxarife
+Estacas de eucalipto,EPI e diversos,un,12,30,saída,2026-09-19,,,,,Pivô 1,Tratorista B
+FTE BR-12,Fertilizantes,kg,20.6,30,saída,2026-09-19,,,,,Talhão 5,Almoxarife
+Fungicida azoxistrobina,Defensivos e biológicos,L,10.6,15.0,saída,2026-09-19,,,,,Pivô 1,Almoxarife
+Gesso agrícola,Corretivos,t,1.99,3.0,saída,2026-09-19,,,,,Talhão 5,Encarregado
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-09-19,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,248.2,800,saída,2026-09-19,,,,,Talhão 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-09-19,,,,,Talhão 3,Almoxarife
+Ureia,Fertilizantes,kg,133.7,1000,saída,2026-09-19,,,,,Talhão 4,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,2700.0,600,entrada,2026-09-20,4.28,CLO-2609-6,,Distribuidora Rural B,,Tratorista B
+Respirador PFF2,EPI e diversos,un,30,5,entrada,2026-09-20,9.15,RES-2609-5,,Distribuidora Rural B,,Encarregado
+Sulfato de amônio,Fertilizantes,kg,1500.0,250,entrada,2026-09-20,2.69,SUL-2609-5,,Distribuidora Rural B,,Operador de pulverização
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,100.0,10,entrada,2026-09-20,19.13,ÓLE-2609-4,,Cooperativa C,,Tratorista B
+Atrazina,Defensivos e biológicos,L,6.8,15.0,saída,2026-09-20,,,,,Talhão 4,Tratorista A
+Calcário dolomítico,Corretivos,t,3.57,5.0,saída,2026-09-20,,,,,Talhão 2,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,319.3,600,saída,2026-09-20,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,155.4,1920,saída,2026-09-20,,,,,Trator 2,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,12.8,120,saída,2026-09-20,,,,,Talhão 5,Almoxarife
+MAP,Fertilizantes,kg,184.0,300,saída,2026-09-20,,,,,Pivô 1,Tratorista A
+NPK 04-30-16,Fertilizantes,kg,170.7,500,saída,2026-09-20,,,,,Talhão 1,Tratorista B
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-20,,,,,Almoxarifado,Tratorista A
+Semente de milho,Sementes,sc,4,8,saída,2026-09-20,,,,,Talhão 2,Operador de pulverização
+Sulfato de amônio,Fertilizantes,kg,147.1,250,saída,2026-09-20,,,,,Pivô 1,Operador de pulverização
+Ureia,Fertilizantes,kg,97.1,1000,saída,2026-09-20,,,,,Talhão 2,Tratorista A
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,60,10,saída,2026-09-20,,,,,Trator 2,Tratorista B
+Luva nitrílica,EPI e diversos,par,120,20,entrada,2026-09-21,4.48,LUV-2609-5,,Cooperativa C,,Operador de pulverização
+Diesel S10,Combustíveis e lubrificantes,L,190.2,1920,saída,2026-09-21,,,,,Colheitadeira,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,8.8,15.0,saída,2026-09-21,,,,,Talhão 3,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,1.0,4.5,saída,2026-09-21,,,,,Pulverizador,Operador de pulverização
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-09-21,,,,,Talhão 4,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-21,,,,,Almoxarifado,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-09-21,,TRI-02,,,Talhão 2,Operador de pulverização
+Ureia,Fertilizantes,kg,136.8,1000,saída,2026-09-21,,,,,Talhão 3,Encarregado
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,5.2,10,saída,2026-09-21,,,,,Trator 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,180,30,entrada,2026-09-22,,EST-2609-5,,Cooperativa C,,Tratorista A
+Óleo hidráulico,Combustíveis e lubrificantes,L,48.0,8.0,entrada,2026-09-22,22.2,ÓLE-2609-5,,Cooperativa C,,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,193.2,1920,saída,2026-09-22,,,,,Trator 2,Operador de pulverização
+Estacas de eucalipto,EPI e diversos,un,16,30,saída,2026-09-22,,,,,Talhão 2,Tratorista A
+"Herbicida 2,4-D",Defensivos e biológicos,L,8.8,20,saída,2026-09-22,,,,,Talhão 5,Encarregado
+Oleo hidraulico,Combustíveis e lubrificantes,L,3.6,8.0,saída,2026-09-22,,,,,Pulverizador,Tratorista B
+Semente de soja,Sementes,sc,3,10,saída,2026-09-22,,,,,Talhão 2,Tratorista A
+Atrazina,Defensivos e biológicos,L,6.4,15.0,saída,2026-09-23,,,,,Talhão 5,Operador de pulverização
+Azospirillum,Defensivos e biológicos,L,1.8,2.0,saída,2026-09-23,,,,,Talhão 1,Encarregado
+Bico de pulverização,Peças e manutenção,un,2,4,saída,2026-09-23,,,,,Pulverizador,Almoxarife
+Braquiária,Sementes,kg,12.0,20,saída,2026-09-23,,,,,Talhão 3,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,203.3,1920,saída,2026-09-23,,,,,Trator 2,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,160.2,500,saída,2026-09-23,,,,,Talhão 3,Operador de pulverização
+Semente de feijão,Sementes,kg,13,50,saída,2026-09-23,,,,,Talhão 2,Almoxarife
+Adjuvante,Defensivos e biológicos,mL,1500,4.0,saída,2026-09-24,,,,,Talhão 4,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,166.0,1920,saída,2026-09-24,,,,,Pulverizador,Operador de pulverização
+Glifosato 480,Defensivos e biológicos,L,9.8,120,saída,2026-09-24,,,,,Talhão 5,Tratorista A
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-09-24,,,,,Almoxarifado,Tratorista B
+NPK 04-14-08,Fertilizantes,kg,400.7,800,saída,2026-09-24,,,,,Talhão 1,Tratorista A
+Respirador PFF2,EPI e diversos,un,2,5,saída,2026-09-24,,,,,Almoxarifado,Almoxarife
+Semente de milho,Sementes,sc,3,8,saída,2026-09-24,,,,,Talhão 5,Tratorista A
+Ureia,Fertilizantes,kg,112.5,1000,saída,2026-09-24,,,,,Talhão 4,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,207.0,15.0,entrada,2026-09-25,123.92,FUN-2609-6,2028-09-14,Agro Fornecedor A,,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,436.8,600,saída,2026-09-25,,,,,Talhão 4,Tratorista B
+Conector de irrigação,Irrigação,un,8,10,saída,2026-09-25,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,186.2,1920,saída,2026-09-25,,,,,Trator 2,Tratorista B
+Filtro de ar,Peças e manutenção,un,1,1,saída,2026-09-25,,,,,Trator 1,Tratorista A
+Fungicida azoxistrobina,Defensivos e biológicos,L,11.2,15.0,saída,2026-09-25,,,,,Talhão 3,Almoxarife
+Graxa,Combustíveis e lubrificantes,kg,0.9,4.5,saída,2026-09-25,,,,,Trator 1,Tratorista B
+Mangueira de gotejamento,Irrigação,m,147.7,200,saída,2026-09-25,,,,,Pivô 1,Encarregado
+Semente de soja,Sementes,sc,3,10,saída,2026-09-25,,,,,Talhão 3,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,120.0,20,entrada,2026-09-26,32.64,HER-2609-5,2028-09-15,Cooperativa C,,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,259.4,1920,saída,2026-09-26,,,,,Oficina,Tratorista A
+Estacas de eucalipto,EPI e diversos,un,11,30,saída,2026-09-26,,,,,Talhão 2,Tratorista A
+FTE BR-12,Fertilizantes,kg,23.5,30,saída,2026-09-26,,,,,Talhão 5,Operador de pulverização
+Gesso agrícola,Corretivos,t,2.05,3.0,saída,2026-09-26,,,,,Pivô 1,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,7.3,20,saída,2026-09-26,,,,,Talhão 5,Tratorista A
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-26,,,,,Almoxarifado,Operador de pulverização
+MAP,Fertilizantes,kg,184.5,300,saída,2026-09-26,,,,,Pivô 1,Almoxarife
+Sulfato de amônio,Fertilizantes,kg,117.5,250,saída,2026-09-26,,,,,Talhão 4,Tratorista B
+Óleo de motor 15W40,Combustíveis e lubrificantes,L,4.3,10,saída,2026-09-26,,,,,Trator 2,Encarregado
+Calcário dolomítico,Corretivos,t,30.0,5.0,entrada,2026-09-27,204.11,CAL-2609-5,,Distribuidora Rural B,,Almoxarife
+NPK 04-30-16,Fertilizantes,kg,3000.0,500,entrada,2026-09-27,4.04,NPK-2609-5,,Cooperativa C,,Tratorista A
+Calcário dolomítico,Corretivos,t,3.78,5.0,saída,2026-09-27,,,,,Pivô 1,Tratorista B
+Diesel S10,Combustíveis e lubrificantes,L,194.6,1920,saída,2026-09-27,,,,,Trator 2,Tratorista A
+Glifosato 480,Defensivos e biológicos,L,10.9,120,saída,2026-09-27,,,,,Talhão 3,Tratorista B
+NPK 04-30-16,Fertilizantes,kg,188.0,500,saída,2026-09-27,,,,,Talhão 2,Operador de pulverização
+Óleo hidráulico,Combustíveis e lubrificantes,L,3.7,8.0,saída,2026-09-27,,,,,Trator 1,Tratorista A
+Atrazina,Defensivos e biológicos,L,90.0,15.0,entrada,2026-09-28,36.51,ATR-2609-5,2028-09-17,Cooperativa C,,Encarregado
+Semente de soja,Sementes,sc,60,10,entrada,2026-09-28,389.97,SEM-2609-5,2028-03-21,Distribuidora Rural B,,Encarregado
+Adjuvante,Defensivos e biológicos,mL,1700,4.0,saída,2026-09-28,,,,,Talhão 3,Tratorista A
+Atrazina,Defensivos e biológicos,L,4.4,15.0,saída,2026-09-28,,,,,Talhão 5,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,183.0,1920,saída,2026-09-28,,,,,Trator 2,Encarregado
+Inoculante para soja,Defensivos e biológicos,L,0.8,5,saída,2026-09-28,,,,,Talhão 5,Encarregado
+Luva nitrílica,EPI e diversos,par,4,20,saída,2026-09-28,,,,,Almoxarifado,Tratorista A
+NPK 04-14-08,Fertilizantes,kg,342.1,800,saída,2026-09-28,,,,,Talhão 2,Operador de pulverização
+Respirador PFF2,EPI e diversos,un,1,5,saída,2026-09-28,,,,,Almoxarifado,Tratorista A
+Semente de soja,Sementes,sc,3,10,saída,2026-09-28,,,,,Talhão 2,Almoxarife
+Trichoderma,Defensivos e biológicos,kg,0.5,2,saída,2026-09-28,,TRI-02,,,Pivô 1,Operador de pulverização
+Braquiária,Sementes,kg,11.0,20,saída,2026-09-29,,,,,Pivô 1,Encarregado
+Diesel S10,Combustíveis e lubrificantes,L,165.5,1920,saída,2026-09-29,,,,,Trator 2,Encarregado
+Estacas de eucalipto,EPI e diversos,un,14,30,saída,2026-09-29,,,,,Talhão 1,Encarregado
+Fungicida azoxistrobina,Defensivos e biológicos,L,10.5,15.0,saída,2026-09-29,,,,,Talhão 4,Encarregado
+Semente de milho,Sementes,sc,3,8,saída,2026-09-29,,,,,Talhão 4,Operador de pulverização
+Ureia,Fertilizantes,kg,106.4,1000,saída,2026-09-29,,,,,Pivô 1,Tratorista B
+Cloreto de potássio (KCl),Fertilizantes,kg,346.5,600,saída,2026-09-30,,,,,Talhão 4,Tratorista A
+Diesel S10,Combustíveis e lubrificantes,L,150,1920,saída,2026-09-30,,,,,Trator 1,Tratorista B
+Filtro de óleo,Peças e manutenção,un,1,1,saída,2026-09-30,,,,,Oficina,Tratorista B
+Glifosato 480,Defensivos e biológicos,L,13.6,120,saída,2026-09-30,,,,,Talhão 4,Tratorista B
+"Herbicida 2,4-D",Defensivos e biológicos,L,9.6,20,saída,2026-09-30,,,,,Talhão 1,Encarregado
+Luvas nitrilicas,EPI e diversos,par,4,20,saída,2026-09-30,,,,,Almoxarifado,Encarregado
+NPK 04-30-16,Fertilizantes,kg,176.3,500,saída,2026-09-30,,,,,Talhão 5,Encarregado
+Ureia,Fertilizantes,kg,105.4,1000,saída,2026-09-30,,,,,Talhão 1,Tratorista B
