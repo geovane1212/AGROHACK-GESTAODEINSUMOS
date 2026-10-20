@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% from "_macros.html" import cabecalho_pagina with context %}
-{% block title %}Como funciona{% endblock %}
+{% block title %}Como funciona</div>
+{% endblock %}
 {% block content %}
 {{ cabecalho_pagina('Como funciona: critérios e limites',
-   'Todos os números abaixo são lidos da configuração usada no cálculo (motor/config.py), então esta página sempre mostra os parâmetros reais.',
-   url_for('web.mais'), 'Mais') }}
+   'Todos os números abaixo são lidos da configuração usada no cálculo (motor/config.py), então esta página sempre mostra os parâmetros reais.') }}
+<div class="leitura">
 
-<section class="cartao">
-  <h2>1. Data de referência</h2>
+<section class="cartao cartao-numerado">
+  <h2>Data de referência</h2>
   <p>Todas as contas ("vence em X dias", "consumo dos últimos 30 dias") usam a <strong>data de referência</strong>
     mostrada no topo, e não o relógio do computador. Padrão: a data da última movimentação registrada. Assim os dados
     não "envelhecem" sozinhos e a análise pode ser refeita para qualquer data. Movimentações posteriores à data de
     referência são ignoradas (e avisadas na qualidade dos dados).</p>
 </section>
 
-<section class="cartao">
-  <h2>2. Saldo, unidades e dados ausentes</h2>
+<section class="cartao cartao-numerado">
+  <h2>Saldo, unidades e dados ausentes</h2>
   <ul>
     <li><strong>Saldo</strong> = soma das entradas − soma das saídas, por produto e por lote.</li>
     <li><strong>Unidades:</strong> g, kg e t são convertidos para kg; mL e L para L. Saco, unidade, rolo, galão e
@@ -29,8 +30,8 @@
   </ul>
 </section>
 
-<section class="cartao">
-  <h2>3. Consumo médio e confiança</h2>
+<section class="cartao cartao-numerado">
+  <h2>Consumo médio e confiança</h2>
   <p><strong>Consumo médio diário</strong> = soma das saídas na janela ÷ dias da janela. A janela é de
     {{ p.janela_curta_dias }} dias se houver pelo menos {{ p.min_saidas_janela_curta }} saídas nela; senão,
     {{ p.janela_longa_dias }} dias. Se o produto é mais novo que a janela, divide-se pelos dias desde a primeira movimentação.</p>
@@ -46,8 +47,8 @@
   </table></div>
 </section>
 
-<section class="cartao">
-  <h2>4. Regras de alerta</h2>
+<section class="cartao cartao-numerado">
+  <h2>Regras de alerta</h2>
   <div class="tabela-rolagem"><table class="responsiva">
     <thead><tr><th>Alerta</th><th>Quando dispara</th><th>Severidade</th><th>Quando pode errar</th></tr></thead>
     <tbody>
@@ -84,8 +85,8 @@
   </table></div>
 </section>
 
-<section class="cartao">
-  <h2>5. Prioridade</h2>
+<section class="cartao cartao-numerado">
+  <h2>Prioridade</h2>
   <p><strong>Prioridade = peso da severidade + urgência + valor envolvido − incerteza</strong></p>
   <ul>
     <li>Severidade: Crítico 100, Atenção 50, Informativo 10.</li>
@@ -96,8 +97,8 @@
   <p>Cada alerta mostra a conta da própria prioridade em "Por que este alerta?".</p>
 </section>
 
-<section class="cartao">
-  <h2>6. Nomes diferentes para o mesmo produto</h2>
+<section class="cartao cartao-numerado">
+  <h2>Nomes diferentes para o mesmo produto</h2>
   <ul>
     <li>Nomes que ficam idênticos após tirar maiúsculas, acentos, pontuação e espaços extras são tratados como o mesmo
       produto (com aviso "grafias equivalentes").</li>
@@ -109,10 +110,11 @@
   </ul>
 </section>
 
-<section class="cartao">
-  <h2>7. Por que não usamos IA ou previsão complexa?</h2>
+<section class="cartao cartao-numerado">
+  <h2>Por que não usamos IA ou previsão complexa?</h2>
   <p>Porque cada alerta precisa ser explicado ao produtor com números que ele consegue conferir. Médias recentes,
     mediana e MAD são simples, robustas a poucos dados e fáceis de auditar. Quando há pouco histórico, o sistema diz
     isso em vez de inventar precisão.</p>
 </section>
+</div>
 {% endblock %}

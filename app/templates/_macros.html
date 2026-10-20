@@ -1,19 +1,25 @@
 {# Componentes reutilizáveis. Importar sempre "with context" (usam ICONES, CLASSES e url_for). #}
-
-{% macro icone(nome, classe='') -%}
-<svg class="icone {{ classe }}" aria-hidden="true" focusable="false"><use href="{{ url_for('static', filename='img/icones.svg') }}#i-{{ nome }}"></use></svg>
-{%- endmacro %}
+{% from "_icones.html" import icone %}
 
 {% macro selo(severidade) -%}
 <span class="selo {{ CLASSES[severidade] }}">{{ icone(ICONES[severidade]) }}{{ severidade }}</span>
 {%- endmacro %}
 
+{% macro etiqueta_confianca(nivel) -%}
+{% set classes = {'alta': 'conf-alta', 'média': 'conf-media', 'baixa': 'conf-baixa'} %}
+<span class="etiqueta {{ classes.get(nivel, '') }}">{{ ('confiança ' ~ nivel) if nivel else 'sem estimativa' }}</span>
+{%- endmacro %}
+
+{% macro etiqueta_abc(classe) -%}
+{% if classe %}<span class="etiqueta abc-{{ classe|lower }}" title="Curva ABC pelo valor em estoque">Classe {{ classe }}</span>{% else %}<span class="suave">—</span>{% endif %}
+{%- endmacro %}
+
 {% macro cabecalho_pagina(titulo, subtitulo=none, voltar=none, voltar_rotulo='Voltar') -%}
 <header class="cabecalho-pagina">
-  {% if voltar %}<a class="voltar" href="{{ voltar }}">{{ icone('arrow-left') }} {{ voltar_rotulo }}</a>{% endif %}
+  {% if voltar %}<a class="voltar" href="{{ voltar }}">{{ icone('arrow-left', 'icone-p') }} {{ voltar_rotulo }}</a>{% endif %}
   <h1>{{ titulo }}</h1>
-  {% if subtitulo %}<p>{{ subtitulo }}</p>{% endif %}
-  {{ caller() if caller }}
+  {% if subtitulo %}<p class="subtitulo">{{ subtitulo }}</p>{% endif %}
+  {% if caller %}<div class="linha-acoes">{{ caller() }}</div>{% endif %}
 </header>
 {%- endmacro %}
 
@@ -21,43 +27,62 @@
 <a class="botao {{ estilo }} {{ 'bloco' if bloco }}" href="{{ url }}">{% if icone_nome %}{{ icone(icone_nome) }}{% endif %}{{ rotulo }}</a>
 {%- endmacro %}
 
-{% macro indicador(numero, rotulo, url=none, classe='', valor=false) -%}
-{% if url %}<a class="cartao indicador {{ classe }}" href="{{ url }}">{% else %}<div class="cartao indicador {{ classe }}">{% endif %}
-  <div class="numero {{ 'valor' if valor }}">{{ numero }}</div>
-  <div class="rotulo">{{ rotulo }}</div>
+{% macro kpi(rotulo, numero, icone_nome, url=none, classe='', detalhe=none, menor=false, detalhe_ausente=false) -%}
+{% if url %}<a class="cartao kpi" href="{{ url }}">{% else %}<div class="cartao kpi">{% endif %}
+  <div class="kpi-topo"><span class="kpi-rotulo">{{ rotulo }}</span><span class="kpi-icone {{ classe }}">{{ icone(icone_nome) }}</span></div>
+  <div class="kpi-numero {{ 'menor' if menor }}">{{ numero }}</div>
+  {% if detalhe %}<div class="kpi-detalhe {{ 'ausente' if detalhe_ausente }}">{{ detalhe }}</div>{% endif %}
 {% if url %}</a>{% else %}</div>{% endif %}
 {%- endmacro %}
 
-{% macro estado_vazio(titulo, texto=none, acao_rotulo=none, acao_url=none, icone_nome='circle-check') -%}
-<div class="estado-vazio cartao">
-  {{ icone(icone_nome) }}
-  <p><strong>{{ titulo }}</strong></p>
+{# Mantido para telas que mostram um número simples com rótulo. #}
+{% macro indicador(numero, rotulo, url=none, classe='', valor=false) -%}
+{{ kpi(rotulo, numero, 'package', url, classe, none, valor) }}
+{%- endmacro %}
+
+{% macro estado_vazio(titulo, texto=none, acao_rotulo=none, acao_url=none, icone_nome='inbox', acao2_rotulo=none, acao2_url=none, compacto=false) -%}
+<div class="cartao estado-vazio {{ 'compacto' if compacto }}">
+  <div class="ilustracao">{{ icone(icone_nome) }}</div>
+  <h3>{{ titulo }}</h3>
   {% if texto %}<p>{{ texto }}</p>{% endif %}
-  {% if acao_url %}<p>{{ botao(acao_rotulo, acao_url) }}</p>{% endif %}
+  {% if acao_url or acao2_url %}
+  <div class="botoes">
+    {% if acao_url %}{{ botao(acao_rotulo, acao_url) }}{% endif %}
+    {% if acao2_url %}{{ botao(acao2_rotulo, acao2_url, none, 'secundario') }}{% endif %}
+  </div>
+  {% endif %}
 </div>
 {%- endmacro %}
 
-{% macro mensagem(texto, tipo='ok') -%}
+{% macro mensagem(texto, tipo='ok', fechavel=true) -%}
 <div class="mensagem {{ tipo }}" role="{{ 'alert' if tipo == 'erro' else 'status' }}">
-  {{ icone({'ok': 'circle-check', 'erro': 'octagon-alert', 'aviso': 'triangle-alert'}[tipo]) }}<span>{{ texto }}</span>
+  {{ icone({'ok': 'circle-check', 'erro': 'octagon-alert', 'aviso': 'triangle-alert'}.get(tipo, 'info')) }}<span>{{ texto }}</span>
+  {% if fechavel %}<button type="button" class="fechar" data-fechar aria-label="Fechar mensagem" hidden>{{ icone('x', 'icone-p') }}</button>{% endif %}
 </div>
 {%- endmacro %}
 
 {% macro alerta(a, mostrar_produto=true) -%}
+{% set valor = a|valor_envolvido %}
 <article class="alerta {{ CLASSES[a.severidade] }}">
-  <div class="alerta-topo">
+  <div class="alerta-etiquetas">
     {{ selo(a.severidade) }}
-    <h3 class="alerta-titulo">{{ a.titulo }}{% if mostrar_produto %} —
-      <a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a>{% endif %}</h3>
+    <span class="etiqueta">{{ icone('tag') }}{{ a.titulo }}</span>
+    {% if valor %}<span class="etiqueta valor" title="Valor envolvido">{{ icone('banknote') }}{{ valor }}</span>{% endif %}
   </div>
-  <p>{{ a.mensagem }}</p>
+  {% if mostrar_produto %}
+  <h3 class="alerta-titulo"><a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a></h3>
+  {% endif %}
+  <p class="alerta-mensagem">{{ a.mensagem }}</p>
   <details>
     <summary>{{ icone('circle-help') }} Por que este alerta? {{ icone('chevron-down', 'icone-abrir') }}</summary>
     <div class="detalhes">
-      <p><strong>Regra aplicada:</strong> {{ a.regra }}</p>
-      <p><strong>Quando pode errar:</strong> {{ a.limite }}</p>
-      <p><strong>Prioridade {{ a.score }}</strong> = {{ a.score_partes|join('; ') }}.</p>
-      <p>Categoria: {{ a.categoria }}</p>
+      <dl>
+        <dt>Regra aplicada</dt><dd>{{ a.regra }}</dd>
+        <dt>Quando pode errar</dt><dd>{{ a.limite }}</dd>
+        {% if a.confianca %}<dt>Confiança</dt><dd>{{ a.confianca }}</dd>{% endif %}
+        <dt>Prioridade {{ a.score }}</dt><dd>{{ a.score_partes|join('; ') }}.</dd>
+        <dt>Categoria</dt><dd>{{ a.categoria }}</dd>
+      </dl>
     </div>
   </details>
 </article>
@@ -84,10 +109,27 @@
 </ul>
 {%- endmacro %}
 
+{# Barra inferior do celular (5 itens). #}
 {% macro nav_itens(secao, criticos) -%}
 <li><a class="nav-item" href="{{ url_for('web.painel') }}" {% if secao == 'inicio' %}aria-current="page"{% endif %}>{{ icone('house') }}<span class="rotulo">Início</span></a></li>
 <li><a class="nav-item" href="{{ url_for('web.alertas') }}" {% if secao == 'alertas' %}aria-current="page"{% endif %}>{{ icone('bell') }}<span class="rotulo">Alertas</span>{% if criticos %}<span class="contador" aria-label="{{ criticos }} críticos">{{ criticos }}</span>{% endif %}</a></li>
 <li><a class="nav-item nav-registrar" href="{{ url_for('web.atalhos') }}" data-abre-folha="menu-registrar" {% if secao == 'registrar' %}aria-current="page"{% endif %}><span class="bolha">{{ icone('plus') }}</span><span class="rotulo">Registrar</span></a></li>
 <li><a class="nav-item" href="{{ url_for('web.produtos') }}" {% if secao == 'estoque' %}aria-current="page"{% endif %}>{{ icone('package') }}<span class="rotulo">Estoque</span></a></li>
 <li><a class="nav-item" href="{{ url_for('web.mais') }}" {% if secao == 'mais' %}aria-current="page"{% endif %}>{{ icone('ellipsis') }}<span class="rotulo">Mais</span></a></li>
+{%- endmacro %}
+
+{# Abas do cabeçalho no computador. #}
+{% macro abas_itens(endpoint, secao, criticos) -%}
+{% set abas = [
+  ('web.painel', 'Painel', 'house', secao == 'inicio'),
+  ('web.alertas', 'Alertas', 'bell', secao == 'alertas'),
+  ('web.produtos', 'Estoque', 'package', secao == 'estoque'),
+  ('web.importar', 'Importar', 'file-spreadsheet', endpoint in ('web.importar', 'web.importar_confirmar')),
+  ('web.qualidade', 'Qualidade', 'clipboard-check', endpoint == 'web.qualidade'),
+  ('web.movimentacoes', 'Histórico', 'history', endpoint == 'web.movimentacoes'),
+  ('web.como_funciona', 'Como funciona', 'book-open', endpoint == 'web.como_funciona'),
+] %}
+{% for alvo, rotulo, ic, ativo in abas %}
+<li><a class="aba" href="{{ url_for(alvo) }}" {% if ativo %}aria-current="page"{% endif %}>{{ rotulo }}{% if alvo == 'web.alertas' and criticos %} <span class="contador" aria-label="{{ criticos }} críticos">{{ criticos }}</span>{% endif %}</a></li>
+{% endfor %}
 {%- endmacro %}

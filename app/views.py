@@ -2,6 +2,7 @@
 
 import csv
 import io
+import re
 import uuid
 from pathlib import Path
 
@@ -57,8 +58,17 @@ def painel():
     por_categoria = dict(sorted(por_categoria.items(), key=lambda x: -x[1]))
     cobertura = sorted([p for p in res.produtos if p["cobertura"] is not None],
                        key=lambda p: p["cobertura"])[:10]
+    a_vencer = _lotes_a_vencer(res)
+    vencendo_30 = sum(1 for l in a_vencer if l["dias"] <= PADRAO.vencimento_critico_dias)
     return render_template("painel.html", mudancas=mudancas, por_categoria=por_categoria,
-                           cobertura=cobertura, a_vencer=_lotes_a_vencer(res)[:8])
+                           cobertura=cobertura, a_vencer=a_vencer[:8], vencendo_30=vencendo_30)
+
+
+@bp.app_template_filter("valor_envolvido")
+def valor_envolvido(alerta):
+    """Valor em reais que o motor usou na prioridade do alerta (texto já formatado), ou None."""
+    achado = re.search(r"valor envolvido \((R\$ [^)]+)\)", " ".join(alerta.score_partes))
+    return achado.group(1) if achado else None
 
 
 def _lotes_a_vencer(res):

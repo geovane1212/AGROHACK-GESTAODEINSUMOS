@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% from "_macros.html" import cabecalho_pagina, estado_vazio, icone with context %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import cabecalho_pagina, estado_vazio with context %}
 {% block title %}Busca{% endblock %}
 {% block content %}
-{{ cabecalho_pagina('Buscar produto', 'Resultados para "' ~ termo ~ '"' if termo else 'Digite parte do nome do produto.') }}
+{{ cabecalho_pagina('Buscar produto', 'Resultados para "' ~ termo ~ '"' if termo else 'Digite parte do nome do produto no campo de busca.') }}
 {% if achados %}
 <nav class="cartao" aria-label="Produtos encontrados">
   <ul class="lista-links">
@@ -11,6 +12,6 @@
   </ul>
 </nav>
 {% elif termo %}
-{{ estado_vazio('Nenhum produto encontrado.', 'Confira a grafia ou veja a lista completa.', 'Ver estoque', url_for('web.produtos'), 'search') }}
+{{ estado_vazio('Nenhum produto encontrado', 'Confira a grafia ou veja a lista completa do estoque.', 'Ver estoque', url_for('web.produtos'), 'search') }}
 {% endif %}
 {% endblock %}

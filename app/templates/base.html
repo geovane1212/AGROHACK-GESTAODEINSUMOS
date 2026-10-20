@@ -3,63 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1d4a1f">
-  <title>{% block title %}Início{% endblock %} · Gestão de Insumos</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  <meta name="theme-color" content="#1f4d20">
+  <title>{% block title %}Painel{% endblock %} · Gestão Inteligente de Insumos</title>
+  <link rel="preload" href="{{ url_for('static', filename='fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
 </head>
-{% from "_macros.html" import icone, nav_itens, atalhos_registrar, mensagem with context %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import nav_itens, abas_itens, atalhos_registrar, mensagem with context %}
 {% set criticos = res.resumo.severidades['Crítico'] if res.resumo.severidades else 0 %}
+{% set data_ref = res.data_referencia|data if res.data_referencia is not none else '—' %}
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-  <div class="layout">
-    <aside class="lateral" aria-label="Menu lateral">
-      <a class="marca" href="{{ url_for('web.painel') }}">{{ icone('sprout', 'icone-grande') }} Gestão de Insumos</a>
-      <nav aria-label="Menu principal"><ul>{{ nav_itens(secao, criticos) }}</ul></nav>
-      <p class="separador" id="titulo-mais-lateral">Mais</p>
-      <nav aria-labelledby="titulo-mais-lateral"><ul>
-        <li><a class="nav-item" href="{{ url_for('web.importar') }}">{{ icone('file-spreadsheet') }}<span class="rotulo">Importar planilha</span></a></li>
-        <li><a class="nav-item" href="{{ url_for('web.qualidade') }}">{{ icone('clipboard-check') }}<span class="rotulo">Qualidade dos dados</span></a></li>
-        <li><a class="nav-item" href="{{ url_for('web.movimentacoes') }}">{{ icone('history') }}<span class="rotulo">Histórico</span></a></li>
-        <li><a class="nav-item" href="{{ url_for('web.como_funciona') }}">{{ icone('book-open') }}<span class="rotulo">Como funciona</span></a></li>
-      </ul></nav>
-    </aside>
+  <div class="principal">
+    {% if dados_simulados %}
+    <div class="faixa-simulado" role="note">{{ icone('triangle-alert', 'icone-p') }}<span><strong>DADOS SIMULADOS</strong> — não são de uma propriedade real</span></div>
+    {% endif %}
 
-    <div class="principal">
-      {% if dados_simulados %}
-      <div class="faixa-simulado" role="note">{{ icone('triangle-alert') }} DADOS SIMULADOS — não são de uma propriedade real</div>
-      {% endif %}
-      <header class="topo">
-        <div class="topo-conteudo">
-          <a class="marca" href="{{ url_for('web.painel') }}">{{ icone('sprout', 'icone-grande') }} Insumos</a>
-          <a class="chip-data" href="{{ url_for('web.mais') }}#data-referencia"
-             title="Data de referência das análises{{ ' (escolhida manualmente)' if data_ref_manual }}. Toque para alterar.">
-            {{ icone('calendar') }}<span class="visualmente-oculto">Data de referência:</span>
-            {{ res.data_referencia|data if res.data_referencia is not none else '—' }}</a>
-          <form class="busca" role="search" action="{{ url_for('web.busca') }}" method="get">
-            <label class="visualmente-oculto" for="busca-produto">Buscar produto</label>
-            <input id="busca-produto" name="q" type="search" list="lista-busca" placeholder="Buscar produto…"
-                   autocomplete="off" value="{{ busca_atual or '' }}">
-            <datalist id="lista-busca">{% for p in res.produtos %}<option value="{{ p.nome }}">{% endfor %}</datalist>
-            <button type="submit" aria-label="Buscar">{{ icone('search') }}</button>
+    <header class="cabecalho" id="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a class="marca" href="{{ url_for('web.painel') }}">
+          <span class="marca-icone">{{ icone('sprout') }}</span>
+          <span class="marca-nome-longo">Gestão Inteligente de Insumos</span><span class="marca-nome-curto">Insumos</span>
+        </a>
+        <nav class="abas" aria-label="Menu principal"><ul>{{ abas_itens(request.endpoint, secao, criticos) }}</ul></nav>
+        <a class="botao botao-registrar-topo" href="{{ url_for('web.atalhos') }}" data-abre-folha="menu-registrar" {% if secao == 'registrar' %}aria-current="page"{% endif %}>{{ icone('plus') }}Registrar</a>
+        <a class="chip-data" href="{{ url_for('web.mais') }}#data-referencia"
+           title="Data de referência das análises{{ ' (escolhida manualmente)' if data_ref_manual }}. Toque para alterar.">
+          {{ icone('calendar', 'icone-p') }}<span class="visualmente-oculto">Data de referência:</span> {{ data_ref }}</a>
+      </div>
+    </header>
+
+    <div class="faixa-referencia">
+      <div class="faixa-referencia-conteudo">
+        <div class="referencia">
+          {{ icone('calendar') }}
+          <span>Data de referência</span>
+          <span class="chip">{{ data_ref }}{% if data_ref_manual %} · manual{% endif %}</span>
+          <span class="visualmente-oculto">({{ 'escolhida manualmente' if data_ref_manual else 'data da última movimentação' }})</span>
+          <form method="post" action="{{ url_for('web.data_referencia') }}">
+            <label class="visualmente-oculto" for="data_referencia_topo">Nova data de referência</label>
+            <input type="date" id="data_referencia_topo" name="data_referencia"
+                   value="{{ res.data_referencia.strftime('%Y-%m-%d') if res.data_referencia is not none else '' }}">
+            <button class="secundario" type="submit" name="acao" value="manual">Alterar</button>
+            {% if data_ref_manual %}<button class="fantasma" type="submit" name="acao" value="automatica">Usar última</button>{% endif %}
           </form>
         </div>
-      </header>
-
-      <main id="conteudo">
-        {% with mensagens = get_flashed_messages(with_categories=true) %}
-          {% if mensagens %}
-          <div class="mensagens" aria-live="polite">
-            {% for categoria, msg in mensagens %}{{ mensagem(msg, categoria) }}{% endfor %}
+        <form class="busca" role="search" action="{{ url_for('web.busca') }}" method="get">
+          <label class="visualmente-oculto" for="busca-produto">Buscar produto</label>
+          <div class="campo-busca">
+            {{ icone('search') }}
+            <input id="busca-produto" name="q" type="search" list="lista-busca" placeholder="Buscar produto…"
+                   autocomplete="off" value="{{ busca_atual or '' }}">
           </div>
-          {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
-      </main>
-      <footer class="rodape">
-        AGROHACK 2026/2 · IFRO Campus Ariquemes · Igor Malher, Geovane Alencar, João Paulo da Costa e Edson Henrique ·
-        <a href="{{ url_for('web.como_funciona') }}">Critérios e limites</a>
-      </footer>
+          <datalist id="lista-busca">{% for p in res.produtos %}<option value="{{ p.nome }}">{% endfor %}</datalist>
+          <button type="submit" class="secundario icone-so" aria-label="Buscar">{{ icone('search') }}</button>
+        </form>
+      </div>
     </div>
+
+    <main id="conteudo">
+      {% with mensagens = get_flashed_messages(with_categories=true) %}
+        {% if mensagens %}
+        <div class="mensagens" aria-live="polite">
+          {% for categoria, msg in mensagens %}{{ mensagem(msg, categoria) }}{% endfor %}
+        </div>
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <span>AGROHACK 2026/2 · IFRO Campus Ariquemes</span>
+        <span>Igor Malher, Geovane Alencar, João Paulo da Costa e Edson Henrique ·
+          <a href="{{ url_for('web.como_funciona') }}">Critérios e limites</a></span>
+      </div>
+    </footer>
   </div>
 
   <nav class="barra-inferior" aria-label="Menu principal (celular)"><ul>{{ nav_itens(secao, criticos) }}</ul></nav>
@@ -67,7 +86,7 @@
   <dialog class="folha" id="menu-registrar" aria-labelledby="titulo-menu-registrar">
     <div class="folha-topo">
       <h2 id="titulo-menu-registrar">O que você quer fazer?</h2>
-      <form method="dialog"><button class="secundario" aria-label="Fechar">{{ icone('x') }}</button></form>
+      <form method="dialog"><button class="secundario icone-so" aria-label="Fechar">{{ icone('x') }}</button></form>
     </div>
     {{ atalhos_registrar() }}
   </dialog>

@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-{% from "_macros.html" import lista_mudancas, cabecalho_pagina, mensagem, botao, icone with context %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import lista_mudancas, cabecalho_pagina, mensagem, botao with context %}
 {% block title %}Importação concluída{% endblock %}
 {% block content %}
 {{ cabecalho_pagina('Importação concluída') }}
-<div aria-live="polite">{{ mensagem(n ~ ' movimentação(ões) importada(s). Alertas recalculados.', 'ok') }}</div>
+<div class="mensagens" aria-live="polite">{{ mensagem(n ~ ' movimentação(ões) importada(s). Alertas recalculados.', 'ok', false) }}</div>
 
 <section class="mudancas">
   <h2>{{ icone('refresh-cw') }} O que mudou</h2>
@@ -12,7 +13,8 @@
 
 {% if erros %}
 <section class="cartao">
-  <h2>{{ icone('octagon-alert') }} {{ erros|length }} linha(s) recusada(s)</h2>
+  <h2 class="cartao-titulo"><span class="icone-caixa">{{ icone('octagon-alert') }}</span> Linhas recusadas
+    <span class="selo-contagem tem">{{ erros|length }}</span></h2>
   <p class="suave">Corrija no arquivo e importe só essas linhas de novo.</p>
   <ul>{% for e in erros[:100] %}<li>{{ e }}</li>{% endfor %}</ul>
   {% if erros|length > 100 %}<p>… e mais {{ erros|length - 100 }}.</p>{% endif %}
@@ -21,13 +23,14 @@
 
 {% if avisos %}
 <section class="cartao">
-  <h2>{{ icone('triangle-alert') }} {{ avisos|length }} aviso(s)</h2>
+  <h2 class="cartao-titulo"><span class="icone-caixa">{{ icone('triangle-alert') }}</span> Avisos
+    <span class="selo-contagem tem">{{ avisos|length }}</span></h2>
   <ul>{% for a in avisos[:100] %}<li>{{ a }}</li>{% endfor %}</ul>
 </section>
 {% endif %}
 
 <div class="botoes">
-  {{ botao('Ir para o início', url_for('web.painel'), 'house') }}
+  {{ botao('Ir para o painel', url_for('web.painel'), 'house') }}
   {{ botao('Ver qualidade dos dados', url_for('web.qualidade'), 'clipboard-check', 'secundario') }}
 </div>
 {% endblock %}

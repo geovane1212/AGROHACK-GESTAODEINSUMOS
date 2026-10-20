@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-{% from "_macros.html" import alerta, cabecalho_pagina, estado_vazio, icone with context %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import alerta, cabecalho_pagina, estado_vazio with context %}
 {% block title %}Alertas{% endblock %}
 {% block content %}
-{{ cabecalho_pagina('Alertas', 'Do mais urgente para o menos urgente. Toque em "Por que este alerta?" para ver a regra e os limites.') }}
+{{ cabecalho_pagina('Alertas priorizados', 'Do mais urgente para o menos urgente. Abra "Por que este alerta?" para ver a regra, os números e os limites.') }}
 
-<form class="filtros" method="get">
+<form class="barra-filtros" method="get" aria-label="Filtrar alertas">
   <div><label for="severidade">Severidade</label>
     <select id="severidade" name="severidade">
       <option value="">Todas</option>
@@ -22,10 +23,19 @@
       <option value="">Todos</option>
       {% for t, n in tipos %}<option value="{{ t }}" {% if filtros.get('tipo') == t %}selected{% endif %}>{{ n }}</option>{% endfor %}
     </select></div>
-  <button type="submit">{{ icone('list-filter') }} Filtrar</button>
+  <div class="acoes">
+    <button type="submit">{{ icone('list-filter') }} Filtrar</button>
+    <a class="botao secundario" href="{{ url_for('web.alertas_csv', **filtros) }}">{{ icone('download') }} Baixar CSV</a>
+  </div>
 </form>
 
-<p><strong>{{ alertas|length }}</strong> alerta(s) ·
-  <a href="{{ url_for('web.alertas_csv', **filtros) }}">{{ icone('download') }} baixar CSV</a></p>
-{% for a in alertas %}{{ alerta(a) }}{% else %}{{ estado_vazio('Nenhum alerta com esses filtros.') }}{% endfor %}
+<p class="suave"><strong>{{ alertas|length }}</strong> alerta(s){% if filtros.get('severidade') or filtros.get('categoria') or filtros.get('tipo') %} com os filtros escolhidos · <a href="{{ url_for('web.alertas') }}">limpar filtros</a>{% endif %}</p>
+{% for a in alertas %}{{ alerta(a) }}{% else %}
+  {% if res.alertas %}
+    {{ estado_vazio('Nenhum alerta com esses filtros', 'Tente outra severidade, categoria ou tipo.', 'Limpar filtros', url_for('web.alertas'), 'list-filter') }}
+  {% else %}
+    {{ estado_vazio('Nenhum alerta no momento', 'Quando houver movimentações com algum problema, os alertas aparecem aqui, do mais urgente para o menos urgente.',
+                    'Importar planilha', url_for('web.importar'), 'bell', 'Registrar movimentação', url_for('web.registrar')) }}
+  {% endif %}
+{% endfor %}
 {% endblock %}

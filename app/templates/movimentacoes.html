@@ -1,33 +1,44 @@
 {% extends "base.html" %}
-{% from "_macros.html" import cabecalho_pagina, estado_vazio, icone with context %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import cabecalho_pagina, estado_vazio with context %}
 {% block title %}Histórico{% endblock %}
 {% block content %}
-{{ cabecalho_pagina('Histórico de movimentações', 'Os nomes aparecem exatamente como foram registrados.', url_for('web.mais'), 'Mais') }}
-<form class="filtros" method="get">
-  <div><label for="filtro">Filtrar por produto</label><input id="filtro" name="filtro" value="{{ busca }}" type="search"></div>
-  <button type="submit">{{ icone('search') }} Filtrar</button>
+{{ cabecalho_pagina('Histórico de movimentações', 'Todas as entradas e saídas, da mais recente para a mais antiga. Os nomes aparecem exatamente como foram registrados.') }}
+
+{% if total == 0 and not busca %}
+{{ estado_vazio('Nenhuma movimentação registrada', 'Importe a planilha do almoxarifado ou registre a primeira entrada.',
+                'Importar planilha', url_for('web.importar'), 'history', 'Registrar movimentação', url_for('web.registrar')) }}
+{% else %}
+<form class="barra-filtros" method="get" aria-label="Filtrar histórico">
+  <div><label for="filtro">Filtrar por produto</label><input id="filtro" name="filtro" value="{{ busca }}" type="search" placeholder="ex.: diesel"></div>
+  <div class="acoes"><button type="submit">{{ icone('search') }} Filtrar</button>
+    {% if busca %}<a class="botao secundario" href="{{ url_for('web.movimentacoes') }}">Limpar</a>{% endif %}</div>
 </form>
-<p class="suave">{{ total }} movimentação(ões){% if paginas > 1 %} · página {{ pagina }} de {{ paginas }}{% endif %}.</p>
+<p class="suave"><strong>{{ total }}</strong> movimentação(ões){% if paginas > 1 %} · página {{ pagina }} de {{ paginas }}{% endif %}.</p>
 {% if movs %}
-<div class="tabela-rolagem"><table class="responsiva">
+<div class="tabela-rolagem alta"><table class="responsiva">
   <thead><tr><th>Produto</th><th>Data e tipo</th><th class="num">Quantidade</th><th class="num">Preço</th>
     <th>Lote</th><th>Validade</th><th>Destino / fornecedor</th><th>Responsável</th><th>Origem</th></tr></thead>
   <tbody>{% for m in movs %}
     <tr><td class="destaque">{{ m.produto }}</td>
-      <td data-rotulo="Data e tipo">{{ m.data[8:10] }}/{{ m.data[5:7] }}/{{ m.data[:4] }} · {{ 'Entrada' if m.tipo == 'entrada' else 'Saída' }}</td>
+      <td data-rotulo="Data e tipo">{{ m.data[8:10] }}/{{ m.data[5:7] }}/{{ m.data[:4] }} ·
+        {% if m.tipo == 'entrada' %}<span class="etiqueta conf-alta">Entrada</span>{% else %}<span class="etiqueta">Saída</span>{% endif %}</td>
       <td class="num" data-rotulo="Quantidade">{{ m.quantidade|num }} {{ m.unidade }}</td>
       <td class="num" data-rotulo="Preço">{% if m.tipo == 'entrada' %}{% if m.preco_unitario == m.preco_unitario and m.preco_unitario is not none %}{{ m.preco_unitario|moeda }}{% else %}<span class="ausente">ausente</span>{% endif %}{% endif %}</td>
       <td data-rotulo="Lote">{{ m.lote or '' }}</td><td data-rotulo="Validade">{{ m.validade or '' }}</td>
       <td data-rotulo="Destino / fornecedor">{{ m.destino or m.fornecedor or '' }}</td>
-      <td data-rotulo="Responsável">{{ m.responsavel or '' }}</td><td data-rotulo="Origem">{{ m.origem }}</td></tr>
+      <td data-rotulo="Responsável">{{ m.responsavel or '' }}</td><td data-rotulo="Origem"><span class="etiqueta">{{ m.origem }}</span></td></tr>
   {% endfor %}</tbody>
 </table></div>
 {% if paginas > 1 %}
 <nav class="paginacao" aria-label="Páginas">
-  {% if pagina > 1 %}<a class="botao secundario" href="{{ url_for('web.movimentacoes', filtro=busca or none, pagina=pagina - 1) }}">{{ icone('arrow-left') }} Anteriores</a>{% else %}<span></span>{% endif %}
-  <span>{{ pagina }} / {{ paginas }}</span>
+  {% if pagina > 1 %}<a class="botao secundario" href="{{ url_for('web.movimentacoes', filtro=busca or none, pagina=pagina - 1) }}">{{ icone('arrow-left') }} Mais recentes</a>{% else %}<span></span>{% endif %}
+  <span class="suave">{{ pagina }} / {{ paginas }}</span>
   {% if pagina < paginas %}<a class="botao secundario" href="{{ url_for('web.movimentacoes', filtro=busca or none, pagina=pagina + 1) }}">Mais antigas {{ icone('chevron-right') }}</a>{% else %}<span></span>{% endif %}
 </nav>
 {% endif %}
-{% else %}{{ estado_vazio('Nenhuma movimentação encontrada.', icone_nome='search') }}{% endif %}
+{% else %}
+  {{ estado_vazio('Nenhuma movimentação encontrada', 'Nenhum produto com "' ~ busca ~ '" no nome.', 'Limpar filtro', url_for('web.movimentacoes'), 'search') }}
+{% endif %}
+{% endif %}
 {% endblock %}
