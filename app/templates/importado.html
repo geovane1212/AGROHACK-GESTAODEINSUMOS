@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "_macros.html" import lista_mudancas with context %}
+{% block title %}Importação concluída{% endblock %}
+{% block content %}
+<h1>Importação concluída</h1>
+<ul class="mensagens"><li class="ok">✅ {{ n }} movimentação(ões) importada(s). Alertas recalculados.</li></ul>
+
+<section class="mudancas">
+  <h2>🔄 O que mudou</h2>
+  {{ lista_mudancas(mudancas) }}
+</section>
+
+{% if erros %}
+<h2>⛔ {{ erros|length }} linha(s) recusada(s)</h2>
+<p class="suave">Corrija no arquivo e importe só essas linhas de novo.</p>
+<ul>{% for e in erros[:100] %}<li>{{ e }}</li>{% endfor %}</ul>
+{% if erros|length > 100 %}<p>… e mais {{ erros|length - 100 }}.</p>{% endif %}
+{% endif %}
+
+{% if avisos %}
+<h2>⚠️ {{ avisos|length }} aviso(s)</h2>
+<ul>{% for a in avisos[:100] %}<li>{{ a }}</li>{% endfor %}</ul>
+{% endif %}
+
+<p><a class="botao" href="{{ url_for('web.painel') }}">Ir para o painel</a>
+   <a class="botao secundario" href="{{ url_for('web.qualidade') }}">Ver qualidade dos dados</a></p>
+{% endblock %}

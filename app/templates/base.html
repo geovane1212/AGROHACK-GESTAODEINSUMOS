@@ -3,17 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Gestão de Insumos{% endblock %}</title>
-  <style>
-    body { font-family: system-ui, sans-serif; font-size: 1.05rem; line-height: 1.5;
-           margin: 0; color: #1a1a1a; background: #fafaf7; }
-    main { max-width: 960px; margin: 0 auto; padding: 1rem; }
-    .aviso-simulado { background: #fff3cd; color: #5c4400; border-bottom: 2px solid #b58900;
-                      padding: .6rem 1rem; text-align: center; font-weight: 600; }
-  </style>
+  <title>{% block title %}Painel{% endblock %} · Gestão de Insumos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="aviso-simulado" role="status">⚠ Dados SIMULADOS para demonstração — não são de uma propriedade real.</div>
-  <main>{% block content %}{% endblock %}</main>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  {% if dados_simulados %}
+  <div class="aviso-simulado" role="status">⚠️ Dados SIMULADOS para demonstração — não são de uma propriedade real.</div>
+  {% endif %}
+  <header class="topo">
+    <div class="topo-linha">
+      <a class="marca" href="{{ url_for('web.painel') }}">🌱 Gestão Inteligente de Insumos</a>
+    </div>
+  </header>
+  {% set menu = [
+    ('web.painel', 'Painel'), ('web.alertas', 'Alertas'), ('web.produtos', 'Estoque'),
+    ('web.registrar', 'Registrar movimentação'), ('web.importar', 'Importar planilha'),
+    ('web.qualidade', 'Qualidade dos dados'), ('web.movimentacoes', 'Histórico'),
+    ('web.como_funciona', 'Como funciona') ] %}
+  <nav class="menu" aria-label="Menu principal">
+    <ul>
+      {% for endpoint, rotulo in menu %}
+      <li><a href="{{ url_for(endpoint) }}" {% if request.endpoint == endpoint %}aria-current="page"{% endif %}>{{ rotulo }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="data-ref">
+    <form method="post" action="{{ url_for('web.data_referencia') }}">
+      <span>📅 Data de referência das análises:
+        <strong>{{ res.data_referencia|data if res.data_referencia is not none else '—' }}</strong>
+        <span class="suave">({{ 'escolhida manualmente' if data_ref_manual else 'data da última movimentação' }})</span>
+      </span>
+      <label class="pular" for="data_referencia">Nova data de referência</label>
+      <input type="date" id="data_referencia" name="data_referencia"
+             value="{{ res.data_referencia.strftime('%Y-%m-%d') if res.data_referencia is not none else '' }}">
+      <button class="pequeno secundario" type="submit" name="acao" value="manual">Alterar</button>
+      {% if data_ref_manual %}<button class="pequeno secundario" type="submit" name="acao" value="automatica">Usar última movimentação</button>{% endif %}
+    </form>
+  </div>
+  <main id="conteudo">
+    {% with mensagens = get_flashed_messages(with_categories=true) %}
+      {% if mensagens %}
+      <ul class="mensagens" role="status">
+        {% for categoria, msg in mensagens %}<li class="{{ categoria }}">{{ msg }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    AGROHACK 2026/2 · IFRO Campus Ariquemes · Igor Malher, Geovane Alencar, João Paulo da Costa e Edson Henrique ·
+    <a href="{{ url_for('web.como_funciona') }}">Critérios e limites</a>
+  </footer>
+  {% block scripts %}{% endblock %}
 </body>
 </html>

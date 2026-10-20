@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Histórico{% endblock %}
+{% block content %}
+<h1>Histórico de movimentações</h1>
+<form class="filtros" method="get">
+  <div><label for="q">Buscar produto</label><input id="q" name="q" value="{{ busca }}"></div>
+  <button type="submit">Buscar</button>
+</form>
+<p class="suave">{{ total }} movimentação(ões){% if total > 300 %}; mostrando as 300 mais recentes{% endif %}.
+  Os nomes aparecem exatamente como foram registrados.</p>
+<div class="tabela-rolagem"><table>
+  <thead><tr><th>Data</th><th>Tipo</th><th>Produto</th><th class="num">Quantidade</th><th class="num">Preço</th>
+    <th>Lote</th><th>Validade</th><th>Destino / fornecedor</th><th>Responsável</th><th>Origem</th></tr></thead>
+  <tbody>{% for m in movs %}
+    <tr><td>{{ m.data[8:10] }}/{{ m.data[5:7] }}/{{ m.data[:4] }}</td>
+      <td>{{ 'Entrada' if m.tipo == 'entrada' else 'Saída' }}</td><td>{{ m.produto }}</td>
+      <td class="num">{{ m.quantidade|num }} {{ m.unidade }}</td>
+      <td class="num">{% if m.tipo == 'entrada' %}{% if m.preco_unitario == m.preco_unitario and m.preco_unitario is not none %}{{ m.preco_unitario|moeda }}{% else %}<span class="ausente">ausente</span>{% endif %}{% endif %}</td>
+      <td>{{ m.lote or '' }}</td><td>{{ m.validade or '' }}</td><td>{{ m.destino or m.fornecedor or '' }}</td>
+      <td>{{ m.responsavel or '' }}</td><td>{{ m.origem }}</td></tr>
+  {% endfor %}</tbody>
+</table></div>
+{% endblock %}

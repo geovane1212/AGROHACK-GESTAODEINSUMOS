@@ -1,0 +1,34 @@
+{% macro selo(severidade) -%}
+<span class="selo {{ CLASSES[severidade] }}"><span aria-hidden="true">{{ ICONES[severidade] }}</span> {{ severidade }}</span>
+{%- endmacro %}
+
+{% macro alerta(a, mostrar_produto=true) -%}
+<article class="alerta {{ CLASSES[a.severidade] }}">
+  <div class="alerta-cabecalho">
+    {{ selo(a.severidade) }}
+    <span class="alerta-titulo">{{ a.titulo }}{% if mostrar_produto %} —
+      <a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a>{% endif %}</span>
+    <span class="prioridade" title="Score de prioridade">Prioridade {{ a.score }}</span>
+  </div>
+  <p>{{ a.mensagem }}</p>
+  <details>
+    <summary>Por que este alerta? (regra, limites e prioridade)</summary>
+    <p><strong>Regra aplicada:</strong> {{ a.regra }}</p>
+    <p><strong>Quando pode errar:</strong> {{ a.limite }}</p>
+    <p><strong>Prioridade {{ a.score }}</strong> = {{ a.score_partes|join('; ') }}.</p>
+    <p class="suave">Categoria: {{ a.categoria }}</p>
+  </details>
+</article>
+{%- endmacro %}
+
+{% macro lista_mudancas(m) -%}
+{% if m and (m.novos or m.resolvidos or m.mudaram) %}
+<ul>
+  {% for x in m.novos %}<li>🆕 <strong>Novo:</strong> {{ selo(x.severidade) }} {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
+  {% for x in m.mudaram %}<li>{{ '⬆️' if x.piorou else '⬇️' }} <strong>{{ 'Piorou' if x.piorou else 'Melhorou' }}:</strong> {{ x.titulo }} — {{ x.produto }} ({{ x.de }} → {{ x.para }})</li>{% endfor %}
+  {% for x in m.resolvidos %}<li>✅ <strong>Resolvido:</strong> {{ x.titulo }} — {{ x.produto }}</li>{% endfor %}
+</ul>
+{% else %}
+<p>Nenhum alerta novo, resolvido ou com severidade diferente.</p>
+{% endif %}
+{%- endmacro %}
