@@ -87,8 +87,6 @@
   --ok-fundo: #eaf5e8;
   --ok-texto: #1d5420;
   --ok-borda: #b3d8ad;
-  --aviso-simulado-fundo: #fff4d6;
-  --aviso-simulado-texto: #5c3a00;
 
   /* Tipografia: 12 / 14 / 16 / 20 / 24 / 32 px */
   --fonte: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -161,8 +159,6 @@
     --ok-fundo: #15291a;
     --ok-texto: #a8dba5;
     --ok-borda: #2e5432;
-    --aviso-simulado-fundo: #3a2c0c;
-    --aviso-simulado-texto: #ffd892;
     --sombra-1: 0 1px 2px rgba(0, 0, 0, .4);
     --sombra-2: 0 4px 14px rgba(0, 0, 0, .45);
     --sombra-3: 0 12px 32px rgba(0, 0, 0, .6);
@@ -199,10 +195,6 @@ code, kbd { font-family: var(--fonte-mono); font-size: .9em; background: var(--s
                       clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* 5. Cabeçalho e navegação ------------------------------------------------------ */
-.faixa-simulado { display: flex; align-items: center; justify-content: center; gap: var(--e-2);
-                  padding: 6px var(--e-4); background: var(--aviso-simulado-fundo); color: var(--aviso-simulado-texto);
-                  font-size: var(--fs-14); font-weight: 650; text-align: center; }
-.faixa-simulado strong { letter-spacing: .04em; }
 
 .cabecalho { position: sticky; top: 0; z-index: 60; background: var(--cabecalho); color: #fff;
              transition: box-shadow var(--transicao); }
@@ -418,6 +410,17 @@ a.cartao:hover, .cartao-clicavel:hover { box-shadow: var(--sombra-2); border-col
 .alerta .detalhes dt { font-weight: 700; color: var(--texto); }
 .alerta .detalhes dd { margin: 0; }
 @media (min-width: 720px) { .alerta .detalhes dl { grid-template-columns: 160px 1fr; } }
+
+/* Alerta compacto (painel): cabeçalho + uma linha de resumo */
+.alerta.compacto { padding: .5rem .8rem .25rem calc(.8rem + 6px); margin-bottom: .5rem; }
+.alerta.compacto .alerta-cabecalho { display: flex; flex-wrap: wrap; align-items: center; gap: 4px var(--e-2); min-width: 0; }
+.alerta.compacto .selo { font-size: .82rem; padding: 1px 8px; }
+.alerta.compacto .alerta-titulo { margin: 0; font-size: .98rem; flex: 1 1 12rem; min-width: 0; overflow-wrap: anywhere; }
+.alerta.compacto .alerta-prioridade { font-size: var(--fs-12); color: var(--texto-suave); white-space: nowrap; }
+.alerta.compacto .alerta-resumo { margin: 2px 0 0; font-size: .9rem; color: var(--texto); }
+.alerta.compacto details { margin-top: var(--e-1); }
+.alerta.compacto summary { min-height: 40px; font-size: .875rem; }
+.alerta.compacto .detalhes .alerta-mensagem { color: var(--texto); margin-bottom: var(--e-3); }
 
 /* 10. Botões ------------------------------------------------------------------------------ */
 .botao, button { font: inherit; font-weight: 650; font-size: var(--fs-14); display: inline-flex; align-items: center;

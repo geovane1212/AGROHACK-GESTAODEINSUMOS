@@ -18,8 +18,8 @@ def test_todas_as_paginas_abrem(cliente):
         assert cliente.get(url).status_code == 200, url
 
 
-def test_pagina_inicial_mostra_aviso_de_dados_simulados(cliente):
+def test_pagina_inicial_carrega_painel(cliente):
     html = cliente.get("/").get_data(as_text=True)
-    assert "SIMULADOS" in html
+    assert "SIMULADOS" not in html
     assert "Data de referência" in html and "30/09/2026" in html
     assert "O que merece atenção imediata" in html

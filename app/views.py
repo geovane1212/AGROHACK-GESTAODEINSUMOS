@@ -39,7 +39,6 @@ def contexto_global():
     return {
         "res": resultado,
         "data_ref_manual": servicos.data_referencia_configurada() is not None,
-        "dados_simulados": db.contar_movimentacoes("simulado") > 0,
         "ICONES": ICONES, "CLASSES": CLASSES,
         "secao": SECOES.get(request.endpoint, "mais"),
         "busca_atual": request.args.get("q", "") if request.endpoint == "web.busca" else "",
