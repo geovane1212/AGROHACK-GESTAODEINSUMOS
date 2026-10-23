@@ -1,34 +1,42 @@
 {% extends "base.html" %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import cabecalho_pagina with context %}
 {% block title %}Conferir colunas{% endblock %}
 {% block content %}
-<h1>Conferir colunas</h1>
-<p>Arquivo <strong>{{ nome }}</strong> com {{ total }} linha(s). Indique qual coluna do arquivo corresponde a
-  cada campo. As sugestões vieram do nome do cabeçalho.</p>
+{{ cabecalho_pagina('Conferir colunas', 'Arquivo ' ~ nome ~ ' com ' ~ total ~ ' linha(s). Indique qual coluna do arquivo corresponde a cada campo; as sugestões vieram do nome do cabeçalho.',
+                    url_for('web.importar'), 'Importar') }}
 
-<form method="post" action="{{ url_for('web.importar_confirmar') }}" class="painel-bloco">
+<form method="post" action="{{ url_for('web.importar_confirmar') }}" class="cartao">
   <input type="hidden" name="token" value="{{ token }}">
   <input type="hidden" name="nome" value="{{ nome }}">
-  <div class="campos-grade">
-    {% for c, (rotulo, obrig) in campos.items() %}
-    <div class="campo"><label for="campo_{{ c }}">{{ rotulo }}{{ ' *' if obrig }}</label>
-      <select id="campo_{{ c }}" name="campo_{{ c }}" {% if obrig %}required{% endif %}>
-        <option value="">— não existe no arquivo —</option>
-        {% for col in colunas %}<option value="{{ col }}" {% if mapa.get(c) == col %}selected{% endif %}>{{ col }}</option>{% endfor %}
-      </select></div>
-    {% endfor %}
+  <div class="secao-form">
+    <h2 class="secao-form-titulo">{{ icone('file-spreadsheet') }} Colunas</h2>
+    <div class="campos-grade tres">
+      {% for c, (rotulo, obrig) in campos.items() %}
+      <div class="campo"><label for="campo_{{ c }}">{{ rotulo }}{% if obrig %} <span class="obrigatorio" aria-hidden="true">*</span>{% endif %}</label>
+        <select id="campo_{{ c }}" name="campo_{{ c }}" {% if obrig %}required{% endif %}>
+          <option value="">— não existe no arquivo —</option>
+          {% for col in colunas %}<option value="{{ col }}" {% if mapa.get(c) == col %}selected{% endif %}>{{ col }}</option>{% endfor %}
+        </select></div>
+      {% endfor %}
+    </div>
   </div>
-  <div class="campo">
-    <label><input type="checkbox" name="substituir" value="1"> Substituir todas as movimentações atuais por este arquivo</label>
-    <small class="suave">Use para trocar a base simulada pela base oficial. Unificações de nomes e fatores de
-      conversão já confirmados são mantidos e reaproveitados.</small>
+  <div class="secao-form">
+    <label class="opcao"><input type="checkbox" name="substituir" value="1"> Substituir todas as movimentações atuais por este arquivo</label>
+    <p class="ajuda">Use para trocar a base simulada pela base oficial. Unificações de nomes e fatores de conversão já
+      confirmados são mantidos e reaproveitados.</p>
   </div>
-  <button type="submit">Importar e reanalisar</button>
-  <a class="botao secundario" href="{{ url_for('web.importar') }}">Cancelar</a>
+  <div class="botoes">
+    <button type="submit">{{ icone('check') }} Importar e reanalisar</button>
+    <a class="botao secundario" href="{{ url_for('web.importar') }}">Cancelar</a>
+  </div>
 </form>
 
-<h2>Prévia (5 primeiras linhas)</h2>
-<div class="tabela-rolagem"><table>
-  <thead><tr>{% for col in colunas %}<th>{{ col }}</th>{% endfor %}</tr></thead>
-  <tbody>{% for linha in previa %}<tr>{% for col in colunas %}<td>{{ linha[col] }}</td>{% endfor %}</tr>{% endfor %}</tbody>
-</table></div>
+<section class="secao">
+  <div class="secao-titulo"><h2>Prévia (5 primeiras linhas)</h2></div>
+  <div class="tabela-rolagem"><table>
+    <thead><tr>{% for col in colunas %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+    <tbody>{% for linha in previa %}<tr>{% for col in colunas %}<td>{{ linha[col] }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+  </table></div>
+</section>
 {% endblock %}

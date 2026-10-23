@@ -1,7 +1,6 @@
 {% extends "base.html" %}
+{% from "_macros.html" import estado_vazio with context %}
 {% block title %}Erro{% endblock %}
 {% block content %}
-<h1>Ops!</h1>
-<p>{{ mensagem }}</p>
-<p><a class="botao" href="{{ url_for('web.painel') }}">Voltar ao painel</a></p>
+{{ estado_vazio(mensagem, 'Volte para o painel e tente de novo.', 'Ir para o painel', url_for('web.painel'), 'triangle-alert') }}
 {% endblock %}

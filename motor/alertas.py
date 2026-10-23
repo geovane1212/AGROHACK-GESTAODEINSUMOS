@@ -32,6 +32,7 @@ class Alerta:
     score: int = 0
     score_partes: list = field(default_factory=list)
     dados: dict = field(default_factory=dict)
+    resumo: str = ""     # linha curta para listas compactas; a explicação completa fica em `mensagem`
 
     @property
     def chave(self) -> str:
@@ -69,12 +70,12 @@ def texto_confianca(consumo: dict) -> str:
 
 
 def _novo(prod, tipo, titulo, severidade, mensagem, regra, limite, dias=None, valor=None,
-          confianca=None, dados=None):
+          confianca=None, dados=None, resumo=""):
     score, partes = prioridade(severidade, dias, valor, confianca)
     return Alerta(tipo=tipo, titulo=titulo, severidade=severidade, produto=prod["nome"],
                   chave_produto=prod["chave"], categoria=prod["categoria"], mensagem=mensagem,
                   regra=regra, limite=limite, confianca=confianca, score=score,
-                  score_partes=partes, dados=dados or {})
+                  score_partes=partes, dados=dados or {}, resumo=resumo)
 
 
 def _frase_consumo(prod):
@@ -113,6 +114,13 @@ def regra_estoque_critico(prod, p):
 
     titulo = "Estoque crítico" if severidade == CRITICO else "Estoque baixo"
     mensagem = f"{titulo}: " + " ".join(frases) + " " + texto_confianca(c)
+    minimo_txt = f" (mínimo: {t.qtd(minimo, u)})" if minimo else ""
+    if saldo <= 0:
+        resumo = f"Sem estoque: saldo {t.qtd(saldo, u)}{minimo_txt}"
+    elif tem_consumo and cob is not None:
+        resumo = f"Dura ~{t.dias(cob)} · saldo {t.qtd(saldo, u)}{minimo_txt}"
+    else:
+        resumo = f"Saldo {t.qtd(saldo, u)}{minimo_txt}"
     return [_novo(
         prod, "estoque_critico", titulo, severidade, mensagem,
         regra=(f"Crítico se o saldo ≤ estoque mínimo ou se a cobertura ≤ {p.cobertura_critica_dias} "
@@ -123,6 +131,7 @@ def regra_estoque_critico(prod, p):
         dias=0 if saldo <= 0 else cob, confianca=c["confianca"],
         dados={"saldo": saldo, "minimo": minimo, "cobertura_dias": cob,
                "consumo_diario": c["consumo_diario"]},
+        resumo=resumo,
     )]
 
 
@@ -177,6 +186,14 @@ def regra_vencimento(prod, p, data_ref):
         frases.append(f"E mais {len(em_risco) - 3} lote(s) em risco.")
     vencido = any(l["dias"] < 0 for l in em_risco)
     titulo = "Lote vencido" if vencido else "Risco de vencimento"
+    pior = em_risco[0]
+    nome_pior = f"Lote {pior['lote']}" if pior["lote"] else "Entrada sem lote"
+    if pior["dias"] < 0:
+        resumo = f"{nome_pior}: {t.qtd(pior['qtd'], u)} vencidos desde {t.data(pior['validade'])}"
+    else:
+        resumo = f"{nome_pior} vence em {t.dias(pior['dias'])}, sobra ≈ {t.qtd(pior['sobra'], u)}"
+    if len(em_risco) > 1:
+        resumo += f" (+{len(em_risco) - 1} lote(s))"
     total_sobra = sum(l["sobra"] for l in em_risco)
     valor_total = total_sobra * custo if custo is not None else None
     return [_novo(
@@ -190,6 +207,7 @@ def regra_vencimento(prod, p, data_ref):
         dias=max(0, em_risco[0]["dias"]), valor=valor_total,
         dados={"lotes": [{"lote": l["lote"], "validade": t.data(l["validade"]), "qtd": l["qtd"],
                           "sobra": l["sobra"], "dias": l["dias"]} for l in em_risco]},
+        resumo=resumo,
     )]
 
 
@@ -205,7 +223,8 @@ def regra_excesso(prod, p):
                       regra=f"Atenção se a cobertura estimada passar de {p.excesso_cobertura_dias} dias.",
                       limite=("Insumos comprados antecipadamente para a próxima safra podem parecer "
                               "excesso agora."),
-                      valor=valor, confianca=c["confianca"], dados={"cobertura_dias": cob})]
+                      valor=valor, confianca=c["confianca"], dados={"cobertura_dias": cob},
+                      resumo=f"Dura ~{t.dias(cob)}, acima de {p.excesso_cobertura_dias} dias · saldo {t.qtd(saldo, u)}")]
     sem_consumo = not c["consumo_diario"]
     if sem_consumo and minimo and saldo > p.excesso_multiplo_minimo * minimo:
         msg = (f"Saldo acima do necessário: {t.qtd(saldo, u)} equivalem a {t.num(saldo / minimo)} vezes o "
@@ -215,7 +234,8 @@ def regra_excesso(prod, p):
                       regra=(f"Informativo se não há consumo estimável e o saldo passa de "
                              f"{t.num(p.excesso_multiplo_minimo)} vezes o estoque mínimo."),
                       limite="O estoque mínimo cadastrado pode estar desatualizado.",
-                      valor=valor, dados={"multiplo_minimo": saldo / minimo})]
+                      valor=valor, dados={"multiplo_minimo": saldo / minimo},
+                      resumo=f"Saldo {t.num(saldo / minimo)}× o mínimo, sem consumo recente")]
     return []
 
 
@@ -265,6 +285,7 @@ def regra_fora_do_padrao(prod, p, data_ref):
         limite=("Produtos de uso naturalmente irregular (aplicações por talhão, manutenção corretiva) "
                 "podem gerar avisos que são normais."),
         dados={"quantidade": q, "mediana": mediana, "limite": limite, "data": t.data(linha["data"])},
+        resumo=f"Retirada de {t.qtd(q, u)} em {t.data(linha['data'])}: {t.num(q / mediana)}× o normal",
     )]
 
 
@@ -294,6 +315,7 @@ def regra_consumo_crescente(prod, p, data_ref):
                "saídas em cada bloco. Retiradas fora do padrão não entram na conta."),
         limite="Três meses podem refletir a fase da safra (plantio, colheita), não uma tendência permanente.",
         dados={"blocos": [s1, s2, s3], "alta_percentual": alta},
+        resumo=f"Consumo +{t.num(alta, 0)}% em 90 dias ({t.qtd(s1, u)} → {t.qtd(s3, u)} por mês)",
     )]
 
 
@@ -326,6 +348,8 @@ def regra_variacao_preco(prod, p, data_ref):
                "anteriores com preço."),
         limite="Não corrige inflação nem diferenças de frete, prazo de pagamento ou qualidade do produto.",
         dados={"preco": ultima["preco_base"], "mediana": mediana, "variacao": variacao},
+        resumo=(f"Última compra {t.num(abs(variacao) * 100, 0)}% {'acima' if acima else 'abaixo'} da mediana "
+                f"({t.moeda(ultima['preco_base'])}/{u})"),
     )]
 
 
@@ -357,6 +381,8 @@ def regra_alto_valor_parado(prod, p, data_ref):
                 "ficar paradas de propósito."),
         valor=prod["valor_estoque"],
         dados={"valor": prod["valor_estoque"], "dias_sem_saida": dias_sem, "giro": giro},
+        resumo=(f"{t.moeda(prod['valor_estoque'])} parados · "
+                + ("nenhuma saída" if dias_sem is None else f"última saída há {t.dias(dias_sem)}")),
     )]
 
 

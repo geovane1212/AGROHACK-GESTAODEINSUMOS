@@ -68,11 +68,15 @@ CAMPOS_MOV = ["produto", "categoria", "unidade", "quantidade", "estoque_minimo",
               "preco_unitario", "lote", "validade", "fornecedor", "destino", "responsavel"]
 
 
-def caminho_banco():
+def caminho_banco() -> Path:
     if os.environ.get("VERCEL"):
+        # No Vercel só /tmp aceita escrita (é apagado quando o serviço reinicia).
         caminho = Path("/tmp/instance/app.db")
     else:
-        caminho = Path(current_app.instance_path) / "app.db"
+        # Fora do Vercel vale DATABASE_URL (os testes usam um banco temporário por ela).
+        caminho = Path(current_app.config["DATABASE_URL"].removeprefix("sqlite:///"))
+        if not caminho.is_absolute():
+            caminho = Path(current_app.root_path).parent / caminho
     caminho.parent.mkdir(parents=True, exist_ok=True)
     return caminho
 

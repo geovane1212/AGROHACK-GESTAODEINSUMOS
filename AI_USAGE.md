@@ -26,6 +26,9 @@ testes, conferi a regra com um exemplo à mão").
 | 19/10/2026 | Testes: `tests/` (106 testes) | Claude Code | Escreveu os testes e rodou a suíte | [preencher] | [preencher] |
 | 19/10/2026 | Documentação: `README.md`, `VALIDACAO.md`, `docs/APRESENTACAO.md` | Claude Code | Escreveu os textos com base nos resultados reais dos testes | [preencher] | [preencher] |
 | 19/10/2026 | Deploy: `Dockerfile`, `render.yaml`, `wsgi.py` | Claude Code | Escreveu os arquivos (Dockerfile não testado localmente) | [preencher] | [preencher] |
+| 19/10/2026 | v2 Fase 0–1: `docs/DIAGNOSTICO_V1.md`, navegação, componentes, `tests/test_navegacao.py` | Claude Code | Mediu a interface com Playwright, criou a navegação mobile-first e os testes de navegação | [preencher] | [preencher] |
+| 20/10/2026 | Redesenho visual: `app/static/css/estilo.css`, `app/templates/` (todos), `_icones.html`, fonte Inter local | Claude Code | Reescreveu o CSS e os templates seguindo o prompt de redesenho, sem mudar rotas, motor ou banco; mediu contraste WCAG | [preencher] | [preencher] |
+| 20/10/2026 | Roteiro resumido da apresentação (3–4 min) | Claude Code | Escreveu o roteiro, a colinha e as respostas da banca só com os fatos fornecidos (entregue no chat) | [preencher] | [preencher] |
 
 ## Compromissos da equipe
 

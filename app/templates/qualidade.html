@@ -1,87 +1,100 @@
 {% extends "base.html" %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import cabecalho_pagina, estado_vazio with context %}
 {% block title %}Qualidade dos dados{% endblock %}
 {% block content %}
-<h1>Qualidade dos dados</h1>
-<p class="suave">Tudo o que pode distorcer um cálculo aparece aqui. O sistema não corrige nada sozinho: ele mostra o
-  problema, explica o efeito e deixa você decidir.</p>
+{{ cabecalho_pagina('Qualidade dos dados', 'Tudo o que pode distorcer um cálculo aparece aqui. O sistema não corrige nada sozinho: mostra o problema, explica o efeito e deixa você decidir.') }}
 
-<section class="painel-bloco">
-  <h2>🔤 Possíveis nomes duplicados ({{ sugestoes|length }})</h2>
-  <p class="suave">Sugestões feitas por semelhança de texto (rapidfuzz), depois de normalizar maiúsculas, acentos e espaços.
-    Nomes com números ou especificações diferentes (ex.: NPK 04-14-08 x NPK 04-30-16, Filtro de óleo x Filtro de ar)
-    nunca são sugeridos. A unificação só acontece se você confirmar.</p>
+{% set avisos = grupos.items()|rejectattr(0, 'equalto', 'Possível nome duplicado')|list %}
+
+<section class="cartao">
+  <h2 class="cartao-titulo"><span class="icone-caixa">{{ icone('copy') }}</span> Possíveis nomes duplicados
+    <span class="selo-contagem {{ 'tem' if sugestoes }}">{{ sugestoes|length }}</span></h2>
+  <p class="suave">Sugestões por semelhança de texto, depois de normalizar maiúsculas, acentos e espaços. Nomes com números
+    ou especificações diferentes (ex.: NPK 04-14-08 x NPK 04-30-16, Filtro de óleo x Filtro de ar) nunca são sugeridos.
+    A unificação só acontece se você confirmar.</p>
   {% for s in sugestoes %}
   <div class="alerta informativo">
     <p><strong>"{{ s.nome_a }}"</strong> e <strong>"{{ s.nome_b }}"</strong> — {{ s.motivo }}.</p>
-    <form method="post" action="{{ url_for('web.unificar') }}" class="inline">
-      <fieldset style="border:0;padding:0;margin:0 0 .5rem">
+    <form method="post" action="{{ url_for('web.unificar') }}">
+      <fieldset>
         <legend>Qual nome deve ficar?</legend>
-        <label style="font-weight:400"><input type="radio" name="escolha" value="a" checked
+        <label class="opcao"><input type="radio" name="escolha" value="a" checked
           onchange="this.form.canonico.value='{{ s.chave_a }}';this.form.outro.value='{{ s.chave_b }}'"> {{ s.nome_a }}</label>
-        <label style="font-weight:400"><input type="radio" name="escolha" value="b"
+        <label class="opcao"><input type="radio" name="escolha" value="b"
           onchange="this.form.canonico.value='{{ s.chave_b }}';this.form.outro.value='{{ s.chave_a }}'"> {{ s.nome_b }}</label>
       </fieldset>
       <input type="hidden" name="canonico" value="{{ s.chave_a }}">
       <input type="hidden" name="outro" value="{{ s.chave_b }}">
-      <button type="submit" class="pequeno">✔ Confirmar: é o mesmo produto</button>
+      <div class="botoes">
+        <button type="submit">{{ icone('check') }} Confirmar: é o mesmo produto</button>
+        <button type="submit" class="secundario" form="rejeitar-{{ loop.index }}">{{ icone('x') }} São produtos diferentes</button>
+      </div>
     </form>
-    <form method="post" action="{{ url_for('web.rejeitar') }}" class="inline">
+    <form method="post" action="{{ url_for('web.rejeitar') }}" id="rejeitar-{{ loop.index }}" hidden>
       <input type="hidden" name="a" value="{{ s.chave_a }}"><input type="hidden" name="b" value="{{ s.chave_b }}">
-      <button type="submit" class="pequeno secundario">✖ São produtos diferentes</button>
     </form>
   </div>
-  {% else %}<p>Nenhuma sugestão pendente.</p>{% endfor %}
+  {% else %}
+    {{ estado_vazio('Nenhuma sugestão pendente', 'Nenhum par de nomes parecido o bastante para ser o mesmo produto.', icone_nome='circle-check', compacto=true) }}
+  {% endfor %}
 
   {% if apelidos %}
-  <h3>Unificações confirmadas (tabela de apelidos)</h3>
+  <h3>Unificações confirmadas</h3>
   <p class="suave">Reaproveitadas automaticamente quando uma nova planilha (ex.: a base oficial) for importada.</p>
-  <div class="tabela-rolagem"><table>
-    <thead><tr><th>Nome registrado</th><th>Conta como</th><th></th></tr></thead>
+  <div class="tabela-rolagem"><table class="responsiva">
+    <thead><tr><th>Nome registrado</th><th>Conta como</th><th>Ação</th></tr></thead>
     <tbody>{% for a in apelidos %}
-      <tr><td>{{ a.nome_apelido }}</td><td>{{ a.nome_produto }}</td>
-        <td><form method="post" action="{{ url_for('web.remover_apelido') }}"><input type="hidden" name="apelido" value="{{ a.apelido }}">
-          <button class="pequeno secundario" type="submit">Desfazer</button></form></td></tr>
+      <tr><td class="destaque">{{ a.nome_apelido }}</td><td data-rotulo="Conta como">{{ a.nome_produto }}</td>
+        <td data-rotulo="Ação"><form method="post" action="{{ url_for('web.remover_apelido') }}"><input type="hidden" name="apelido" value="{{ a.apelido }}">
+          <button class="secundario" type="submit">Desfazer</button></form></td></tr>
     {% endfor %}</tbody>
   </table></div>
   {% endif %}
 </section>
 
-<section class="painel-bloco">
-  <h2>📏 Fatores de conversão de unidade</h2>
+<section class="cartao">
+  <h2 class="cartao-titulo"><span class="icone-caixa">{{ icone('scale') }}</span> Fatores de conversão de unidade
+    <span class="selo-contagem {{ 'tem' if inconsistentes }}">{{ inconsistentes|length }}</span></h2>
   <p class="suave">g, kg e t (massa) e mL e L (volume) são convertidos automaticamente. Unidades que dependem do produto
     (saco, unidade, rolo, galão, caixa) só são convertidas com um fator informado para aquele produto.</p>
   {% if inconsistentes %}
-  <form method="post" action="{{ url_for('web.gravar_fator') }}" class="filtros">
+  <form method="post" action="{{ url_for('web.gravar_fator') }}" class="barra-filtros">
     <div><label for="produto">Produto</label>
       <select id="produto" name="produto">{% for q in inconsistentes %}<option value="{{ q.chave_produto }}">{{ q.produto }}</option>{% endfor %}</select></div>
     <div><label for="unidade">1 (unidade)</label>
       <select id="unidade" name="unidade">{% for q in inconsistentes %}{% for u in q.extra.unidades %}<option>{{ u }}</option>{% endfor %}{% endfor %}</select></div>
-    <div><label for="fator">=  (quantidade)</label><input id="fator" name="fator" inputmode="decimal" placeholder="ex.: 50" size="8" required></div>
+    <div><label for="fator">equivale a</label><input id="fator" name="fator" inputmode="decimal" placeholder="ex.: 50" required></div>
     <div><label for="destino">(unidade)</label>
       <select id="destino" name="destino">{% for q in inconsistentes %}<option>{{ q.extra.unidade_base }}</option>{% endfor %}
         {% for u in unidades_base %}<option>{{ u }}</option>{% endfor %}</select></div>
-    <button type="submit">Cadastrar fator e reanalisar</button>
+    <div class="acoes"><button type="submit">{{ icone('check') }} Cadastrar e reanalisar</button></div>
   </form>
   {% endif %}
   {% if fatores %}
-  <div class="tabela-rolagem"><table>
-    <thead><tr><th>Produto</th><th>Conversão</th><th></th></tr></thead>
+  <div class="tabela-rolagem"><table class="responsiva">
+    <thead><tr><th>Produto</th><th>Conversão</th><th>Ação</th></tr></thead>
     <tbody>{% for f in fatores %}
-      <tr><td>{{ f.nome_produto }}</td><td>1 {{ f.unidade }} = {{ f.fator|num }} {{ f.unidade_destino }}</td>
-        <td><form method="post" action="{{ url_for('web.remover_fator') }}"><input type="hidden" name="produto" value="{{ f.produto }}">
-          <input type="hidden" name="unidade" value="{{ f.unidade }}"><button class="pequeno secundario" type="submit">Remover</button></form></td></tr>
+      <tr><td class="destaque">{{ f.nome_produto }}</td><td data-rotulo="Conversão">1 {{ f.unidade }} = {{ f.fator|num }} {{ f.unidade_destino }}</td>
+        <td data-rotulo="Ação"><form method="post" action="{{ url_for('web.remover_fator') }}"><input type="hidden" name="produto" value="{{ f.produto }}">
+          <input type="hidden" name="unidade" value="{{ f.unidade }}"><button class="secundario" type="submit">Remover</button></form></td></tr>
     {% endfor %}</tbody>
   </table></div>
-  {% elif not inconsistentes %}<p>Nenhuma unidade inconsistente e nenhum fator cadastrado.</p>{% endif %}
+  {% elif not inconsistentes %}
+    {{ estado_vazio('Nenhuma unidade inconsistente', 'Nenhum fator de conversão é necessário agora.', icone_nome='circle-check', compacto=true) }}
+  {% endif %}
 </section>
 
-<h2>📋 Todos os avisos</h2>
-{% for titulo, itens in grupos.items() if titulo != 'Possível nome duplicado' %}
-<section class="painel-bloco">
-  <h3>{{ titulo }} ({{ itens|length }})</h3>
+<section class="cartao">
+  <h2 class="cartao-titulo"><span class="icone-caixa">{{ icone('clipboard-check') }}</span> Avisos
+    <span class="selo-contagem {{ 'tem' if avisos }}">{{ avisos|sum(attribute=1, start=[])|length }}</span></h2>
+  {% for titulo, itens in avisos %}
+  <h3>{{ titulo }} <span class="etiqueta">{{ itens|length }}</span></h3>
   <ul>{% for q in itens %}<li>
     {% if q.chave_produto %}<a href="{{ url_for('web.produto', chave=q.chave_produto) }}">{{ q.produto }}</a>{% else %}{{ q.produto }}{% endif %}:
     {{ q.descricao }}</li>{% endfor %}</ul>
+  {% else %}
+    {{ estado_vazio('Nenhum aviso de qualidade', 'Os dados não têm preço ou validade ausente, saldo negativo nem unidades misturadas.', icone_nome='circle-check', compacto=true) }}
+  {% endfor %}
 </section>
-{% else %}<p>Nenhum aviso de qualidade. 👍</p>{% endfor %}
 {% endblock %}

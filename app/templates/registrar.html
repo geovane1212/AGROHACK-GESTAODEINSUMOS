@@ -1,49 +1,67 @@
 {% extends "base.html" %}
+{% from "_icones.html" import icone %}
+{% from "_macros.html" import cabecalho_pagina with context %}
 {% block title %}Registrar movimentação{% endblock %}
 {% block content %}
-<h1>Registrar movimentação</h1>
-<p class="suave">Depois de salvar, todos os alertas são recalculados e o painel mostra o que mudou.
-  Campos com * são obrigatórios. Deixe preço e validade em branco se não souber: o sistema trata como
-  "ausente", nunca como zero.</p>
+{{ cabecalho_pagina('Registrar movimentação',
+   'Depois de salvar, todos os alertas são recalculados. Deixe preço e validade em branco se não souber: o sistema trata como "ausente", nunca como zero.',
+   url_for('web.atalhos'), 'Registrar') }}
 
-<form method="post" class="painel-bloco">
-  <fieldset class="campo" style="border:0;padding:0">
-    <legend><strong>Tipo *</strong></legend>
-    <div class="opcoes-tipo">
-      <label><input type="radio" name="tipo" value="saida" {% if form.get('tipo', 'saida') in ('saida', 'saída') %}checked{% endif %}> Saída (retirada)</label>
-      <label><input type="radio" name="tipo" value="entrada" {% if form.get('tipo') == 'entrada' %}checked{% endif %}> Entrada (compra)</label>
+<form method="post" class="cartao">
+  <div class="secao-form">
+    <h2 class="secao-form-titulo">{{ icone('package') }} Dados principais</h2>
+    <fieldset>
+      <legend>Tipo de movimentação <span class="obrigatorio" aria-hidden="true">*</span></legend>
+      <div class="segmentado">
+        <input type="radio" id="tipo-saida" name="tipo" value="saida" {% if form.get('tipo', 'saida') in ('saida', 'saída') %}checked{% endif %}>
+        <label for="tipo-saida">{{ icone('package-minus') }} Saída<span class="so-computador-inline"> (retirada)</span></label>
+        <input type="radio" id="tipo-entrada" name="tipo" value="entrada" {% if form.get('tipo') == 'entrada' %}checked{% endif %}>
+        <label for="tipo-entrada">{{ icone('package-plus') }} Entrada<span class="so-computador-inline"> (compra)</span></label>
+      </div>
+    </fieldset>
+    <div class="campos-grade quatro">
+      <div class="campo"><label for="produto">Produto <span class="obrigatorio" aria-hidden="true">*</span></label>
+        <input id="produto" name="produto" list="lista-produtos" required value="{{ form.get('produto', '') }}" autocomplete="off"
+               placeholder="Comece a digitar…">
+        <datalist id="lista-produtos">{% for p in res.produtos %}<option value="{{ p.nome }}">{% endfor %}</datalist></div>
+      <div class="campo"><label for="quantidade">Quantidade <span class="obrigatorio" aria-hidden="true">*</span></label>
+        <input id="quantidade" name="quantidade" inputmode="decimal" required value="{{ form.get('quantidade', '') }}" placeholder="ex.: 60 ou 12,5"></div>
+      <div class="campo"><label for="unidade">Unidade <span class="obrigatorio" aria-hidden="true">*</span></label>
+        <input id="unidade" name="unidade" list="lista-unidades" required value="{{ form.get('unidade', '') }}" placeholder="kg, L, sc, un…">
+        <datalist id="lista-unidades">{% for u in ['kg', 'g', 't', 'L', 'mL', 'sc', 'un', 'par', 'm', 'rolo', 'galão', 'caixa'] %}<option value="{{ u }}">{% endfor %}</datalist></div>
+      <div class="campo"><label for="data">Data <span class="obrigatorio" aria-hidden="true">*</span></label>
+        <input id="data" name="data" type="date" required value="{{ form.get('data', '') }}" aria-describedby="ajuda-data">
+        <small id="ajuda-data">Padrão: a data de referência atual.</small></div>
     </div>
-  </fieldset>
-  <div class="campos-grade">
-    <div class="campo"><label for="produto">Produto *</label>
-      <input id="produto" name="produto" list="lista-produtos" required value="{{ form.get('produto', '') }}" autocomplete="off">
-      <datalist id="lista-produtos">{% for p in res.produtos %}<option value="{{ p.nome }}">{% endfor %}</datalist></div>
-    <div class="campo"><label for="quantidade">Quantidade *</label>
-      <input id="quantidade" name="quantidade" inputmode="decimal" required value="{{ form.get('quantidade', '') }}" placeholder="ex.: 60 ou 12,5"></div>
-    <div class="campo"><label for="unidade">Unidade *</label>
-      <input id="unidade" name="unidade" list="lista-unidades" required value="{{ form.get('unidade', '') }}" placeholder="kg, L, sc, un...">
-      <datalist id="lista-unidades">{% for u in ['kg', 'g', 't', 'L', 'mL', 'sc', 'un', 'par', 'm', 'rolo', 'galão', 'caixa'] %}<option value="{{ u }}">{% endfor %}</datalist></div>
-    <div class="campo"><label for="data">Data *</label>
-      <input id="data" name="data" type="date" required value="{{ form.get('data', '') }}">
-      <small class="suave">Padrão: a data de referência atual.</small></div>
-    <div class="campo"><label for="categoria">Categoria</label>
-      <input id="categoria" name="categoria" list="lista-categorias" value="{{ form.get('categoria', '') }}">
-      <datalist id="lista-categorias">{% for c in categorias %}<option value="{{ c }}">{% endfor %}</datalist></div>
-    <div class="campo"><label for="destino">Destino da retirada</label>
-      <input id="destino" name="destino" value="{{ form.get('destino', '') }}" placeholder="talhão, máquina..."></div>
-    <div class="campo"><label for="responsavel">Responsável</label>
-      <input id="responsavel" name="responsavel" value="{{ form.get('responsavel', '') }}"></div>
-    <div class="campo"><label for="preco_unitario">Preço unitário (entradas)</label>
-      <input id="preco_unitario" name="preco_unitario" inputmode="decimal" value="{{ form.get('preco_unitario', '') }}" placeholder="R$ por unidade"></div>
-    <div class="campo"><label for="lote">Lote</label>
-      <input id="lote" name="lote" value="{{ form.get('lote', '') }}"></div>
-    <div class="campo"><label for="validade">Validade</label>
-      <input id="validade" name="validade" type="date" value="{{ form.get('validade', '') }}"></div>
-    <div class="campo"><label for="fornecedor">Fornecedor</label>
-      <input id="fornecedor" name="fornecedor" value="{{ form.get('fornecedor', '') }}"></div>
-    <div class="campo"><label for="estoque_minimo">Estoque mínimo</label>
-      <input id="estoque_minimo" name="estoque_minimo" inputmode="decimal" value="{{ form.get('estoque_minimo', '') }}"></div>
   </div>
-  <button type="submit">💾 Salvar e reanalisar</button>
+
+  <div class="secao-form">
+    <h2 class="secao-form-titulo">{{ icone('tag') }} Detalhes opcionais</h2>
+    <div class="campos-grade tres">
+      <div class="campo"><label for="destino">Destino da retirada</label>
+        <input id="destino" name="destino" value="{{ form.get('destino', '') }}" placeholder="talhão, máquina…"></div>
+      <div class="campo"><label for="responsavel">Responsável</label>
+        <input id="responsavel" name="responsavel" value="{{ form.get('responsavel', '') }}"></div>
+      <div class="campo"><label for="categoria">Categoria</label>
+        <input id="categoria" name="categoria" list="lista-categorias" value="{{ form.get('categoria', '') }}">
+        <datalist id="lista-categorias">{% for c in categorias %}<option value="{{ c }}">{% endfor %}</datalist></div>
+      <div class="campo"><label for="preco_unitario">Preço unitário (entradas)</label>
+        <input id="preco_unitario" name="preco_unitario" inputmode="decimal" value="{{ form.get('preco_unitario', '') }}" placeholder="R$ por unidade"></div>
+      <div class="campo"><label for="lote">Lote</label>
+        <input id="lote" name="lote" value="{{ form.get('lote', '') }}"></div>
+      <div class="campo"><label for="validade">Validade</label>
+        <input id="validade" name="validade" type="date" value="{{ form.get('validade', '') }}"></div>
+      <div class="campo"><label for="fornecedor">Fornecedor</label>
+        <input id="fornecedor" name="fornecedor" value="{{ form.get('fornecedor', '') }}"></div>
+      <div class="campo"><label for="estoque_minimo">Estoque mínimo</label>
+        <input id="estoque_minimo" name="estoque_minimo" inputmode="decimal" value="{{ form.get('estoque_minimo', '') }}"></div>
+    </div>
+  </div>
+
+  <div class="botoes">
+    <button type="submit">{{ icone('check') }} Salvar e reanalisar</button>
+    <a class="botao secundario" href="{{ url_for('web.painel') }}">Cancelar</a>
+  </div>
+  <p class="suave"><span class="obrigatorio" aria-hidden="true">*</span> campos obrigatórios</p>
 </form>
 {% endblock %}

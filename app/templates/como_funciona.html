@@ -1,20 +1,22 @@
 {% extends "base.html" %}
-{% block title %}Como funciona{% endblock %}
+{% from "_macros.html" import cabecalho_pagina with context %}
+{% block title %}Como funciona</div>
+{% endblock %}
 {% block content %}
-<h1>Como funciona: critérios e limites</h1>
-<p>Todos os números abaixo são lidos da configuração usada no cálculo (<code>motor/config.py</code>), então esta
-  página sempre mostra os parâmetros reais.</p>
+{{ cabecalho_pagina('Como funciona: critérios e limites',
+   'Todos os números abaixo são lidos da configuração usada no cálculo (motor/config.py), então esta página sempre mostra os parâmetros reais.') }}
+<div class="leitura">
 
-<section class="painel-bloco">
-  <h2>1. Data de referência</h2>
+<section class="cartao cartao-numerado">
+  <h2>Data de referência</h2>
   <p>Todas as contas ("vence em X dias", "consumo dos últimos 30 dias") usam a <strong>data de referência</strong>
     mostrada no topo, e não o relógio do computador. Padrão: a data da última movimentação registrada. Assim os dados
     não "envelhecem" sozinhos e a análise pode ser refeita para qualquer data. Movimentações posteriores à data de
     referência são ignoradas (e avisadas na qualidade dos dados).</p>
 </section>
 
-<section class="painel-bloco">
-  <h2>2. Saldo, unidades e dados ausentes</h2>
+<section class="cartao cartao-numerado">
+  <h2>Saldo, unidades e dados ausentes</h2>
   <ul>
     <li><strong>Saldo</strong> = soma das entradas − soma das saídas, por produto e por lote.</li>
     <li><strong>Unidades:</strong> g, kg e t são convertidos para kg; mL e L para L. Saco, unidade, rolo, galão e
@@ -28,63 +30,63 @@
   </ul>
 </section>
 
-<section class="painel-bloco">
-  <h2>3. Consumo médio e confiança</h2>
+<section class="cartao cartao-numerado">
+  <h2>Consumo médio e confiança</h2>
   <p><strong>Consumo médio diário</strong> = soma das saídas na janela ÷ dias da janela. A janela é de
     {{ p.janela_curta_dias }} dias se houver pelo menos {{ p.min_saidas_janela_curta }} saídas nela; senão,
     {{ p.janela_longa_dias }} dias. Se o produto é mais novo que a janela, divide-se pelos dias desde a primeira movimentação.</p>
   <p><strong>Cobertura</strong> = saldo ÷ consumo médio diário (quantos dias o estoque deve durar).</p>
-  <div class="tabela-rolagem"><table>
+  <div class="tabela-rolagem"><table class="responsiva">
     <thead><tr><th>Saídas nos últimos {{ p.janela_longa_dias }} dias</th><th>Confiança da estimativa</th></tr></thead>
     <tbody>
-      <tr><td>{{ p.confianca_alta }} ou mais</td><td>alta</td></tr>
-      <tr><td>{{ p.confianca_media }} a {{ p.confianca_alta - 1 }}</td><td>média</td></tr>
-      <tr><td>{{ p.confianca_minima }} a {{ p.confianca_media - 1 }}</td><td>baixa (o alerta avisa e a prioridade cai 10 pontos)</td></tr>
-      <tr><td>menos de {{ p.confianca_minima }}</td><td>sem estimativa (não calculamos cobertura)</td></tr>
+      <tr><td class="destaque">{{ p.confianca_alta }} ou mais saídas</td><td data-rotulo="Confiança">alta</td></tr>
+      <tr><td class="destaque">{{ p.confianca_media }} a {{ p.confianca_alta - 1 }} saídas</td><td data-rotulo="Confiança">média</td></tr>
+      <tr><td class="destaque">{{ p.confianca_minima }} a {{ p.confianca_media - 1 }} saídas</td><td data-rotulo="Confiança">baixa (o alerta avisa e a prioridade cai 10 pontos)</td></tr>
+      <tr><td class="destaque">menos de {{ p.confianca_minima }} saídas</td><td data-rotulo="Confiança">sem estimativa (não calculamos cobertura)</td></tr>
     </tbody>
   </table></div>
 </section>
 
-<section class="painel-bloco">
-  <h2>4. Regras de alerta</h2>
-  <div class="tabela-rolagem"><table>
+<section class="cartao cartao-numerado">
+  <h2>Regras de alerta</h2>
+  <div class="tabela-rolagem"><table class="responsiva">
     <thead><tr><th>Alerta</th><th>Quando dispara</th><th>Severidade</th><th>Quando pode errar</th></tr></thead>
     <tbody>
-      <tr><td>Estoque crítico / baixo</td>
-        <td>Saldo ≤ estoque mínimo, ou cobertura ≤ {{ p.cobertura_critica_dias }} dias (crítico) / ≤ {{ p.cobertura_atencao_dias }} dias (baixo).</td>
-        <td>⛔ Crítico / ⚠️ Atenção</td><td>Supõe consumo futuro igual ao recente; não vê compras não lançadas.</td></tr>
-      <tr><td>Risco de vencimento / lote vencido</td>
-        <td>Para cada lote: sobra = quantidade − consumo previsto até a validade (FEFO). Alerta se há sobra e vence em
+      <tr id="regra-estoque_critico"><td class="destaque">Estoque crítico / baixo</td>
+        <td data-rotulo="Quando dispara">Saldo ≤ estoque mínimo, ou cobertura ≤ {{ p.cobertura_critica_dias }} dias (crítico) / ≤ {{ p.cobertura_atencao_dias }} dias (baixo).</td>
+        <td data-rotulo="Severidade">Crítico / Atenção</td><td data-rotulo="Quando pode errar">Supõe consumo futuro igual ao recente; não vê compras não lançadas.</td></tr>
+      <tr id="regra-vencimento"><td class="destaque">Risco de vencimento / lote vencido</td>
+        <td data-rotulo="Quando dispara">Para cada lote: sobra = quantidade − consumo previsto até a validade (FEFO). Alerta se há sobra e vence em
           ≤ {{ p.vencimento_critico_dias }} dias (crítico), ≤ {{ p.vencimento_atencao_dias }} (atenção) ou ≤ {{ p.vencimento_info_dias }} (informativo). Lote já vencido com saldo = crítico.</td>
-        <td>⛔ / ⚠️ / ℹ️</td><td>Depende de o lote ou o FEFO refletir a retirada real.</td></tr>
-      <tr><td>Excesso</td>
-        <td>Cobertura acima de {{ p.excesso_cobertura_dias }} dias (atenção), ou sem consumo estimável e saldo acima de
+        <td data-rotulo="Severidade">Crítico / Atenção / Informativo</td><td data-rotulo="Quando pode errar">Depende de o lote ou o FEFO refletir a retirada real.</td></tr>
+      <tr id="regra-excesso"><td class="destaque">Excesso</td>
+        <td data-rotulo="Quando dispara">Cobertura acima de {{ p.excesso_cobertura_dias }} dias (atenção), ou sem consumo estimável e saldo acima de
           {{ p.excesso_multiplo_minimo|num }}× o mínimo (informativo). Não repete quando o produto já tem alerta de vencimento ou de valor parado.</td>
-        <td>⚠️ / ℹ️</td><td>Compras antecipadas para a próxima safra parecem excesso.</td></tr>
-      <tr><td>Retirada fora do padrão</td>
-        <td>Saída dos últimos {{ p.outlier_janela_dias }} dias maior que mediana + {{ p.outlier_k|num }} × MAD das demais saídas dos
+        <td data-rotulo="Severidade">Atenção / Informativo</td><td data-rotulo="Quando pode errar">Compras antecipadas para a próxima safra parecem excesso.</td></tr>
+      <tr id="regra-fora_do_padrao"><td class="destaque">Retirada fora do padrão</td>
+        <td data-rotulo="Quando dispara">Saída dos últimos {{ p.outlier_janela_dias }} dias maior que mediana + {{ p.outlier_k|num }} × MAD das demais saídas dos
           últimos {{ p.outlier_historico_dias }} dias e maior que 2× a mediana (se MAD = 0, limite = 3× a mediana). Exige
           {{ p.outlier_min_saidas }} saídas. MAD = mediana dos desvios absolutos × 1,4826; ao contrário da média e do
           desvio-padrão, não é distorcida pelo próprio pico.</td>
-        <td>⚠️</td><td>Uso irregular por natureza (aplicação por talhão, manutenção corretiva).</td></tr>
-      <tr><td>Consumo crescente</td>
-        <td>Três blocos seguidos de {{ p.tendencia_bloco_dias }} dias com consumo sempre maior, alta total ≥
+        <td data-rotulo="Severidade">Atenção</td><td data-rotulo="Quando pode errar">Uso irregular por natureza (aplicação por talhão, manutenção corretiva).</td></tr>
+      <tr id="regra-consumo_crescente"><td class="destaque">Consumo crescente</td>
+        <td data-rotulo="Quando dispara">Três blocos seguidos de {{ p.tendencia_bloco_dias }} dias com consumo sempre maior, alta total ≥
           {{ (p.tendencia_aumento_min * 100)|round|int }}% e ao menos {{ p.tendencia_min_saidas_bloco }} saídas por bloco. Retiradas fora do padrão não entram na conta (um pico isolado não é tendência).</td>
-        <td>⚠️</td><td>Pode ser a fase da safra, não uma tendência permanente.</td></tr>
-      <tr><td>Variação de preço</td>
-        <td>Última compra (até {{ p.preco_janela_dias }} dias) com preço por unidade base ≥ {{ (p.preco_variacao_min * 100)|round|int }}%
+        <td data-rotulo="Severidade">Atenção</td><td data-rotulo="Quando pode errar">Pode ser a fase da safra, não uma tendência permanente.</td></tr>
+      <tr id="regra-variacao_preco"><td class="destaque">Variação de preço</td>
+        <td data-rotulo="Quando dispara">Última compra (até {{ p.preco_janela_dias }} dias) com preço por unidade base ≥ {{ (p.preco_variacao_min * 100)|round|int }}%
           diferente da mediana das compras anteriores (mínimo {{ p.preco_min_compras_anteriores }}).</td>
-        <td>⚠️ mais cara / ℹ️ mais barata</td><td>Não corrige inflação, frete ou qualidade.</td></tr>
-      <tr><td>Alto valor parado</td>
-        <td>Classe A da curva ABC (itens que somam os primeiros {{ (p.abc_corte_a * 100)|round|int }}% do valor) e sem saída há ≥
+        <td data-rotulo="Severidade">Atenção (mais cara) / Informativo (mais barata)</td><td data-rotulo="Quando pode errar">Não corrige inflação, frete ou qualidade.</td></tr>
+      <tr id="regra-alto_valor_parado"><td class="destaque">Alto valor parado</td>
+        <td data-rotulo="Quando dispara">Classe A da curva ABC (itens que somam os primeiros {{ (p.abc_corte_a * 100)|round|int }}% do valor) e sem saída há ≥
           {{ p.parado_dias_sem_saida }} dias ou saídas de {{ p.parado_giro_dias }} dias ≤ {{ (p.parado_giro_max * 100)|round|int }}% do saldo.</td>
-        <td>⚠️</td><td>Itens sem preço ficam de fora; peças de emergência podem ficar paradas de propósito.</td></tr>
+        <td data-rotulo="Severidade">Atenção</td><td data-rotulo="Quando pode errar">Itens sem preço ficam de fora; peças de emergência podem ficar paradas de propósito.</td></tr>
     </tbody>
   </table></div>
 </section>
 
-<section class="painel-bloco">
-  <h2>5. Prioridade</h2>
+<section class="cartao cartao-numerado">
+  <h2>Prioridade</h2>
   <p><strong>Prioridade = peso da severidade + urgência + valor envolvido − incerteza</strong></p>
   <ul>
     <li>Severidade: Crítico 100, Atenção 50, Informativo 10.</li>
@@ -95,8 +97,8 @@
   <p>Cada alerta mostra a conta da própria prioridade em "Por que este alerta?".</p>
 </section>
 
-<section class="painel-bloco">
-  <h2>6. Nomes diferentes para o mesmo produto</h2>
+<section class="cartao cartao-numerado">
+  <h2>Nomes diferentes para o mesmo produto</h2>
   <ul>
     <li>Nomes que ficam idênticos após tirar maiúsculas, acentos, pontuação e espaços extras são tratados como o mesmo
       produto (com aviso "grafias equivalentes").</li>
@@ -108,10 +110,11 @@
   </ul>
 </section>
 
-<section class="painel-bloco">
-  <h2>7. Por que não usamos IA ou previsão complexa?</h2>
+<section class="cartao cartao-numerado">
+  <h2>Por que não usamos IA ou previsão complexa?</h2>
   <p>Porque cada alerta precisa ser explicado ao produtor com números que ele consegue conferir. Médias recentes,
     mediana e MAD são simples, robustas a poucos dados e fáceis de auditar. Quando há pouco histórico, o sistema diz
     isso em vez de inventar precisão.</p>
 </section>
+</div>
 {% endblock %}

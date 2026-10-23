@@ -1,0 +1,13 @@
+{# Ícones SVG (Lucide, licença ISC). Os desenhos ficam em static/img/icones.svg e são reaproveitados
+   com <use>, para o navegador baixar o arquivo uma vez só e guardar em cache.
+   Uso: {% from "_icones.html" import icone %} ... {{ icone('calendar') }} ou {{ icone('x', 'icone-p') }}
+
+   Disponíveis: arrow-left, banknote, bell, book-open, calendar, calendar-clock, check, chevron-down,
+   chevron-right, circle-check, circle-help, clipboard-check, copy, download, ellipsis, file-spreadsheet,
+   file-up, history, hourglass, house, inbox, info, list-filter, minus, octagon-alert, package,
+   package-minus, package-plus, plus, printer, qr-code, refresh-cw, scale, search, settings, share-2,
+   shopping-cart, siren, sprout, tag, trending-up, triangle-alert, type, upload, x #}
+
+{% macro icone(nome, classe='') -%}
+<svg class="icone {{ classe }}" aria-hidden="true" focusable="false"><use href="{{ url_for('static', filename='img/icones.svg') }}#i-{{ nome }}"></use></svg>
+{%- endmacro %}

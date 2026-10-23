@@ -171,3 +171,36 @@ def test_alertas_ordenados_por_prioridade():
     res = analisar(tabela(*linhas))
     assert [a.severidade for a in res.alertas] == ["Crítico", "Atenção"]
     assert res.alertas[0].score > res.alertas[1].score
+
+
+# ------------------------------------------------------------------ resumo curto (painel compacto)
+def test_resumo_do_estoque_critico():
+    linhas = [mov("Diesel", "entrada", 960, 89, "L", estoque_minimo=100)] + \
+             saidas_regulares("Diesel", 30, 3, unidade="L", estoque_minimo=100)
+    [alerta] = _alertas(analisar(tabela(*linhas)), "estoque_critico")
+    assert alerta.resumo == "Dura ~6 dias · saldo 60 L (mínimo: 100 L)"
+    assert "poderá ser suficiente por aproximadamente 6 dias" in alerta.mensagem   # mensagem completa intacta
+
+
+def test_resumo_do_vencimento_mostra_o_lote_mais_urgente():
+    linhas = [mov("Inoculante", "entrada", 40, 60, "L", lote="L1", validade="2026-10-20")] + \
+             saidas_regulares("Inoculante", 1, 7, dias=60, unidade="L")
+    [alerta] = _alertas(analisar(tabela(*linhas)), "vencimento")
+    assert alerta.resumo.startswith("Lote L1 vence em 20 dias, sobra ≈ ")
+
+
+def test_resumo_da_retirada_fora_do_padrao():
+    linhas = [mov("Óleo", "entrada", 500, 89, "L")] + \
+             [mov("Óleo", "saida", 5, d, "L") for d in range(5, 89, 5)] + [mov("Óleo", "saida", 60, 2, "L")]
+    [alerta] = _alertas(analisar(tabela(*linhas)), "fora_do_padrao")
+    assert alerta.resumo == "Retirada de 60 L em 28/09/2026: 12× o normal"
+
+
+def test_todo_alerta_da_base_simulada_tem_resumo_curto():
+    from tests.test_gabarito import CSV
+    from motor.importacao import aplicar_mapeamento, ler_arquivo, sugerir_mapeamento
+    bruto = ler_arquivo(CSV.read_bytes(), CSV.name)
+    df, _, _ = aplicar_mapeamento(bruto, sugerir_mapeamento(bruto.columns))
+    for alerta in analisar(df).alertas:
+        assert alerta.resumo, alerta.tipo
+        assert len(alerta.resumo) <= 90, alerta.resumo
