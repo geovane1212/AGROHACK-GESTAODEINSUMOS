@@ -1,6 +1,7 @@
 """Acesso ao banco SQLite (módulo sqlite3 da biblioteca padrão)."""
 
 import json
+import os
 import sqlite3
 from pathlib import Path
 
@@ -67,11 +68,11 @@ CAMPOS_MOV = ["produto", "categoria", "unidade", "quantidade", "estoque_minimo",
               "preco_unitario", "lote", "validade", "fornecedor", "destino", "responsavel"]
 
 
-def caminho_banco() -> Path:
-    url = current_app.config["DATABASE_URL"]
-    caminho = Path(url.removeprefix("sqlite:///"))
-    if not caminho.is_absolute():
-        caminho = Path(current_app.root_path).parent / caminho
+def caminho_banco():
+    if os.environ.get("VERCEL"):
+        caminho = Path("/tmp/instance/app.db")
+    else:
+        caminho = Path(current_app.instance_path) / "app.db"
     caminho.parent.mkdir(parents=True, exist_ok=True)
     return caminho
 
