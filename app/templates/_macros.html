@@ -61,8 +61,32 @@
 </div>
 {%- endmacro %}
 
-{% macro alerta(a, mostrar_produto=true) -%}
+{% macro alerta(a, mostrar_produto=true, compacto=false) -%}
 {% set valor = a|valor_envolvido %}
+{% if compacto %}
+{# Versão curta para o painel: cabeçalho + uma linha; a explicação completa fica no "Por que este alerta?". #}
+<article class="alerta compacto {{ CLASSES[a.severidade] }}">
+  <div class="alerta-cabecalho">
+    {{ selo(a.severidade) }}
+    <h3 class="alerta-titulo">{{ a.titulo }}{% if mostrar_produto %} —
+      <a href="{{ url_for('web.produto', chave=a.chave_produto) }}">{{ a.produto }}</a>{% endif %}</h3>
+    <span class="alerta-prioridade" title="Score de prioridade">Prioridade {{ a.score }}</span>
+  </div>
+  <p class="alerta-resumo">{{ a.resumo or a.mensagem|truncate(140, true, '…') }}{% if valor and valor not in a.resumo %} · {{ valor }}{% endif %}</p>
+  <details>
+    <summary>{{ icone('circle-help') }} Por que este alerta? {{ icone('chevron-down', 'icone-abrir') }}</summary>
+    <div class="detalhes">
+      <p class="alerta-mensagem">{{ a.mensagem }}</p>
+      <dl>
+        <dt>Regra aplicada</dt><dd>{{ a.regra }}</dd>
+        <dt>Quando pode errar</dt><dd>{{ a.limite }}</dd>
+        {% if a.confianca %}<dt>Confiança</dt><dd>{{ a.confianca }}</dd>{% endif %}
+        <dt>Prioridade {{ a.score }}</dt><dd>{{ a.score_partes|join('; ') }}.</dd>
+      </dl>
+    </div>
+  </details>
+</article>
+{% else %}
 <article class="alerta {{ CLASSES[a.severidade] }}">
   <div class="alerta-etiquetas">
     {{ selo(a.severidade) }}
@@ -86,6 +110,7 @@
     </div>
   </details>
 </article>
+{% endif %}
 {%- endmacro %}
 
 {% macro lista_mudancas(m) -%}

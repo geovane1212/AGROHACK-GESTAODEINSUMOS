@@ -34,7 +34,7 @@
       <a class="pilula informativo" href="{{ url_for('web.alertas', severidade='Informativo') }}">{{ icone('info', 'icone-p') }}<span class="numero">{{ sev['Informativo'] }}</span> informativos</a>
     </div>
   </div>
-  {% for a in res.alertas[:5] %}{{ alerta(a) }}{% else %}
+  {% for a in res.alertas[:5] %}{{ alerta(a, compacto=true) }}{% else %}
     {{ estado_vazio('Nenhum alerta no momento', 'Tudo dentro do esperado para a data de referência.', icone_nome='circle-check', compacto=true) }}
   {% endfor %}
   {% if res.alertas|length > 5 %}
