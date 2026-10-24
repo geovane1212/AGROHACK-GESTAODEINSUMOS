@@ -15,7 +15,7 @@
 | João Paulo da Costa | ADS – IFRO Campus Ariquemes | Gravação do Vídeo Explicativo |
 | Edson Henrique | ADS – IFRO Campus Ariquemes | Apresentação do Pitch |
 
-Responsável pela inscrição/contato com a organização: [preencher].
+Responsável pela inscrição/contato com a organização: João Paulo.
 Sugestão de divisão das frentes: [`docs/PLANO.md`](docs/PLANO.md).
 
 ## 2. Problema e público
@@ -69,7 +69,7 @@ tests/      pytest (106 testes)
 
 ## 4. Como testar
 
-**Link online:** [preencher após o deploy] · Instruções de deploy: seção 4.3.
+**Link online:** https://agrohack-gestaodeinsumos.vercel.app/
 
 ### 4.1 Execução local (Windows, Linux ou Mac, Python 3.11+)
 
@@ -158,7 +158,7 @@ envolvido (1 ponto a cada R$ 500, máx. 20) − 10 se a confiança for baixa.
   [`docs/APRESENTACAO.md`](docs/APRESENTACAO.md).
 - **Atualização e reanálise:** ver passo 3 da seção 4.2 (também automatizado em
   `tests/test_web.py::test_retirada_grande_gera_alerta_na_reanalise`).
-- Vídeo demonstrativo: [preencher link]. Slides: [preencher link].
+- Vídeo demonstrativo: [EM DESENVOLVIMENTO]. Slides: [preencher link].
 
 ## 7. Validação
 
