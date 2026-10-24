@@ -10,7 +10,7 @@
 
 | Nome | Curso | Função no projeto |
 | --- | --- | --- |
-| Igor Malher | ADS – IFRO Campus Ariquemes | [Desenvolvimento & IA |
+| Igor Malher | ADS – IFRO Campus Ariquemes | Desenvolvimento & IA |
 | Geovane Alencar | ADS – IFRO Campus Ariquemes | Desenvolvimento & IA |
 | João Paulo da Costa | ADS – IFRO Campus Ariquemes | Gravação do Vídeo Explicativo |
 | Edson Henrique | ADS – IFRO Campus Ariquemes | Apresentação do Pitch |
