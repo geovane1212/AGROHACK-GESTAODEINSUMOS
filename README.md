@@ -10,10 +10,10 @@
 
 | Nome | Curso | Função no projeto |
 | --- | --- | --- |
-| Igor Malher | ADS – IFRO Campus Ariquemes | [preencher] |
-| Geovane Alencar | ADS – IFRO Campus Ariquemes | [preencher] |
-| João Paulo da Costa | ADS – IFRO Campus Ariquemes | [preencher] |
-| Edson Henrique | ADS – IFRO Campus Ariquemes | [preencher] |
+| Igor Malher | ADS – IFRO Campus Ariquemes | [Desenvolvimento & IA |
+| Geovane Alencar | ADS – IFRO Campus Ariquemes | [Desenvolvimento & IA] |
+| João Paulo da Costa | ADS – IFRO Campus Ariquemes | [Gravação do Vídeo Explicativo] |
+| Edson Henrique | ADS – IFRO Campus Ariquemes | [Apresentação do Pitch] |
 
 Responsável pela inscrição/contato com a organização: [preencher].
 Sugestão de divisão das frentes: [`docs/PLANO.md`](docs/PLANO.md).
