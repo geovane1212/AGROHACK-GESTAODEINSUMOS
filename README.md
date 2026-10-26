@@ -158,7 +158,7 @@ envolvido (1 ponto a cada R$ 500, máx. 20) − 10 se a confiança for baixa.
   [`docs/APRESENTACAO.md`](docs/APRESENTACAO.md).
 - **Atualização e reanálise:** ver passo 3 da seção 4.2 (também automatizado em
   `tests/test_web.py::test_retirada_grande_gera_alerta_na_reanalise`).
-- Vídeo demonstrativo: [EM DESENVOLVIMENTO]. Slides: [preencher link].
+- Vídeo demonstrativo: [https://drive.google.com/file/d/1Y9qWj8f5lx7XKlI0gAgvURjA364qlV_F/view?usp=drivesdk]. Slides: [preencher link].
 
 ## 7. Validação
 
