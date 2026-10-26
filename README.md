@@ -6,7 +6,7 @@
 >
 > ⚠️ Até a divulgação da base oficial, o sistema usa **dados SIMULADOS** ([`data/simulado/`](data/simulado/)).
 
-## 1. Equipe
+## 1. Hype Stack
 
 | Nome | Curso | Função no projeto |
 | --- | --- | --- |
